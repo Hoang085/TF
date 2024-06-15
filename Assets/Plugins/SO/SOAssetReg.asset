@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c62b3d6ae518947b32accabfdfc462, type: 3}
+  m_Name: SOAssetReg
+  m_EditorClassIdentifier: 
+  setPinEvent: {fileID: 11400000, guid: 54c7adf3226af1c48b37c0c2149f18d7, type: 2}
+  unPinEvent: {fileID: 11400000, guid: 340e09a8445202a45b41182db0fe0004, type: 2}
