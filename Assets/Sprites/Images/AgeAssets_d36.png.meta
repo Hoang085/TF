@@ -1,0 +1,600 @@
+fileFormatVersion: 2
+guid: d84832efe2f94c7fb0edf534cfd85383
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: AgeAssets_1
+  - first:
+      213: 21300002
+    second: AgeAssets_0
+  - first:
+      213: 21300004
+    second: AgeAssets_5
+  - first:
+      213: 21300006
+    second: AgeAssets_4
+  - first:
+      213: 21300008
+    second: AgeAssets_2
+  - first:
+      213: 21300010
+    second: AgeAssets_3
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 47
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 188
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AgeAssets_4
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 276
+        width: 80
+        height: 369
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40.00001, y: 184.5001}
+        - {x: 40.00001, y: 184.5001}
+        - {x: -40.00001, y: -184.5}
+      - - {x: -40.00001, y: -184.5}
+        - {x: 40.00001, y: 184.5001}
+        - {x: 40.00001, y: -184.5}
+      physicsShape:
+      - - {x: 23, y: -45.5}
+        - {x: 39, y: 13.5}
+        - {x: 40, y: 17.5}
+        - {x: 40, y: 171.5}
+        - {x: 39, y: 174.5}
+        - {x: 35, y: 178.5}
+        - {x: 29, y: 182.5}
+        - {x: 17, y: 184.5}
+        - {x: -16, y: 184.5}
+        - {x: -29, y: 182.5}
+        - {x: -40, y: 174.5}
+        - {x: -40, y: 12.49999}
+        - {x: -28, y: -26.5}
+        - {x: -23, y: -45.5}
+        - {x: -22, y: -142.5}
+        - {x: -26, y: -146.5}
+        - {x: -28, y: -164.5}
+        - {x: -25, y: -172.5}
+        - {x: -12, y: -184.5}
+        - {x: 13, y: -184.5}
+        - {x: 25, y: -176.5}
+        - {x: 29, y: -152.5}
+        - {x: 22, y: -142.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AgeAssets_2
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 646
+        width: 215
+        height: 179
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -107.5, y: 89.49999}
+        - {x: 107.5, y: 89.49999}
+        - {x: -107.5, y: -89.49999}
+      - - {x: -107.5, y: -89.49999}
+        - {x: 107.5, y: 89.49999}
+        - {x: 107.5, y: -89.49999}
+      physicsShape:
+      - - {x: 32.5, y: 23.5}
+        - {x: 89.5, y: 33.5}
+        - {x: 107.5, y: 45.5}
+        - {x: 107.5, y: 80.5}
+        - {x: 89.5, y: 89.5}
+        - {x: -106.5, y: 89.5}
+        - {x: -107.5, y: 88.5}
+        - {x: -107.5, y: 10.5}
+        - {x: -100.5, y: -35.5}
+        - {x: -69.5, y: -42.5}
+        - {x: -62.5, y: -89.5}
+        - {x: -14.5, y: -89.5}
+        - {x: -4.5, y: -31.5}
+        - {x: 21.5, y: 0.5}
+        - {x: 29.5, y: 11.5}
+        - {x: -11.5, y: 24.5}
+        - {x: -8.5, y: 16.5}
+        - {x: -5.5, y: 13.5}
+        - {x: -2.5, y: 12.5}
+        - {x: 0.5, y: 12.5}
+        - {x: 3.5, y: 13.5}
+        - {x: 6.5, y: 17.5}
+        - {x: 7.5, y: 22.5}
+        - {x: 1.5, y: 32.5}
+        - {x: -0.5, y: 33.5}
+        - {x: 17.5, y: 32.5}
+        - {x: 17.5, y: 22.5}
+        - {x: 9.5, y: 14.5}
+        - {x: -10.5, y: 14.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AgeAssets_3
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 418
+        width: 86
+        height: 226
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 113}
+        - {x: 43, y: 113}
+        - {x: -43, y: -113}
+      - - {x: -43, y: -113}
+        - {x: 43, y: 113}
+        - {x: 43, y: -113}
+      physicsShape:
+      - - {x: 25, y: 62}
+        - {x: 28, y: 89.99999}
+        - {x: 28, y: 98.99999}
+        - {x: 26, y: 104}
+        - {x: 22, y: 113}
+        - {x: -26, y: 113}
+        - {x: -34, y: 87.99999}
+        - {x: -26, y: 62}
+        - {x: -39, y: 35}
+        - {x: -43, y: 20}
+        - {x: -43, y: -105}
+        - {x: -29, y: -113}
+        - {x: 25, y: -113}
+        - {x: 31, y: -112}
+        - {x: 43, y: -104}
+        - {x: 43, y: 23}
+        - {x: 39, y: 35}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AgeAssets_0
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 826
+        width: 328
+        height: 198
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -164, y: 99.00001}
+        - {x: 164, y: 99.00001}
+        - {x: -164, y: -99.00001}
+      - - {x: -164, y: -99.00001}
+        - {x: 164, y: 99.00001}
+        - {x: 164, y: -99.00001}
+      physicsShape:
+      - - {x: -15, y: -62}
+        - {x: -2, y: -53}
+        - {x: 5, y: -42}
+        - {x: 4, y: -33}
+        - {x: 18, y: -21}
+        - {x: 38, y: -3}
+        - {x: 36, y: -9.999999}
+        - {x: 32, y: -20}
+        - {x: 31, y: -47}
+        - {x: 36, y: -60}
+        - {x: 45, y: -75}
+        - {x: 64, y: -91.99999}
+        - {x: 79, y: -98.99999}
+        - {x: 117, y: -98.99999}
+        - {x: 124, y: -96}
+        - {x: 140, y: -86.99999}
+        - {x: 158, y: -68}
+        - {x: 164, y: -55}
+        - {x: 164, y: -12}
+        - {x: 156, y: 3}
+        - {x: 151, y: 9.999999}
+        - {x: 135, y: 25}
+        - {x: 120, y: 32}
+        - {x: 98.99999, y: 40}
+        - {x: 90.99999, y: 73}
+        - {x: 83.99999, y: 92.99999}
+        - {x: 79, y: 98.99999}
+        - {x: 61, y: 98.99999}
+        - {x: 59, y: 98}
+        - {x: 55, y: 93.99999}
+        - {x: 53, y: 88.99999}
+        - {x: 53, y: 78}
+        - {x: 57, y: 59}
+        - {x: 43, y: 47}
+        - {x: -13, y: -2}
+        - {x: -16, y: 0}
+        - {x: -28, y: 52}
+        - {x: -40, y: 63}
+        - {x: -54, y: 62}
+        - {x: -63, y: 50}
+        - {x: -62, y: 38}
+        - {x: -58, y: 24}
+        - {x: -78, y: 31}
+        - {x: -86.99999, y: 33}
+        - {x: -110, y: 33}
+        - {x: -124, y: 30}
+        - {x: -141, y: 20}
+        - {x: -153, y: 6}
+        - {x: -159, y: -2}
+        - {x: -164, y: -17}
+        - {x: -164, y: -46}
+        - {x: -163, y: -51}
+        - {x: -161, y: -60}
+        - {x: -152, y: -75}
+        - {x: -139, y: -86.99999}
+        - {x: -123, y: -96.99999}
+        - {x: -114, y: -98.99999}
+        - {x: -78, y: -98.99999}
+        - {x: -56, y: -87.99999}
+        - {x: -40, y: -68}
+        - {x: -31, y: -63}
+        - {x: -105, y: -65}
+        - {x: -106, y: -64}
+        - {x: -109, y: -64}
+        - {x: -116, y: -60}
+        - {x: -125, y: -51}
+        - {x: -128, y: -46}
+        - {x: -129, y: -41}
+        - {x: -130, y: -40}
+        - {x: -130, y: -27}
+        - {x: -129, y: -26}
+        - {x: -129, y: -23}
+        - {x: -127, y: -20}
+        - {x: -127, y: -18}
+        - {x: -125, y: -17}
+        - {x: -123, y: -13}
+        - {x: -119, y: -8}
+        - {x: -118, y: -8}
+        - {x: -113, y: -4}
+        - {x: -111, y: -4}
+        - {x: -108, y: -2}
+        - {x: -104, y: -2}
+        - {x: -103, y: -0.9999999}
+        - {x: -92.99999, y: -0.9999999}
+        - {x: -91.99999, y: -2}
+        - {x: -85.99999, y: -3}
+        - {x: -80.99999, y: -6}
+        - {x: -78, y: -8}
+        - {x: -77, y: -8}
+        - {x: -72, y: -14}
+        - {x: -70, y: -16}
+        - {x: -103, y: -16}
+        - {x: -108, y: -18}
+        - {x: -114, y: -24}
+        - {x: -115, y: -27}
+        - {x: -115, y: -30}
+        - {x: -116, y: -31}
+        - {x: -116, y: -36}
+        - {x: -115, y: -37}
+        - {x: -114, y: -41}
+        - {x: -109, y: -48}
+        - {x: -102, y: -51}
+        - {x: -70, y: -50}
+        - {x: -72, y: -52}
+        - {x: -72, y: -53}
+        - {x: -79.99999, y: -60}
+        - {x: -86.99999, y: -64}
+        - {x: -89.99999, y: -64}
+        - {x: -90.99999, y: -65}
+        - {x: -96.99999, y: -65}
+        - {x: -98, y: -66}
+        - {x: -98.99999, y: -65}
+        - {x: 91.99999, y: -65}
+        - {x: 90.99999, y: -64}
+        - {x: 87.99999, y: -64}
+        - {x: 80.99999, y: -60}
+        - {x: 72, y: -51}
+        - {x: 69, y: -46}
+        - {x: 68, y: -41}
+        - {x: 67, y: -40}
+        - {x: 67, y: -27}
+        - {x: 68, y: -26}
+        - {x: 68, y: -23}
+        - {x: 70, y: -20}
+        - {x: 70, y: -18}
+        - {x: 72, y: -17}
+        - {x: 74, y: -13}
+        - {x: 77, y: -9}
+        - {x: 76, y: -11}
+        - {x: 77, y: -12}
+        - {x: 78, y: -19}
+        - {x: 79.99999, y: -23}
+        - {x: 79.99999, y: -26}
+        - {x: 80.99999, y: -27}
+        - {x: 80.99999, y: -30}
+        - {x: 81.99999, y: -31}
+        - {x: 82.99999, y: -37}
+        - {x: 83.99999, y: -40}
+        - {x: 89.99999, y: -46}
+        - {x: 94.99999, y: -48}
+        - {x: 105, y: -48}
+        - {x: 110, y: -46}
+        - {x: 116, y: -40}
+        - {x: 117, y: -37}
+        - {x: 117, y: -34}
+        - {x: 118, y: -33}
+        - {x: 118, y: -28}
+        - {x: 117, y: -27}
+        - {x: 117, y: -24}
+        - {x: 115, y: -20}
+        - {x: 114, y: -13}
+        - {x: 112, y: -9}
+        - {x: 111, y: -3}
+        - {x: 119, y: -8}
+        - {x: 125, y: -13}
+        - {x: 125, y: -14}
+        - {x: 129, y: -20}
+        - {x: 130, y: -26}
+        - {x: 131, y: -27}
+        - {x: 131, y: -40}
+        - {x: 130, y: -41}
+        - {x: 130, y: -43}
+        - {x: 129, y: -44}
+        - {x: 129, y: -46}
+        - {x: 125, y: -52}
+        - {x: 125, y: -53}
+        - {x: 117, y: -60}
+        - {x: 110, y: -64}
+        - {x: 107, y: -64}
+        - {x: 106, y: -65}
+        - {x: 100, y: -65}
+        - {x: 98.99999, y: -66}
+        - {x: 98, y: -65}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AgeAssets_5
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 146
+        height: 357
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -73.00001, y: 178.5}
+        - {x: 73.00001, y: 178.5}
+        - {x: -73.00001, y: -178.5}
+      - - {x: -73.00001, y: -178.5}
+        - {x: 73.00001, y: 178.5}
+        - {x: 73.00001, y: -178.5}
+      physicsShape:
+      - - {x: 62, y: 178.5}
+        - {x: 55, y: 176.5}
+        - {x: 23, y: 168.5}
+        - {x: 17, y: 165.5}
+        - {x: 0, y: 148.5}
+        - {x: -0.9999999, y: 148.5}
+        - {x: -28, y: 124.5}
+        - {x: -30, y: 122.5}
+        - {x: -46, y: 130.5}
+        - {x: -50, y: 130.5}
+        - {x: -54, y: 127.5}
+        - {x: -59, y: 123.5}
+        - {x: -65, y: 118.5}
+        - {x: -73, y: 111.5}
+        - {x: -73, y: -142.5}
+        - {x: -71, y: -144.5}
+        - {x: -27, y: -155.5}
+        - {x: -16, y: -158.5}
+        - {x: 64, y: -178.5}
+        - {x: 73, y: -178.5}
+        - {x: 73, y: 178.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AgeAssets_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 246
+        height: 689
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -123, y: 344.5}
+        - {x: 123, y: 344.5}
+        - {x: -123, y: -344.5}
+      - - {x: -123, y: -344.5}
+        - {x: 123, y: 344.5}
+        - {x: 123, y: -344.5}
+      physicsShape:
+      - - {x: 64, y: 44.5}
+        - {x: 71, y: 49.5}
+        - {x: 98, y: 73.5}
+        - {x: 123, y: 96.5}
+        - {x: 123, y: 128.5}
+        - {x: 116, y: 132.5}
+        - {x: 80.99999, y: 147.5}
+        - {x: 64, y: 155.5}
+        - {x: 74, y: 272.5}
+        - {x: 78, y: 272.5}
+        - {x: 79.99999, y: 274.5}
+        - {x: 79.99999, y: 302.5}
+        - {x: 77, y: 305.5}
+        - {x: 67, y: 309.5}
+        - {x: 3, y: 334.5}
+        - {x: -15, y: 341.5}
+        - {x: -23, y: 344.5}
+        - {x: -123, y: 344.5}
+        - {x: -123, y: -344.5}
+        - {x: -121, y: -344.5}
+        - {x: -118, y: -343.5}
+        - {x: -98, y: -325.5}
+        - {x: 60, y: -182.5}
+        - {x: 64, y: -178.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AgeAssets_0: 21300002
+      AgeAssets_1: 21300000
+      AgeAssets_2: 21300008
+      AgeAssets_3: 21300010
+      AgeAssets_4: 21300006
+      AgeAssets_5: 21300004
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

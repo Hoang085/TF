@@ -1,0 +1,1691 @@
+fileFormatVersion: 2
+guid: bed9e4c3f6394640abcbe62726c7254e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Hero_Billie_Revolver
+  - first:
+      213: 21300002
+    second: Hero_Jack_Cutlass
+  - first:
+      213: 21300004
+    second: Hero_Jack_Hook
+  - first:
+      213: 21300006
+    second: Hero_Billie_Belt
+  - first:
+      213: 21300008
+    second: Hero_Magnus_Belt
+  - first:
+      213: 21300010
+    second: Hero_Francois_Moustache
+  - first:
+      213: 21300012
+    second: Hero_Joan_Shield
+  - first:
+      213: 21300014
+    second: Hero_Magnus_Staff
+  - first:
+      213: 21300016
+    second: Hero_Aurelius_Helmet
+  - first:
+      213: 21300018
+    second: Hero_Matilda_Spear
+  - first:
+      213: 21300020
+    second: Hero_Matilda_Braid
+  - first:
+      213: 21300022
+    second: Hero_Magnus_Beard
+  - first:
+      213: 21300024
+    second: Hero_Aurelius_Trident
+  - first:
+      213: 21300026
+    second: Hero_Magnus_Hat
+  - first:
+      213: 21300028
+    second: Hero_Francois_Body
+  - first:
+      213: 21300030
+    second: Hero_Francois_Rapier
+  - first:
+      213: 21300032
+    second: Hero_Archie_Hood
+  - first:
+      213: 21300034
+    second: Hero_Jack_Headband
+  - first:
+      213: 21300036
+    second: Hero_Joan_Sword
+  - first:
+      213: 21300038
+    second: Hero_Joan_Hair
+  - first:
+      213: 21300040
+    second: Hero_Francois_Hat
+  - first:
+      213: 21300042
+    second: Hero_Matilda_Shield
+  - first:
+      213: 21300044
+    second: Hero_Archie_Hat
+  - first:
+      213: 21300046
+    second: Hero_Billie_Hat
+  - first:
+      213: 21300048
+    second: Hero_Archie_Bow
+  - first:
+      213: 21300050
+    second: Hero_Matilda_Hair
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 47
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 188
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hero_Billie_Revolver
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 269
+        width: 150
+        height: 255
+      alignment: 9
+      pivot: {x: 0.5124142, y: 0.1969427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75.00001, y: 127.5}
+        - {x: 75.00001, y: 127.5}
+        - {x: -75.00001, y: -127.5}
+      - - {x: -75.00001, y: -127.5}
+        - {x: 75.00001, y: 127.5}
+        - {x: 75.00001, y: -127.5}
+      physicsShape:
+      - - {x: 67, y: -58.5}
+        - {x: 37, y: -58.5}
+        - {x: 40, y: -21.5}
+        - {x: 4, y: 17.5}
+        - {x: -3, y: 61.5}
+        - {x: -21, y: 60.5}
+        - {x: -22, y: 123.5}
+        - {x: -23, y: 127.5}
+        - {x: -69.99999, y: 127.5}
+        - {x: -75, y: 117.5}
+        - {x: -75, y: 100.5}
+        - {x: -67.99999, y: 100.5}
+        - {x: -67.99999, y: -68.5}
+        - {x: -64.99999, y: -74.5}
+        - {x: -58, y: -90.5}
+        - {x: -47, y: -98.5}
+        - {x: -27, y: -100.5}
+        - {x: 30, y: -125.5}
+        - {x: 50, y: -127.5}
+        - {x: 71, y: -127.5}
+        - {x: 75, y: -121.5}
+        - {x: 75, y: -73.5}
+        - {x: 74, y: -64.5}
+        - {x: 17, y: -55.5}
+        - {x: 16, y: -54.5}
+        - {x: 12, y: -54.5}
+        - {x: 8, y: -52.5}
+        - {x: 6, y: -52.5}
+        - {x: 15, y: -49.5}
+        - {x: 16, y: -47.5}
+        - {x: 17, y: -47.5}
+        - {x: 23, y: -41.5}
+        - {x: 22, y: -56.5}
+        - {x: 21, y: -55.5}
+        - {x: 6, y: -15.5}
+        - {x: 8, y: -16.5}
+        - {x: 22, y: -30.5}
+        - {x: 23, y: -35.5}
+        - {x: 24, y: -34.5}
+        - {x: 20, y: -30.5}
+        - {x: 16, y: -29.5}
+        - {x: 11, y: -32.5}
+        - {x: 7, y: -35.5}
+        - {x: 6, y: -36.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Magnus_Staff
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 550
+        width: 78
+        height: 474
+      alignment: 9
+      pivot: {x: 0.6023254, y: 0.340973}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39, y: 236.9999}
+        - {x: 38.99999, y: 236.9999}
+        - {x: -39, y: -237}
+      - - {x: -39, y: -237}
+        - {x: 38.99999, y: 236.9999}
+        - {x: 38.99999, y: -237}
+      physicsShape:
+      - - {x: 28, y: -18}
+        - {x: 36, y: 121}
+        - {x: 39, y: 131}
+        - {x: 39, y: 177}
+        - {x: 34, y: 195}
+        - {x: 20, y: 221}
+        - {x: 4, y: 237}
+        - {x: -17, y: 237}
+        - {x: -30, y: 229}
+        - {x: -34, y: 223}
+        - {x: -37, y: 211}
+        - {x: -30, y: 197}
+        - {x: -8, y: 167}
+        - {x: -15, y: 154}
+        - {x: -21, y: 156}
+        - {x: -39, y: 144}
+        - {x: -39, y: 131}
+        - {x: -32, y: 116}
+        - {x: -18, y: 98}
+        - {x: -19, y: 61}
+        - {x: -11, y: -77}
+        - {x: -11, y: -178}
+        - {x: -14, y: -209}
+        - {x: -12, y: -233}
+        - {x: -5, y: -237}
+        - {x: 16, y: -237}
+        - {x: 24, y: -231}
+        - {x: 24, y: -228}
+        - {x: 25, y: -180}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Aurelius_Trident
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 468
+        width: 138
+        height: 556
+      alignment: 9
+      pivot: {x: 0.5028505, y: 0.4335074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -69.00001, y: 278}
+        - {x: 69.00001, y: 278}
+        - {x: -69.00001, y: -278}
+      - - {x: -69.00001, y: -278}
+        - {x: 69.00001, y: 278}
+        - {x: 69.00001, y: -278}
+      physicsShape:
+      - - {x: 23, y: 13}
+        - {x: 27, y: 25}
+        - {x: 26, y: 69}
+        - {x: 51, y: 69}
+        - {x: 65, y: 79}
+        - {x: 68, y: 87.99999}
+        - {x: 67, y: 103}
+        - {x: 62, y: 157}
+        - {x: 66, y: 157}
+        - {x: 69, y: 159}
+        - {x: 69, y: 173}
+        - {x: 61, y: 202}
+        - {x: 50, y: 233}
+        - {x: 47, y: 239}
+        - {x: 40, y: 241}
+        - {x: 36, y: 236}
+        - {x: 35, y: 230}
+        - {x: 26, y: 144}
+        - {x: 26, y: 135}
+        - {x: 22, y: 131}
+        - {x: 20, y: 140}
+        - {x: 19, y: 159}
+        - {x: 17, y: 196}
+        - {x: 16, y: 201}
+        - {x: 22, y: 204}
+        - {x: 24, y: 207}
+        - {x: 23, y: 216}
+        - {x: 11, y: 259}
+        - {x: 7, y: 274}
+        - {x: 4, y: 278}
+        - {x: -5, y: 278}
+        - {x: -8, y: 274}
+        - {x: -25, y: 212}
+        - {x: -22, y: 202}
+        - {x: -17, y: 196}
+        - {x: -19, y: 159}
+        - {x: -20, y: 140}
+        - {x: -22, y: 131}
+        - {x: -25, y: 136}
+        - {x: -26, y: 154}
+        - {x: -28, y: 163}
+        - {x: -31, y: 192}
+        - {x: -33, y: 211}
+        - {x: -35, y: 236}
+        - {x: -41, y: 241}
+        - {x: -44, y: 240}
+        - {x: -49, y: 237}
+        - {x: -68.99999, y: 173}
+        - {x: -68.99999, y: 159}
+        - {x: -65.99999, y: 157}
+        - {x: -62, y: 152}
+        - {x: -66.99999, y: 103}
+        - {x: -66.99999, y: 87.99999}
+        - {x: -63.99999, y: 79.99999}
+        - {x: -57, y: 71.99999}
+        - {x: -47, y: 68}
+        - {x: -26, y: 69}
+        - {x: -26, y: 24}
+        - {x: -22, y: 13}
+        - {x: -20, y: 12}
+        - {x: -20, y: -263}
+        - {x: -19, y: -270}
+        - {x: -10, y: -278}
+        - {x: 11, y: -278}
+        - {x: 20, y: -268}
+        - {x: 20, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Francois_Hat
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 132
+        width: 285
+        height: 135
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -142.5, y: 67.50001}
+        - {x: 142.5, y: 67.50001}
+        - {x: -142.5, y: -67.50001}
+      - - {x: -142.5, y: -67.50001}
+        - {x: 142.5, y: 67.50001}
+        - {x: 142.5, y: -67.50001}
+      physicsShape:
+      - - {x: 137.5, y: -28.5}
+        - {x: 31.5, y: 30.5}
+        - {x: 11.5, y: 26.5}
+        - {x: -4.5, y: 5.5}
+        - {x: -50.5, y: 50.5}
+        - {x: -68.5, y: 67.5}
+        - {x: -91.5, y: 67.5}
+        - {x: -94.5, y: 65.5}
+        - {x: -100.5, y: 59.5}
+        - {x: -106.5, y: 52.5}
+        - {x: -104.5, y: 37.5}
+        - {x: -135.5, y: 38.5}
+        - {x: -142.5, y: 31.5}
+        - {x: -142.5, y: -2.5}
+        - {x: -82.5, y: -33.5}
+        - {x: -85.5, y: -40.5}
+        - {x: -83.5, y: -53.5}
+        - {x: -80.5, y: -60.5}
+        - {x: -75.5, y: -65.5}
+        - {x: -70.5, y: -67.5}
+        - {x: 131.5, y: -67.5}
+        - {x: 135.5, y: -66.5}
+        - {x: 142.5, y: -57.5}
+        - {x: 142.5, y: -36.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jack_Cutlass
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 590
+        width: 175
+        height: 434
+      alignment: 9
+      pivot: {x: 0.6117296, y: 0.1481638}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -87.5, y: 217}
+        - {x: 87.49999, y: 217}
+        - {x: -87.5, y: -217}
+      - - {x: -87.5, y: -217}
+        - {x: 87.49999, y: 217}
+        - {x: 87.49999, y: -217}
+      physicsShape:
+      - - {x: 76.5, y: -193}
+        - {x: 85.5, y: -178}
+        - {x: 87.5, y: -172}
+        - {x: 87.5, y: -135}
+        - {x: 86.5, y: -129}
+        - {x: 75.5, y: -108}
+        - {x: 54.5, y: -93}
+        - {x: 55.5, y: -52.00001}
+        - {x: 54.5, y: -5.000015}
+        - {x: 52.5, y: 18.99998}
+        - {x: 48.5, y: 52}
+        - {x: 38.5, y: 88.99998}
+        - {x: 30.5, y: 106}
+        - {x: 15.5, y: 136}
+        - {x: 7.5, y: 148}
+        - {x: -3.499998, y: 162}
+        - {x: -26.5, y: 185}
+        - {x: -46.5, y: 201}
+        - {x: -69.5, y: 214}
+        - {x: -76.49999, y: 217}
+        - {x: -86.49999, y: 217}
+        - {x: -87.5, y: 216}
+        - {x: -87.5, y: 145}
+        - {x: -85.5, y: 142}
+        - {x: -42.5, y: 108}
+        - {x: -38.5, y: 102}
+        - {x: -29.5, y: 88.99998}
+        - {x: -19.5, y: 69.99998}
+        - {x: -8.499998, y: 27}
+        - {x: -3.499998, y: -10}
+        - {x: -2.5, y: -59}
+        - {x: -3.499998, y: -60}
+        - {x: -4.499998, y: -81.00001}
+        - {x: -9.499998, y: -95}
+        - {x: -18.5, y: -101}
+        - {x: -28.5, y: -111}
+        - {x: -41.5, y: -131}
+        - {x: -44.5, y: -156}
+        - {x: 0.5, y: -189}
+        - {x: -3.499998, y: -190}
+        - {x: -9.499998, y: -199}
+        - {x: -9.499998, y: -209}
+        - {x: 1.5, y: -217}
+        - {x: 39.5, y: -217}
+        - {x: 46.5, y: -216}
+        - {x: 51.5, y: -214}
+        - {x: 63.5, y: -206}
+        - {x: 40.5, y: -161}
+        - {x: 53.5, y: -161}
+        - {x: 43.5, y: -177}
+        - {x: 39.5, y: -180}
+        - {x: 40.5, y: -180}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Joan_Sword
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 730
+        width: 83
+        height: 289
+      alignment: 9
+      pivot: {x: 0.488782, y: 0.2197099}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.50001, y: 144.5001}
+        - {x: 41.5, y: 144.5001}
+        - {x: -41.50001, y: -144.5}
+      - - {x: -41.50001, y: -144.5}
+        - {x: 41.5, y: 144.5001}
+        - {x: 41.5, y: -144.5}
+      physicsShape:
+      - - {x: 37.5, y: -70.5}
+        - {x: 41.5, y: -69.5}
+        - {x: 41.5, y: -35.5}
+        - {x: 31.5, y: -36.5}
+        - {x: 30.5, y: 96.49998}
+        - {x: 27.5, y: 106.5}
+        - {x: 5.5, y: 144.5}
+        - {x: -7.5, y: 144.5}
+        - {x: -31.5, y: 101.5}
+        - {x: -32.5, y: -35.5}
+        - {x: -41.5, y: -36.5}
+        - {x: -41.5, y: -73.5}
+        - {x: -26.5, y: -79.5}
+        - {x: -23.5, y: -133.5}
+        - {x: -11.5, y: -144.5}
+        - {x: 13.5, y: -144.5}
+        - {x: 21.5, y: -131.5}
+        - {x: 24.5, y: -99.5}
+        - {x: 24.5, y: -75.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Archie_Hat
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 0
+        width: 309
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -154.5, y: 65}
+        - {x: 154.5, y: 65}
+        - {x: -154.5, y: -65}
+      - - {x: -154.5, y: -65}
+        - {x: 154.5, y: 65}
+        - {x: 154.5, y: -65}
+      physicsShape:
+      - - {x: 150.5, y: -32}
+        - {x: 96.5, y: -33}
+        - {x: 86.5, y: -23}
+        - {x: 22.5, y: 32}
+        - {x: 8.5, y: 38}
+        - {x: -8.5, y: 38}
+        - {x: -17.5, y: 35}
+        - {x: -31.5, y: 31}
+        - {x: -62.5, y: 47}
+        - {x: -99.5, y: 60}
+        - {x: -121.5, y: 65}
+        - {x: -142.5, y: 65}
+        - {x: -153.5, y: 58}
+        - {x: -154.5, y: 55}
+        - {x: -154.5, y: 36}
+        - {x: -152.5, y: 30}
+        - {x: -139.5, y: 21}
+        - {x: -122.5, y: 17}
+        - {x: -107.5, y: 17}
+        - {x: -101.5, y: 11}
+        - {x: -56.5, y: -5}
+        - {x: -50.5, y: -5}
+        - {x: -37.5, y: -2}
+        - {x: -39.5, y: -9.999999}
+        - {x: -57.5, y: -6}
+        - {x: -65.5, y: -5}
+        - {x: -70.5, y: -9}
+        - {x: -70.5, y: -15}
+        - {x: -63.5, y: -35}
+        - {x: -54.5, y: -52}
+        - {x: -45.5, y: -62}
+        - {x: -37.5, y: -65}
+        - {x: 131.5, y: -65}
+        - {x: 136.5, y: -63}
+        - {x: 154.5, y: -44}
+        - {x: 154.5, y: -35}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Magnus_Belt
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 237
+        width: 155
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -77.49999, y: 15}
+        - {x: 77.49999, y: 15}
+        - {x: -77.49999, y: -15}
+      - - {x: -77.49999, y: -15}
+        - {x: 77.49999, y: 15}
+        - {x: 77.49999, y: -15}
+      physicsShape:
+      - - {x: -76.5, y: 15}
+        - {x: -77.5, y: 14}
+        - {x: -77.5, y: -14}
+        - {x: -76.5, y: -15}
+        - {x: 76.5, y: -15}
+        - {x: 77.5, y: -14}
+        - {x: 77.5, y: 14}
+        - {x: 76.5, y: 15}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Joan_Hair
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 185
+        width: 166
+        height: 153
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -83.00001, y: 76.5}
+        - {x: 83.00001, y: 76.5}
+        - {x: -83.00001, y: -76.5}
+      - - {x: -83.00001, y: -76.5}
+        - {x: 83.00001, y: 76.5}
+        - {x: 83.00001, y: -76.5}
+      physicsShape:
+      - - {x: -15, y: -3.5}
+        - {x: 4, y: 25.5}
+        - {x: 20, y: 26.5}
+        - {x: 27, y: 30.5}
+        - {x: 34, y: 20.5}
+        - {x: 39, y: -2.5}
+        - {x: 42, y: -37.5}
+        - {x: 41, y: -61.5}
+        - {x: 45, y: -67.5}
+        - {x: 54, y: -66.5}
+        - {x: 69, y: -59.5}
+        - {x: 79, y: -50.5}
+        - {x: 81.99999, y: -44.5}
+        - {x: 82.99999, y: -41.5}
+        - {x: 82.99999, y: -11.5}
+        - {x: 81.99999, y: -5.5}
+        - {x: 70, y: 25.5}
+        - {x: 61, y: 44.5}
+        - {x: 53, y: 58.5}
+        - {x: 36, y: 74.5}
+        - {x: 31, y: 76.5}
+        - {x: -29, y: 76.5}
+        - {x: -40, y: 70.5}
+        - {x: -58, y: 50.5}
+        - {x: -76, y: 15.5}
+        - {x: -82.99999, y: -4.5}
+        - {x: -82.99999, y: -36.5}
+        - {x: -77, y: -46.5}
+        - {x: -60, y: -61.5}
+        - {x: -30, y: -76.5}
+        - {x: -15, y: -76.5}
+        - {x: -14, y: -68.5}
+        - {x: -22, y: -50.5}
+        - {x: -22, y: -29.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Francois_Moustache
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 512
+        width: 84
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.00001, y: 9}
+        - {x: 42.00001, y: 9}
+        - {x: -42.00001, y: -9}
+      - - {x: -42.00001, y: -9}
+        - {x: 42.00001, y: 9}
+        - {x: 42.00001, y: -9}
+      physicsShape:
+      - - {x: 18, y: 9}
+        - {x: 4, y: 9}
+        - {x: 2, y: 5}
+        - {x: 2, y: -2}
+        - {x: 3, y: -5}
+        - {x: 22, y: -9}
+        - {x: 42, y: -9}
+        - {x: 42, y: 0.9999999}
+        - {x: 36, y: 5}
+        - {x: -26, y: 9}
+        - {x: -33, y: 8}
+        - {x: -38, y: 7}
+        - {x: -42, y: 4}
+        - {x: -42, y: -4}
+        - {x: -41, y: -6}
+        - {x: -38, y: -7}
+        - {x: -35, y: -7}
+        - {x: -9, y: -6}
+        - {x: -6, y: 0}
+        - {x: -6, y: 9}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Matilda_Spear
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 532
+        width: 90
+        height: 492
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6778888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 246}
+        - {x: 45, y: 246}
+        - {x: -45, y: -246.0001}
+      - - {x: -45, y: -246.0001}
+        - {x: 45, y: 246}
+        - {x: 45, y: -246.0001}
+      physicsShape:
+      - - {x: 22, y: 62}
+        - {x: 29, y: 71}
+        - {x: 31, y: 75}
+        - {x: 28, y: 88}
+        - {x: 34, y: 113}
+        - {x: 44, y: 124}
+        - {x: 45, y: 127}
+        - {x: 45, y: 146}
+        - {x: 7, y: 245}
+        - {x: 6, y: 246}
+        - {x: -8, y: 246}
+        - {x: -12, y: 230}
+        - {x: -45, y: 147}
+        - {x: -45, y: 125}
+        - {x: -28, y: 106}
+        - {x: -29, y: 96}
+        - {x: -30, y: 81}
+        - {x: -29, y: 75}
+        - {x: -26, y: 67}
+        - {x: -20, y: 62}
+        - {x: -20, y: -231}
+        - {x: -19, y: -238}
+        - {x: -9.999999, y: -246}
+        - {x: 11, y: -246}
+        - {x: 20, y: -236}
+        - {x: 20, y: 63}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Billie_Belt
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 0
+        width: 145
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72.5, y: 22.99999}
+        - {x: 72.5, y: 22.99999}
+        - {x: -72.5, y: -22.99999}
+      - - {x: -72.5, y: -22.99999}
+        - {x: 72.5, y: 22.99999}
+        - {x: 72.5, y: -22.99999}
+      physicsShape:
+      - - {x: -13.5, y: 23}
+        - {x: -72.5, y: 17}
+        - {x: -72.5, y: -19}
+        - {x: -6.5, y: -23}
+        - {x: 58.5, y: -23}
+        - {x: 72.5, y: -15}
+        - {x: 72.5, y: 17}
+        - {x: 63.5, y: 23}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Billie_Hat
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 68
+        width: 135
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -67.50001, y: 69.99999}
+        - {x: 67.50001, y: 69.99999}
+        - {x: -67.50001, y: -69.99999}
+      - - {x: -67.50001, y: -69.99999}
+        - {x: 67.50001, y: 69.99999}
+        - {x: 67.50001, y: -69.99999}
+      physicsShape:
+      - - {x: 16.5, y: -32}
+        - {x: 39.5, y: -38}
+        - {x: 51.5, y: -37}
+        - {x: 63.5, y: -28}
+        - {x: 67.5, y: -21}
+        - {x: 67.5, y: 6}
+        - {x: 65.5, y: 19}
+        - {x: 52.5, y: 48}
+        - {x: 35.5, y: 62}
+        - {x: 17.5, y: 70}
+        - {x: -23.5, y: 70}
+        - {x: -39.5, y: 64}
+        - {x: -57.5, y: 48}
+        - {x: -67.5, y: 29}
+        - {x: -67.5, y: -29}
+        - {x: -63.5, y: -32}
+        - {x: -54.5, y: -33}
+        - {x: -54.5, y: -58}
+        - {x: -49.5, y: -69}
+        - {x: -44.5, y: -70}
+        - {x: -19.5, y: -70}
+        - {x: -10.5, y: -63}
+        - {x: -8.5, y: -38}
+        - {x: 8.5, y: -37}
+        - {x: 12.5, y: -31}
+        - {x: -6.5, y: -39}
+        - {x: -6.5, y: -53}
+        - {x: 49.5, y: -53}
+        - {x: 49.5, y: -42}
+        - {x: 34.5, y: -31}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jack_Hook
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 499
+        width: 189
+        height: 85
+      alignment: 9
+      pivot: {x: 0.1797878, y: 0.5438153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -94.5, y: 42.5}
+        - {x: 94.50002, y: 42.5}
+        - {x: -94.5, y: -42.50001}
+      - - {x: -94.5, y: -42.50001}
+        - {x: 94.50002, y: 42.5}
+        - {x: 94.50002, y: -42.50001}
+      physicsShape:
+      - - {x: 93.5, y: 22.5}
+        - {x: 79.5, y: 35.5}
+        - {x: 68.5, y: 42.5}
+        - {x: 61.5, y: 42.5}
+        - {x: 54.49999, y: 40.5}
+        - {x: 44.5, y: 1.499996}
+        - {x: 30.5, y: 20.5}
+        - {x: 21.5, y: 24.5}
+        - {x: -19.5, y: 30.5}
+        - {x: -34.5, y: 42.5}
+        - {x: -93.5, y: 42.5}
+        - {x: -94.5, y: 41.5}
+        - {x: -94.5, y: -31.5}
+        - {x: -90.5, y: -34.5}
+        - {x: -42.5, y: -37.5}
+        - {x: 4.499992, y: -19.5}
+        - {x: 10.5, y: -28.5}
+        - {x: 29.5, y: -42.5}
+        - {x: 67.5, y: -42.5}
+        - {x: 88.49998, y: -29.5}
+        - {x: 94.49998, y: -16.5}
+        - {x: 94.49998, y: 17.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Archie_Hood
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 0
+        width: 106
+        height: 124
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -53, y: 61.99999}
+        - {x: 53, y: 61.99999}
+        - {x: -53, y: -61.99999}
+      - - {x: -53, y: -61.99999}
+        - {x: 53, y: 61.99999}
+        - {x: 53, y: -61.99999}
+      physicsShape:
+      - - {x: 49, y: 39}
+        - {x: 53, y: 50}
+        - {x: 53, y: 61}
+        - {x: 52, y: 62}
+        - {x: 42, y: 62}
+        - {x: -26, y: 14}
+        - {x: -40, y: 4}
+        - {x: -50, y: -5}
+        - {x: -53, y: -13}
+        - {x: -53, y: -38}
+        - {x: -51, y: -43}
+        - {x: -47, y: -49}
+        - {x: -39, y: -56}
+        - {x: -29, y: -61}
+        - {x: -15, y: -62}
+        - {x: 11, y: -62}
+        - {x: 12, y: -61}
+        - {x: 18, y: -49}
+        - {x: 31, y: -9.999999}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Archie_Bow
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 612
+        width: 154
+        height: 412
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -77.00001, y: 206.0001}
+        - {x: 77.00001, y: 206.0001}
+        - {x: -77.00001, y: -206.0001}
+      - - {x: -77.00001, y: -206.0001}
+        - {x: 77.00001, y: 206.0001}
+        - {x: 77.00001, y: -206.0001}
+      physicsShape:
+      - - {x: -17, y: -171}
+        - {x: -12, y: -162}
+        - {x: 4, y: -152}
+        - {x: 36, y: -122}
+        - {x: 46, y: -109}
+        - {x: 64, y: -77}
+        - {x: 75, y: -43}
+        - {x: 77, y: -29}
+        - {x: 77, y: 27}
+        - {x: 73, y: 51}
+        - {x: 66, y: 72}
+        - {x: 46, y: 109}
+        - {x: 36, y: 122}
+        - {x: 0, y: 155}
+        - {x: -18, y: 166}
+        - {x: -20, y: 173}
+        - {x: -28, y: 176}
+        - {x: -29, y: 188}
+        - {x: -32, y: 198}
+        - {x: -42, y: 206}
+        - {x: -64, y: 206}
+        - {x: -74, y: 200}
+        - {x: -77, y: 195}
+        - {x: -77, y: 161}
+        - {x: -70, y: 144}
+        - {x: -53, y: 124}
+        - {x: -47, y: 121}
+        - {x: -47, y: -122}
+        - {x: -49, y: -122}
+        - {x: -63, y: -134}
+        - {x: -75, y: -154}
+        - {x: -77, y: -161}
+        - {x: -77, y: -193}
+        - {x: -71, y: -202}
+        - {x: -66, y: -206}
+        - {x: -38, y: -206}
+        - {x: -30, y: -192}
+        - {x: -29, y: -188}
+        - {x: -23, y: -175}
+        - {x: -33, y: 110}
+        - {x: -27, y: 105}
+        - {x: -22, y: 101}
+        - {x: -6, y: 84.99999}
+        - {x: 6, y: 67}
+        - {x: 14, y: 52}
+        - {x: 21, y: 24}
+        - {x: 23, y: 9.999999}
+        - {x: 25, y: -9.999999}
+        - {x: 24, y: -11}
+        - {x: 22, y: -26}
+        - {x: 14, y: -52}
+        - {x: 7, y: -65}
+        - {x: -6, y: -84.99999}
+        - {x: -27, y: -105}
+        - {x: -33, y: -110}
+        - {x: -32, y: -110}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Aurelius_Helmet
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 185
+        height: 183
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -92.50001, y: 91.49999}
+        - {x: 92.50001, y: 91.49999}
+        - {x: -92.50001, y: -91.49999}
+      - - {x: -92.50001, y: -91.49999}
+        - {x: 92.50001, y: 91.49999}
+        - {x: 92.50001, y: -91.49999}
+      physicsShape:
+      - - {x: 38.5, y: -19.5}
+        - {x: 53.5, y: -60.5}
+        - {x: 56.5, y: -83.5}
+        - {x: 60.5, y: -86.5}
+        - {x: 89.5, y: -86.5}
+        - {x: 92.5, y: -84.5}
+        - {x: 92.5, y: -57.5}
+        - {x: 88.5, y: -40.5}
+        - {x: 81.5, y: -15.5}
+        - {x: 69.5, y: 9.5}
+        - {x: 30.5, y: 45.5}
+        - {x: 29.5, y: 64.5}
+        - {x: 36.5, y: 82.5}
+        - {x: 33.5, y: 91.5}
+        - {x: 2.5, y: 91.5}
+        - {x: -7.5, y: 86.5}
+        - {x: -25.5, y: 73.5}
+        - {x: -43.5, y: 54.5}
+        - {x: -54.5, y: 38.5}
+        - {x: -65.5, y: 17.5}
+        - {x: -72.5, y: -9.5}
+        - {x: -73.5, y: -20.5}
+        - {x: -72.5, y: -43.5}
+        - {x: -69.5, y: -53.5}
+        - {x: -86.5, y: -71.5}
+        - {x: -91.5, y: -79.5}
+        - {x: -92.5, y: -80.5}
+        - {x: -92.5, y: -89.5}
+        - {x: -90.5, y: -91.5}
+        - {x: -10.5, y: -91.5}
+        - {x: -9.5, y: -90.5}
+        - {x: 5.5, y: -55.5}
+        - {x: 31.5, y: -21.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Francois_Body
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 210
+        width: 178
+        height: 166
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -89.00001, y: 83.00001}
+        - {x: 89.00001, y: 83.00001}
+        - {x: -89.00001, y: -83.00001}
+      - - {x: -89.00001, y: -83.00001}
+        - {x: 89.00001, y: 83.00001}
+        - {x: 89.00001, y: -83.00001}
+      physicsShape:
+      - - {x: 67, y: -50}
+        - {x: 75, y: -35}
+        - {x: 84.99999, y: 6}
+        - {x: 88.99999, y: 9}
+        - {x: 88.99999, y: 20}
+        - {x: 65, y: 57}
+        - {x: 54, y: 72}
+        - {x: 32, y: 81.99999}
+        - {x: 26, y: 82.99999}
+        - {x: -15, y: 82.99999}
+        - {x: -25, y: 79.99999}
+        - {x: -36, y: 74}
+        - {x: -51, y: 62}
+        - {x: -63, y: 45}
+        - {x: -68, y: 30}
+        - {x: -83.99999, y: -15}
+        - {x: -84.99999, y: -18}
+        - {x: -88.99999, y: -29}
+        - {x: -88.99999, y: -41}
+        - {x: -85.99999, y: -43}
+        - {x: -59, y: -50}
+        - {x: -54, y: -58}
+        - {x: -36, y: -75}
+        - {x: -20, y: -81.99999}
+        - {x: -13, y: -82.99999}
+        - {x: 22, y: -82.99999}
+        - {x: 27, y: -81.99999}
+        - {x: 46, y: -72}
+        - {x: 62, y: -57}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Matilda_Hair
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 143
+        width: 136
+        height: 104
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -67.99999, y: 51.99999}
+        - {x: 67.99999, y: 51.99999}
+        - {x: -67.99999, y: -51.99999}
+      - - {x: -67.99999, y: -51.99999}
+        - {x: 67.99999, y: 51.99999}
+        - {x: 67.99999, y: -51.99999}
+      physicsShape:
+      - - {x: 26, y: 6}
+        - {x: 43, y: -9}
+        - {x: 46, y: -43}
+        - {x: 51, y: -49}
+        - {x: 64, y: -45}
+        - {x: 68, y: -31}
+        - {x: 68, y: 4}
+        - {x: 66, y: 14}
+        - {x: 55, y: 32}
+        - {x: 43, y: 43}
+        - {x: 27, y: 50}
+        - {x: 21, y: 52}
+        - {x: -20, y: 52}
+        - {x: -42, y: 45}
+        - {x: -59, y: 28}
+        - {x: -68, y: 8}
+        - {x: -68, y: -40}
+        - {x: -59, y: -52}
+        - {x: -48, y: -52}
+        - {x: -45, y: -48}
+        - {x: -37, y: -26}
+        - {x: 17, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Matilda_Shield
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 378
+        width: 162
+        height: 162
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -81.00001, y: 81.00001}
+        - {x: 81.00001, y: 81.00001}
+        - {x: -81.00001, y: -81.00001}
+      - - {x: -81.00001, y: -81.00001}
+        - {x: 81.00001, y: 81.00001}
+        - {x: 81.00001, y: -81.00001}
+      physicsShape:
+      - - {x: 80.99999, y: -23}
+        - {x: 80.99999, y: 22}
+        - {x: 79, y: 30}
+        - {x: 67, y: 50}
+        - {x: 55, y: 64}
+        - {x: 30, y: 79.99999}
+        - {x: 23, y: 80.99999}
+        - {x: -22, y: 80.99999}
+        - {x: -30, y: 78}
+        - {x: -44, y: 71}
+        - {x: -50, y: 67}
+        - {x: -63, y: 55}
+        - {x: -75, y: 39}
+        - {x: -80.99999, y: 21}
+        - {x: -80.99999, y: -24}
+        - {x: -72, y: -44}
+        - {x: -67, y: -50}
+        - {x: -55, y: -64}
+        - {x: -37, y: -75}
+        - {x: -25, y: -80.99999}
+        - {x: 23, y: -80.99999}
+        - {x: 44, y: -72}
+        - {x: 64, y: -55}
+        - {x: 79.99999, y: -30}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Magnus_Hat
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 269
+        width: 258
+        height: 176
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -129, y: 88}
+        - {x: 129, y: 88}
+        - {x: -129, y: -88}
+      - - {x: -129, y: -88}
+        - {x: 129, y: 88}
+        - {x: 129, y: -88}
+      physicsShape:
+      - - {x: 65, y: -49}
+        - {x: 64, y: -36}
+        - {x: 62, y: -24}
+        - {x: 58, y: 8}
+        - {x: 50, y: 79.99999}
+        - {x: 43, y: 87.99999}
+        - {x: -55, y: 87.99999}
+        - {x: -58, y: 86.99999}
+        - {x: -65, y: 80.99999}
+        - {x: -89.99999, y: 14}
+        - {x: -94.99999, y: 6}
+        - {x: -89.99999, y: -5}
+        - {x: -82.99999, y: -3}
+        - {x: -55, y: 13}
+        - {x: -58, y: -17}
+        - {x: -62, y: -25}
+        - {x: -65, y: -45}
+        - {x: -87.99999, y: -57}
+        - {x: -102, y: -61}
+        - {x: -122, y: -70}
+        - {x: -129, y: -77}
+        - {x: -129, y: -85.99999}
+        - {x: -127, y: -87.99999}
+        - {x: 127, y: -87.99999}
+        - {x: 129, y: -85.99999}
+        - {x: 129, y: -75}
+        - {x: 110, y: -62}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Jack_Headband
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 340
+        width: 200
+        height: 157
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -100, y: 78.5}
+        - {x: 100, y: 78.5}
+        - {x: -100, y: -78.5}
+      - - {x: -100, y: -78.5}
+        - {x: 100, y: 78.5}
+        - {x: 100, y: -78.5}
+      physicsShape:
+      - - {x: 0.9999999, y: -61.5}
+        - {x: 11, y: -50.5}
+        - {x: 17, y: -42.5}
+        - {x: 19, y: -18.5}
+        - {x: 14, y: -14.5}
+        - {x: 100, y: 28.5}
+        - {x: 100, y: 40.5}
+        - {x: 92.99999, y: 50.5}
+        - {x: 79, y: 64.5}
+        - {x: 62, y: 75.5}
+        - {x: 51, y: 78.5}
+        - {x: 6, y: 78.5}
+        - {x: -19, y: 66.5}
+        - {x: -33, y: 50.5}
+        - {x: -46, y: 28.5}
+        - {x: -53, y: 10.5}
+        - {x: -64, y: 6.5}
+        - {x: -78, y: -11.5}
+        - {x: -78, y: -25.5}
+        - {x: -91.99999, y: -44.5}
+        - {x: -100, y: -61.5}
+        - {x: -100, y: -78.5}
+        - {x: -82.99999, y: -78.5}
+        - {x: -67, y: -73.5}
+        - {x: -47, y: -58.5}
+        - {x: -31, y: -67.5}
+        - {x: -15, y: -67.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Matilda_Braid
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 249
+        width: 114
+        height: 104
+      alignment: 9
+      pivot: {x: 0.7286859, y: 0.6880056}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: 52.00001}
+        - {x: 57.00001, y: 52.00001}
+        - {x: -57, y: -51.99999}
+      - - {x: -57, y: -51.99999}
+        - {x: 57.00001, y: 52.00001}
+        - {x: 57.00001, y: -51.99999}
+      physicsShape:
+      - - {x: 51, y: -2}
+        - {x: 57, y: 10}
+        - {x: 57, y: 34}
+        - {x: 45, y: 50}
+        - {x: 42, y: 52}
+        - {x: 9, y: 52}
+        - {x: 6, y: 51}
+        - {x: -0.9999981, y: 43}
+        - {x: -54, y: -7}
+        - {x: -57, y: -14}
+        - {x: -57, y: -37}
+        - {x: -47, y: -49.99999}
+        - {x: -42, y: -51.99999}
+        - {x: -15, y: -51.99999}
+        - {x: -2.999998, y: -42}
+        - {x: 21, y: -20}
+        - {x: 35, y: -13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Joan_Shield
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 383
+        width: 135
+        height: 177
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -67.50001, y: 88.5}
+        - {x: 67.50001, y: 88.5}
+        - {x: -67.50001, y: -88.5}
+      - - {x: -67.50001, y: -88.5}
+        - {x: 67.50001, y: 88.5}
+        - {x: 67.50001, y: -88.5}
+      physicsShape:
+      - - {x: 67.5, y: -36.5}
+        - {x: 67.5, y: 74.5}
+        - {x: 64.5, y: 77.5}
+        - {x: 56.5, y: 80.5}
+        - {x: 26.5, y: 85.5}
+        - {x: 14.5, y: 88.5}
+        - {x: -15.5, y: 88.5}
+        - {x: -32.5, y: 85.5}
+        - {x: -41.5, y: 82.5}
+        - {x: -60.5, y: 78.5}
+        - {x: -64.5, y: 77.5}
+        - {x: -67.5, y: 75.5}
+        - {x: -67.5, y: -36.5}
+        - {x: -62.5, y: -41.5}
+        - {x: -52.5, y: -50.5}
+        - {x: -41.5, y: -59.5}
+        - {x: -13.5, y: -81.5}
+        - {x: -5.5, y: -88.5}
+        - {x: 5.5, y: -88.5}
+        - {x: 13.5, y: -81.5}
+        - {x: 51.5, y: -50.5}
+        - {x: 62.5, y: -41.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Magnus_Beard
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 0
+        width: 140
+        height: 222
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -69.99999, y: 111}
+        - {x: 69.99999, y: 111}
+        - {x: -69.99999, y: -111}
+      - - {x: -69.99999, y: -111}
+        - {x: 69.99999, y: 111}
+        - {x: 69.99999, y: -111}
+      physicsShape:
+      - - {x: 66, y: -18}
+        - {x: 70, y: 9}
+        - {x: 70, y: 52}
+        - {x: 69, y: 66}
+        - {x: 66, y: 89.99999}
+        - {x: 62, y: 110}
+        - {x: 60, y: 111}
+        - {x: 51, y: 111}
+        - {x: 49, y: 109}
+        - {x: 44, y: 94.99999}
+        - {x: 34, y: 71}
+        - {x: 20, y: 72}
+        - {x: -5, y: 71}
+        - {x: -20, y: 66}
+        - {x: -34, y: 90.99999}
+        - {x: -40, y: 96.99999}
+        - {x: -47, y: 100}
+        - {x: -61, y: 104}
+        - {x: -67, y: 103}
+        - {x: -70, y: 101}
+        - {x: -70, y: 6}
+        - {x: -67, y: 0}
+        - {x: -27, y: -62}
+        - {x: -9, y: -89.99999}
+        - {x: -0.9999999, y: -102}
+        - {x: 5, y: -108}
+        - {x: 12, y: -111}
+        - {x: 37, y: -111}
+        - {x: 43, y: -108}
+        - {x: 53, y: -91.99999}
+        - {x: 54, y: -79.99999}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_Francois_Rapier
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 671
+        width: 147
+        height: 353
+      alignment: 9
+      pivot: {x: 0.5126677, y: 0.1782107}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -73.5, y: 176.5001}
+        - {x: 73.5, y: 176.5001}
+        - {x: -73.5, y: -176.5}
+      - - {x: -73.5, y: -176.5}
+        - {x: 73.5, y: 176.5001}
+        - {x: 73.5, y: -176.5}
+      physicsShape:
+      - - {x: 73.5, y: -97.5}
+        - {x: 73.5, y: -84.5}
+        - {x: 28.5, y: -71.5}
+        - {x: 8.5, y: -70.5}
+        - {x: 7.5, y: 173.5}
+        - {x: 5.5, y: 176.5}
+        - {x: -3.5, y: 176.5}
+        - {x: -5.5, y: 174.5}
+        - {x: -5.5, y: -71.5}
+        - {x: -10.5, y: -69.5}
+        - {x: -37.5, y: -80.5}
+        - {x: -73.49999, y: -85.5}
+        - {x: -73.49999, y: -100.5}
+        - {x: -53.5, y: -120.5}
+        - {x: -52.5, y: -136.5}
+        - {x: -46.5, y: -156.5}
+        - {x: -21.5, y: -176.5}
+        - {x: 14.5, y: -176.5}
+        - {x: 55.5, y: -128.5}
+        - {x: 56.5, y: -119.5}
+        - {x: 70.5, y: -101.5}
+        - {x: -22.5, y: -155.5}
+        - {x: -29.5, y: -149.5}
+        - {x: -29.5, y: -148.5}
+        - {x: -31.5, y: -145.5}
+        - {x: -34.5, y: -141.5}
+        - {x: -34.5, y: -139.5}
+        - {x: -36.5, y: -135.5}
+        - {x: -36.5, y: -132.5}
+        - {x: -37.5, y: -131.5}
+        - {x: -18.5, y: -132.5}
+        - {x: -18.5, y: -158.5}
+        - {x: -19.5, y: -157.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Hero_Archie_Bow: 21300048
+      Hero_Archie_Hat: 21300044
+      Hero_Archie_Hood: 21300032
+      Hero_Aurelius_Helmet: 21300016
+      Hero_Aurelius_Trident: 21300024
+      Hero_Billie_Belt: 21300006
+      Hero_Billie_Hat: 21300046
+      Hero_Billie_Revolver: 21300000
+      Hero_Francois_Body: 21300028
+      Hero_Francois_Hat: 21300040
+      Hero_Francois_Moustache: 21300010
+      Hero_Francois_Rapier: 21300030
+      Hero_Jack_Cutlass: 21300002
+      Hero_Jack_Headband: 21300034
+      Hero_Jack_Hook: 21300004
+      Hero_Joan_Hair: 21300038
+      Hero_Joan_Shield: 21300012
+      Hero_Joan_Sword: 21300036
+      Hero_Magnus_Beard: 21300022
+      Hero_Magnus_Belt: 21300008
+      Hero_Magnus_Hat: 21300026
+      Hero_Magnus_Staff: 21300014
+      Hero_Matilda_Braid: 21300020
+      Hero_Matilda_Hair: 21300050
+      Hero_Matilda_Shield: 21300042
+      Hero_Matilda_Spear: 21300018
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

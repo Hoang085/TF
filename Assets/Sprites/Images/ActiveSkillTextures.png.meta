@@ -1,0 +1,343 @@
+fileFormatVersion: 2
+guid: f1b9ea8cb80143ceb605dc92c2e53c9d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Meteorite
+  - first:
+      213: 21300002
+    second: IceCube
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 47
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 94
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Meteorite
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 852
+        width: 182
+        height: 172
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -91, y: 86}
+        - {x: 91, y: 86}
+        - {x: -91, y: -86}
+      - - {x: -91, y: -86}
+        - {x: 91, y: 86}
+        - {x: 91, y: -86}
+      physicsShape:
+      - - {x: 89.99999, y: -26}
+        - {x: 90.99999, y: -16}
+        - {x: 90.99999, y: 20}
+        - {x: 89.99999, y: 31}
+        - {x: 82.99999, y: 40}
+        - {x: 73, y: 51}
+        - {x: 57, y: 58}
+        - {x: 18, y: 59}
+        - {x: 0.9999999, y: 66}
+        - {x: -12, y: 78}
+        - {x: -21, y: 82.99999}
+        - {x: -42, y: 82.99999}
+        - {x: -51, y: 81.99999}
+        - {x: -63, y: 70}
+        - {x: -69, y: 54}
+        - {x: -86.99999, y: 38}
+        - {x: -89.99999, y: 31}
+        - {x: -89.99999, y: 0}
+        - {x: -79, y: -13}
+        - {x: -62, y: -44}
+        - {x: -56, y: -51}
+        - {x: -42, y: -58}
+        - {x: -20, y: -60}
+        - {x: -7, y: -71}
+        - {x: 2, y: -76}
+        - {x: 36, y: -79.99999}
+        - {x: 60, y: -79.99999}
+        - {x: 77, y: -69}
+        - {x: 79, y: -45}
+        - {x: 86.99999, y: -31}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceCube
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 867
+        width: 139.5
+        height: 152
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -69.75, y: 76.00001}
+        - {x: 69.75, y: 76.00001}
+        - {x: -69.75, y: -76.00001}
+      - - {x: -69.75, y: -76.00001}
+        - {x: 69.75, y: 76.00001}
+        - {x: 69.75, y: -76.00001}
+      physicsShape:
+      - - {x: 53, y: 32}
+        - {x: 47, y: 40}
+        - {x: 9, y: 62}
+        - {x: -9, y: 62}
+        - {x: -33, y: 50}
+        - {x: -45, y: 42}
+        - {x: -54, y: 34}
+        - {x: -58, y: 25}
+        - {x: -58, y: -28}
+        - {x: -50, y: -39}
+        - {x: -8, y: -62}
+        - {x: 11, y: -62}
+        - {x: 54, y: -34}
+        - {x: 56, y: -26}
+        - {x: 56, y: 25}
+        - {x: -8, y: -51}
+        - {x: -15, y: -46}
+        - {x: -22, y: -42}
+        - {x: -27, y: -39}
+        - {x: -39, y: -33}
+        - {x: -42, y: -31}
+        - {x: -46, y: -27}
+        - {x: -48, y: -22}
+        - {x: -49, y: -21}
+        - {x: -49, y: 21}
+        - {x: -48, y: 20}
+        - {x: -41, y: 16}
+        - {x: -34, y: 13}
+        - {x: -32, y: 11}
+        - {x: -25, y: 7}
+        - {x: -18, y: 4}
+        - {x: -16, y: 2}
+        - {x: -9, y: -0.9999999}
+        - {x: -2, y: -3}
+        - {x: 4, y: -3}
+        - {x: 11, y: -0.9999999}
+        - {x: 18, y: 2}
+        - {x: 32, y: 9.999999}
+        - {x: 34, y: 12}
+        - {x: 41, y: 15}
+        - {x: 47, y: 21}
+        - {x: 47, y: 24}
+        - {x: 44, y: 27}
+        - {x: 40, y: 27}
+        - {x: 35, y: 25}
+        - {x: 33, y: 23}
+        - {x: 26, y: 20}
+        - {x: 19, y: 16}
+        - {x: 13, y: 12}
+        - {x: 7, y: 9}
+        - {x: 6, y: 8}
+        - {x: -4, y: 8}
+        - {x: -5, y: 9}
+        - {x: -7, y: 9}
+        - {x: -12, y: 13}
+        - {x: -26, y: 20}
+        - {x: -28, y: 22}
+        - {x: -35, y: 26}
+        - {x: -44, y: 30}
+        - {x: -38, y: 34}
+        - {x: -28, y: 39}
+        - {x: -14, y: 47}
+        - {x: -7, y: 52}
+        - {x: 0, y: 53}
+        - {x: 0.9999999, y: 52}
+        - {x: 7, y: 51}
+        - {x: 8, y: 49}
+        - {x: 15, y: 45}
+        - {x: 27, y: 39}
+        - {x: 29, y: 37}
+        - {x: 34, y: 34}
+        - {x: 39, y: 32}
+        - {x: 43, y: 28}
+        - {x: 46, y: 23}
+        - {x: 46, y: -22}
+        - {x: 45, y: -23}
+        - {x: 44, y: -27}
+        - {x: 41, y: -30}
+        - {x: 35, y: -33}
+        - {x: 21, y: -41}
+        - {x: 16, y: -44}
+        - {x: 9.999999, y: -48}
+        - {x: 4, y: -51}
+        - {x: 3, y: -52}
+        - {x: -5, y: -52}
+        - {x: -6, y: -51}
+        - {x: -34, y: -22}
+        - {x: -36, y: -26}
+        - {x: -36, y: -29}
+        - {x: -33, y: -30}
+        - {x: -30, y: -30}
+        - {x: -27, y: -27}
+        - {x: -27, y: -25}
+        - {x: -30, y: -22}
+        - {x: 9.999999, y: -0.9999999}
+        - {x: 5, y: -3}
+        - {x: 5, y: -11}
+        - {x: 38, y: -26}
+        - {x: 46, y: -26}
+        - {x: 46, y: -18}
+        - {x: 19, y: -0.9999999}
+        - {x: -42, y: 0}
+        - {x: -44, y: -2}
+        - {x: -44, y: -6}
+        - {x: -42, y: -8}
+        - {x: -37, y: -8}
+        - {x: -36, y: -5}
+        - {x: -36, y: -0.9999999}
+        - {x: -39, y: 0}
+        - {x: 32, y: 5}
+        - {x: 32, y: 0.9999999}
+        - {x: 35, y: -2}
+        - {x: 40, y: -2}
+        - {x: 41, y: 0.9999999}
+        - {x: 41, y: 7}
+        - {x: 36, y: 8}
+        - {x: 14, y: 38}
+        - {x: 12, y: 36}
+        - {x: 12, y: 33}
+        - {x: 15, y: 30}
+        - {x: 17, y: 30}
+        - {x: 20, y: 33}
+        - {x: 20, y: 36}
+        - {x: 18, y: 38}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      IceCube: 21300002
+      Meteorite: 21300000
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

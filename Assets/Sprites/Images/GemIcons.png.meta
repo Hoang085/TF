@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 96029c6cc5f64c779fe7a4042e593f08
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: GemIcons_3
+  - first:
+      213: 21300002
+    second: GemIcons_1
+  - first:
+      213: 21300004
+    second: GemIcons_2
+  - first:
+      213: 21300006
+    second: GemIcons_0
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 47
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GemIcons_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -256, y: 256}
+        - {x: 256, y: 256}
+        - {x: -256, y: -256}
+      - - {x: -256, y: -256}
+        - {x: 256, y: 256}
+        - {x: 256, y: -256}
+      physicsShape:
+      - - {x: -51, y: -176}
+        - {x: -35, y: -176}
+        - {x: -20, y: -170}
+        - {x: -3, y: -150}
+        - {x: 115, y: -150}
+        - {x: 138, y: -175}
+        - {x: 152, y: -182}
+        - {x: 175, y: -179}
+        - {x: 185, y: -173}
+        - {x: 201, y: -155}
+        - {x: 209, y: -147}
+        - {x: 209, y: -116}
+        - {x: 203, y: -109}
+        - {x: 182, y: -89}
+        - {x: 181, y: -79.99999}
+        - {x: 188, y: 24}
+        - {x: 187, y: 37}
+        - {x: 178, y: 47}
+        - {x: 178, y: 66}
+        - {x: 173, y: 82}
+        - {x: 189, y: 119}
+        - {x: 188, y: 140}
+        - {x: 183, y: 161}
+        - {x: 173, y: 177}
+        - {x: 154, y: 194}
+        - {x: 133, y: 203}
+        - {x: 119, y: 204}
+        - {x: -122, y: 204}
+        - {x: -145, y: 195}
+        - {x: -157, y: 187}
+        - {x: -172, y: 168}
+        - {x: -179, y: 153}
+        - {x: -181, y: 138}
+        - {x: -181, y: 119}
+        - {x: -167, y: 88}
+        - {x: -172, y: 69}
+        - {x: -183, y: 36}
+        - {x: -176, y: -62}
+        - {x: -194, y: -76}
+        - {x: -218, y: -103}
+        - {x: -218, y: -137}
+        - {x: -191, y: -164}
+        - {x: -180, y: -170}
+        - {x: -156, y: -169}
+        - {x: -146, y: -161}
+        - {x: -131, y: -177}
+        - {x: -118, y: -183}
+        - {x: -94, y: -183}
+        - {x: -82, y: -176}
+        - {x: -71, y: -163}
+        - {x: -64, y: -171}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemIcons_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -256, y: 256}
+        - {x: 256, y: 256}
+        - {x: -256, y: -256}
+      - - {x: -256, y: -256}
+        - {x: 256, y: 256}
+        - {x: 256, y: -256}
+      physicsShape:
+      - - {x: 89, y: -158}
+        - {x: 117, y: -136}
+        - {x: 128, y: -118}
+        - {x: 129, y: -108}
+        - {x: 129, y: -75}
+        - {x: 126, y: -66.99999}
+        - {x: 82, y: 29}
+        - {x: 90, y: 35}
+        - {x: 91.99999, y: 52}
+        - {x: 85, y: 61}
+        - {x: 98.99999, y: 76}
+        - {x: 100, y: 83}
+        - {x: 88, y: 89}
+        - {x: 85.99999, y: 104}
+        - {x: 84, y: 110}
+        - {x: 79.99999, y: 118}
+        - {x: 46, y: 161}
+        - {x: 22, y: 187}
+        - {x: 9, y: 192}
+        - {x: -11, y: 192}
+        - {x: -25, y: 184}
+        - {x: -47, y: 162}
+        - {x: -66.99999, y: 161}
+        - {x: -77, y: 156}
+        - {x: -109, y: 122}
+        - {x: -109, y: 97.99999}
+        - {x: -104, y: 77}
+        - {x: -94, y: 40}
+        - {x: -85.99999, y: 27}
+        - {x: -126, y: -62}
+        - {x: -134, y: -82}
+        - {x: -156, y: -105}
+        - {x: -163, y: -116}
+        - {x: -163, y: -143}
+        - {x: -156, y: -154}
+        - {x: -129, y: -180}
+        - {x: -103, y: -186}
+        - {x: -85.99999, y: -176}
+        - {x: -76, y: -163}
+        - {x: -60, y: -180}
+        - {x: -51, y: -185}
+        - {x: -45, y: -186}
+        - {x: -27, y: -186}
+        - {x: -9.999999, y: -179}
+        - {x: 5, y: -159}
+        - {x: 78, y: -159}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemIcons_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -256, y: 256}
+        - {x: 256, y: 256}
+        - {x: -256, y: -256}
+      - - {x: -256, y: -256}
+        - {x: 256, y: 256}
+        - {x: 256, y: -256}
+      physicsShape:
+      - - {x: 70, y: -111}
+        - {x: 91, y: -112}
+        - {x: 107, y: -101}
+        - {x: 133, y: -72.99999}
+        - {x: 136, y: -65}
+        - {x: 136, y: -47}
+        - {x: 135, y: -39}
+        - {x: 127, y: -28}
+        - {x: 105, y: -7}
+        - {x: 97.99999, y: 17}
+        - {x: 64, y: 57}
+        - {x: 61, y: 81}
+        - {x: 26, y: 118}
+        - {x: 18, y: 121}
+        - {x: -3, y: 121}
+        - {x: -11, y: 120}
+        - {x: -18, y: 114}
+        - {x: -47, y: 85}
+        - {x: -60, y: 57}
+        - {x: -87, y: 32}
+        - {x: -93, y: 16}
+        - {x: -106, y: -1}
+        - {x: -139, y: -32}
+        - {x: -143, y: -43}
+        - {x: -143, y: -71}
+        - {x: -111, y: -107}
+        - {x: -97.99999, y: -111}
+        - {x: -77, y: -111}
+        - {x: -66, y: -104}
+        - {x: -48, y: -85.99999}
+        - {x: -16, y: -117}
+        - {x: -8, y: -119}
+        - {x: 8, y: -119}
+        - {x: 16, y: -118}
+        - {x: 55, y: -100}
+        - {x: 59, y: -104}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GemIcons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -256, y: 256}
+        - {x: 256, y: 256}
+        - {x: -256, y: -256}
+      - - {x: -256, y: -256}
+        - {x: 256, y: 256}
+        - {x: 256, y: -256}
+      physicsShape:
+      - - {x: 43, y: 45}
+        - {x: 34, y: 49}
+        - {x: 17, y: 50}
+        - {x: -6, y: 71}
+        - {x: -14, y: 77}
+        - {x: -39, y: 77}
+        - {x: -44, y: 76}
+        - {x: -79.99999, y: 43}
+        - {x: -83, y: 34}
+        - {x: -83, y: 4}
+        - {x: -54, y: -28}
+        - {x: -41, y: -35}
+        - {x: -24, y: -36}
+        - {x: -5, y: -55}
+        - {x: 9.999999, y: -63}
+        - {x: 37, y: -63}
+        - {x: 70, y: -33}
+        - {x: 76, y: -20}
+        - {x: 76, y: 9.999999}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GemIcons_0: 21300006
+      GemIcons_1: 21300002
+      GemIcons_2: 21300004
+      GemIcons_3: 21300000
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
