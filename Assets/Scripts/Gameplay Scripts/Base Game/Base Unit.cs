@@ -26,8 +26,20 @@ public class BaseUnit : MonoBehaviour
 
             for(int i = 0; i < sprites.Count; i++)
             {
-                Debug.Log("Copy Sprite Component");
-                //sprites[i].gameObject.CopyComponent(unit.sprites[i].GetComponent<SpriteRenderer>());
+                if (i == unit.sprites.Count)
+                {
+                    sprites[i].sprite = null;
+                    continue; //skip if unit doesn't have the sprite needed for the last element
+                }
+
+                //Setting sprite renderer fields
+                sprites[i].sprite = unit.sprites[i].sprite;
+                sprites[i].color = unit.sprites[i].color;
+                sprites[i].sortingOrder = unit.sprites[i].sortingOrder;
+
+                //Setting sprites transform value 
+                sprites[i].transform.localPosition = unit.sprites[i].transform.localPosition;
+                sprites[i].transform.localRotation = unit.sprites[i].transform.localRotation;
             }
         }
     }
