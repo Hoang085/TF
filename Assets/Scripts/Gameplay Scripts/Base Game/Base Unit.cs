@@ -27,7 +27,7 @@ public class BaseUnit : MonoBehaviour
             for(int i = 0; i < sprites.Count; i++)
             {
                 Debug.Log("Copy Sprite Component");
-                sprites[i].gameObject.CopyComponent(unit.sprites[i].GetComponent<SpriteRenderer>());
+                //sprites[i].gameObject.CopyComponent(unit.sprites[i].GetComponent<SpriteRenderer>());
             }
         }
     }

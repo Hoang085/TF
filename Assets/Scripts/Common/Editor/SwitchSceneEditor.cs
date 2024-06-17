@@ -23,16 +23,16 @@ public static class SwitchSceneEditor
         EditorSceneManager.OpenScene("Assets/Resources/Scenes/Home.unity");
     }
 
-    [MenuItem("-SWITCH SCENE-/Level 1")]
-    static void Level1Scene()
+    [MenuItem("-SWITCH SCENE-/GamepLay")]
+    static void GameplayScene()
     {
-        EditorSceneManager.OpenScene("Assets/Resources/Scenes/Level 1.unity");
+        EditorSceneManager.OpenScene("Assets/Resources/Scenes/GamePlay.unity");
     }
     
     [MenuItem("-SWITCH SCENE-/Login")]
     static void LoginScene()
     {
-        EditorSceneManager.OpenScene("Assets/Resources/Scenes/LoginScene.unity");
+        EditorSceneManager.OpenScene("Assets/Resources/Scenes/Login.unity");
     }
     
     [MenuItem("-SWITCH SCENE-/Level 2")]

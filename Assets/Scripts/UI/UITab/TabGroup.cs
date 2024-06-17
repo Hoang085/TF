@@ -53,6 +53,7 @@ public class TabGroup : MonoBehaviour
                     return;
                 _currentTabSelect = tabSelect;
                 tabDatas[i]?.tabPanel.gameObject.SetActive(true);
+                title.text = tabDatas[i].tabPanel.gameObject.name;
                 if (showPanel)
                     tabDatas[i]?.tabPanel?.OnShowScreen();
                 tabDatas[i].tabButton.Selected();
