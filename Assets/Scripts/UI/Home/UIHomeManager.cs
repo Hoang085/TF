@@ -35,23 +35,21 @@ public class UIHomeManager : ManualSingletonMono<UIHomeManager>
         PopupManager.Instance.OnShowScreen(PopupName.Setting, ParentPopup.Hight);
     }
     
-    public void OnBtnShop()
+    public void OnBtnInforChar()
     {
         if (_onClick)
             return;
         BlockMultyClick();
-        PopupManager.Instance.OnShowScreen(PopupName.ShopAll);
+        PopupManager.Instance.OnShowScreen(PopupName.InforChar, ParentPopup.Hight);
     }
 
-    public void OnBtnLevelSelection()
+    public void OnBtnInforBase()
     {
         if (_onClick)
             return;
         BlockMultyClick();
-        ShowUIHome(false);
         
-        string levelName = $"Level {PlayerPrefs.GetInt("UnlockedLevel", 1)}";
-        PopupManager.Instance.ShowLoadingScene(levelName);
+        PopupManager.Instance.OnShowScreen(PopupName.InforBase, ParentPopup.Hight);
     }
     
     public void ShowUIHome(bool isShow = true)

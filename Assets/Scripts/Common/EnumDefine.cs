@@ -33,7 +33,6 @@ namespace H2910.Defines
     public enum PopupName
     {
         None, 
-        Gate,
         Setting,
         DailyReward,
         Mail,
@@ -41,7 +40,9 @@ namespace H2910.Defines
         Pause,
         Lose,
         Win,
-        BonusTime,
+        InforBase,
+        InforChar,
+        TimeLine,
     }
 
     public enum LocalNotiType
