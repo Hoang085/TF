@@ -7,13 +7,24 @@ public class BaseUnit : MonoBehaviour
 {
     [SerializeField] internal Unit unit;
     [SerializeField] List<SpriteRenderer> sprites;
+    [SerializeField] internal bool isEnemy;
 
-    private float atk;
-    private float health;
+    [Header("Player Stats")]
+    internal float atk;
+    internal float atkSpeed;
+    internal float health;
+    internal float moveSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (!isEnemy)
+        {
+            foreach(BaseCard card in DataManager.instance.cards)
+            {
+                card.cardBoost.Apply(this);
+            }
+        }
     }
 
     private void OnUnitChange()
@@ -22,11 +33,13 @@ public class BaseUnit : MonoBehaviour
         {
             gameObject.name = unit.name;
             atk = unit.atk;
+            atkSpeed = unit.atkSpeed;
             health = unit.health;
+            moveSpeed = unit.moveSpeed;
 
             for(int i = 0; i < sprites.Count; i++)
             {
-                if (i == unit.sprites.Count)
+                if (i >= unit.sprites.Count)
                 {
                     sprites[i].sprite = null;
                     continue; //skip if unit doesn't have the sprite needed for the last element
@@ -34,8 +47,13 @@ public class BaseUnit : MonoBehaviour
 
                 //Setting sprite renderer fields
                 sprites[i].sprite = unit.sprites[i].sprite;
-                sprites[i].color = unit.sprites[i].color;
                 sprites[i].sortingOrder = unit.sprites[i].sortingOrder;
+
+                if (sprites[i].gameObject.name == "Body")
+                {
+                    sprites[i].color = isEnemy ? unit.enemyColor : unit.playerColor;
+                }
+                else { sprites[i].color = unit.sprites[i].color; }
 
                 //Setting sprites transform value 
                 sprites[i].transform.localPosition = unit.sprites[i].transform.localPosition;

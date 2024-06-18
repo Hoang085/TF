@@ -6,7 +6,18 @@ using UnityEngine;
 public class Unit : ScriptableObject
 {
     public new string name;
+
     public float atk;
+
+    public float atkSpeed;
+
     public float health;
+
+    public float moveSpeed;
+
     public List<SpriteRenderer> sprites;
+
+    public Color playerColor;
+
+    public Color enemyColor;
 }

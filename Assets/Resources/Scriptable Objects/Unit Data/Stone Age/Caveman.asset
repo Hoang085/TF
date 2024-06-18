@@ -10,12 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38c9a84c2287a0a45bd6e0f751eab695, type: 3}
-  m_Name: Thrower Enemy
+  m_Name: Caveman
   m_EditorClassIdentifier: 
-  name: Thrower
-  atk: 2
-  health: 1
+  name: Caveman
+  atk: 1
+  atkSpeed: 1
+  health: 2
+  moveSpeed: 1
   sprites:
   - {fileID: 7021777363587920636, guid: 1c131fff9ecce754bb6950acba63944c, type: 3}
-  - {fileID: 7641686756862991063, guid: fdf1f9a1b0f7e724ebbe56ea6646ade6, type: 3}
-  - {fileID: 3458058117432650792, guid: 8a37fa02c329b714a993ed7148514af5, type: 3}
+  - {fileID: 2576313343889509708, guid: 5cfec70c03e617846adfea9309c0e4ad, type: 3}
+  - {fileID: 3795186890058436568, guid: 6a8ffba429cf7704883ae0a7e9548b04, type: 3}
+  playerColor: {r: 0.7803922, g: 0.42352945, b: 0.21568629, a: 1}
+  enemyColor: {r: 0.5372549, g: 0.13333334, b: 0.14117648, a: 1}

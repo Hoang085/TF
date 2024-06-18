@@ -10,13 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38c9a84c2287a0a45bd6e0f751eab695, type: 3}
-  m_Name: DinoRider Enemy
+  m_Name: DinoRider
   m_EditorClassIdentifier: 
   name: Dino Rider
   atk: 4
+  atkSpeed: 1
   health: 4
+  moveSpeed: 2
   sprites:
   - {fileID: 7021777363587920636, guid: 1c131fff9ecce754bb6950acba63944c, type: 3}
-  - {fileID: 7641686756862991063, guid: fdf1f9a1b0f7e724ebbe56ea6646ade6, type: 3}
+  - {fileID: 2576313343889509708, guid: 5cfec70c03e617846adfea9309c0e4ad, type: 3}
   - {fileID: 6297467869401269349, guid: a36096f8bfeec914d8f2947916e9fe5a, type: 3}
   - {fileID: 4411806498528870144, guid: b31c832afc32db14288078536fcb14e3, type: 3}
+  playerColor: {r: 0.7803922, g: 0.42352945, b: 0.21568629, a: 1}
+  enemyColor: {r: 0.5372549, g: 0.13333334, b: 0.14117648, a: 1}
