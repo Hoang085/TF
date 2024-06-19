@@ -7,12 +7,15 @@ using UnityEngine;
 
 public class UIHomeManager : ManualSingletonMono<UIHomeManager>
 {
+    public Unit curUnit;
+    
     private Tween _tween;
     private bool _onClick;
     private CanvasGroup _canvas;
 
     public override void Awake()
     {
+        base.Awake();
         _canvas = GetComponentInChildren<CanvasGroup>();
     }
 

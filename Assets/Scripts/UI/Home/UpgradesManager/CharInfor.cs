@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using DG.Tweening;
 using H2910.Defines;
 using H2910.UI.Popups;
+using ScriptableObjectArchitecture;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CharInfor : MonoBehaviour
 {
+    [SerializeField] private GameEvent changeUnit;
+    
     [SerializeField] private string nameChar;
     [SerializeField] private Image charImage;
 
     [SerializeField] private List<TextMeshProUGUI> _listTxt;
-    
     private Unit _unit;
     private bool _onClick;
     
@@ -56,5 +58,9 @@ public class CharInfor : MonoBehaviour
             return;
         BlockMultyClick();
         PopupManager.Instance.OnShowScreen(PopupName.InforChar, ParentPopup.Hight);
+        UIHomeManager.Instance.curUnit = _unit;
+        changeUnit.Raise();
     }
+
+
 }
