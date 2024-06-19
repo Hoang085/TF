@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Card : MonoBehaviour
+public class CharSelection : MonoBehaviour
 {
     [SerializeField] private string name;
     [SerializeField] private Image image;

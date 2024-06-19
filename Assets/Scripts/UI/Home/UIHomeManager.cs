@@ -34,14 +34,6 @@ public class UIHomeManager : ManualSingletonMono<UIHomeManager>
         BlockMultyClick();
         PopupManager.Instance.OnShowScreen(PopupName.Setting, ParentPopup.Hight);
     }
-    
-    public void OnBtnInforChar()
-    {
-        if (_onClick)
-            return;
-        BlockMultyClick();
-        PopupManager.Instance.OnShowScreen(PopupName.InforChar, ParentPopup.Hight);
-    }
 
     public void OnBtnInforBase()
     {

@@ -1,4 +1,6 @@
-﻿public class UIUpgradesPanel : PanelBase 
+﻿
+
+public class UIUpgradesPanel : PanelBase 
 {
-    
+        
 }
