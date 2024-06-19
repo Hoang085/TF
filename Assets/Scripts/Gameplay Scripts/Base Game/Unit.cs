@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New Unit", menuName = "Scriptable Objects/Unit")]
 public class Unit : ScriptableObject
@@ -14,6 +15,8 @@ public class Unit : ScriptableObject
     public float health;
 
     public float moveSpeed;
+
+    public float price;
 
     public List<SpriteRenderer> sprites;
 

@@ -17,6 +17,7 @@ MonoBehaviour:
   atkSpeed: 1
   health: 1
   moveSpeed: 1
+  price: 5
   sprites:
   - {fileID: 7021777363587920636, guid: 1c131fff9ecce754bb6950acba63944c, type: 3}
   - {fileID: 2576313343889509708, guid: 5cfec70c03e617846adfea9309c0e4ad, type: 3}

@@ -19,6 +19,7 @@ public class BaseUnit : MonoBehaviour
     internal float atkSpeed;
     internal float health;
     internal float moveSpeed;
+    internal float price;
 
     internal GameObject target;
 
@@ -43,6 +44,7 @@ public class BaseUnit : MonoBehaviour
             atkSpeed = unit.atkSpeed;
             health = unit.health;
             moveSpeed = unit.moveSpeed;
+            price = unit.price;
 
             for(int i = 0; i < sprites.Count; i++)
             {
