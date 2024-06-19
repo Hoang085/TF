@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseState<EState> where EState : Enum
+public abstract class BaseState<EState, ObjectType> where EState : Enum
 {
     public BaseState(EState key)
     {
@@ -11,7 +11,7 @@ public abstract class BaseState<EState> where EState : Enum
     }
     public EState stateKey { get; private set; }
 
-    public abstract void EnterState();
+    public abstract void EnterState(StateMachine<EState, ObjectType> stateMachine, ObjectType stateObject);
     public abstract void ExitState();
     public abstract void UpdateState();
     public abstract EState GetNextState();

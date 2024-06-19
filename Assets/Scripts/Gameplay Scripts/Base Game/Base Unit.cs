@@ -6,14 +6,21 @@ using UnityEngine;
 public class BaseUnit : MonoBehaviour
 {
     [SerializeField] internal Unit unit;
+    [SerializeField] internal UnitStateMachine unitState;
     [SerializeField] List<SpriteRenderer> sprites;
+    [SerializeField] internal LayerMask targetLayer;
     [SerializeField] internal bool isEnemy;
+
+    [SerializeField] internal float radius;
+    [SerializeField] internal float distance;
 
     [Header("Player Stats")]
     internal float atk;
     internal float atkSpeed;
     internal float health;
     internal float moveSpeed;
+
+    internal GameObject target;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +68,11 @@ public class BaseUnit : MonoBehaviour
             }
         }
     }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
 #if UNITY_EDITOR
     private void OnValidate() => UnityEditor.EditorApplication.delayCall += _OnValidate;
 
@@ -70,6 +82,16 @@ public class BaseUnit : MonoBehaviour
         if (this == null) return;
         Debug.Log("On Validate");
         OnUnitChange();
+        if (isEnemy)
+        {
+            gameObject.layer = 7;
+            targetLayer = 1 << 6;
+        }
+        else
+        {
+            gameObject.layer = 6;
+            targetLayer = 1 << 7;
+        }
     }
 #endif
 }

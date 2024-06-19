@@ -17,6 +17,8 @@ public class Unit : ScriptableObject
 
     public List<SpriteRenderer> sprites;
 
+    public Sprite fullSprite;
+
     public Color playerColor;
 
     public Color enemyColor;

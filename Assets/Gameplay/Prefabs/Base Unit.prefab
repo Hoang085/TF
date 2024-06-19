@@ -381,7 +381,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5648893215562092171}
   - component: {fileID: 764947613690555616}
-  m_Layer: 0
+  - component: {fileID: 221417902200966333}
+  - component: {fileID: 676484565994695512}
+  m_Layer: 6
   m_Name: Base Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,8 +419,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 0}
+  unitState: {fileID: 221417902200966333}
   sprites:
   - {fileID: 296392238696081796}
   - {fileID: 5305939093962573709}
   - {fileID: 831577402743095889}
   - {fileID: 6450622200493344614}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  isEnemy: 0
+--- !u!114 &221417902200966333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983926733423554931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7507c1f25e8a96641ad8e6eaf9c651c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateObject: {fileID: 764947613690555616}
+--- !u!70 &676484565994695512
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983926733423554931}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000029802322, y: 0.22}
+  m_Size: {x: 0.78, y: 1.31}
+  m_Direction: 0

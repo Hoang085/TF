@@ -21,5 +21,6 @@ MonoBehaviour:
   - {fileID: 7021777363587920636, guid: 1c131fff9ecce754bb6950acba63944c, type: 3}
   - {fileID: 2576313343889509708, guid: 5cfec70c03e617846adfea9309c0e4ad, type: 3}
   - {fileID: 3458058117432650792, guid: 8a37fa02c329b714a993ed7148514af5, type: 3}
+  fullSprite: {fileID: 21300000, guid: 4dac3c80a88f1094c842bd805b66a36e, type: 3}
   playerColor: {r: 0.7803922, g: 0.42352945, b: 0.21568629, a: 1}
   enemyColor: {r: 0.5372549, g: 0.13333334, b: 0.14117648, a: 1}

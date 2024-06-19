@@ -3,16 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class StateMachine<EState> : MonoBehaviour where EState : Enum
+public abstract class StateMachine<EState, ObjectType> : MonoBehaviour where EState : Enum
 {
-    protected Dictionary<EState, BaseState<EState>> states = new Dictionary<EState, BaseState<EState>>();
-    protected BaseState<EState> currentState;
+    [SerializeField] internal ObjectType stateObject;
+
+    protected Dictionary<EState, BaseState<EState, ObjectType>> states = new Dictionary<EState, BaseState<EState, ObjectType>>();
+    protected BaseState<EState, ObjectType> currentState;
 
     protected bool isTransitioningState = false;
-    private void Start()
-    {
-        currentState.EnterState();
-    }
     private void Update()
     {
         EState nextStateKey = currentState.GetNextState();
@@ -27,13 +25,13 @@ public abstract class StateMachine<EState> : MonoBehaviour where EState : Enum
         }
     }
 
-    private void TransitionToState(EState stateKey)
+    internal void TransitionToState(EState stateKey)
     {
         isTransitioningState = true;
 
-        currentState.ExitState();
+        currentState?.ExitState();
         currentState = states[stateKey];
-        currentState.EnterState();
+        currentState.EnterState(this, stateObject);
 
         isTransitioningState = false;
     }
