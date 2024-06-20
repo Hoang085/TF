@@ -45,6 +45,8 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     }
     public override void UpdateState()
     {
+        Debug.Log("Hello");
+        unit.transform.Translate(Vector2.right * unit.moveSpeed);
         CheckForTarget();
     }
     private void CheckForTarget()
