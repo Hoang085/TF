@@ -1,15 +1,19 @@
+using System;
 using DG.Tweening;
 using H2910.Common.Singleton;
 using H2910.UI.Popups;
 using H2910.Defines;
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableObjectArchitecture;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
 public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
 {
+    [SerializeField] private GameEvent buyEvent;
+    
     [SerializeField] private TextMeshProUGUI noticeText;
     [SerializeField] private TextMeshProUGUI foodAmountTxt;
     [SerializeField] private Image coolDownImage;
@@ -32,7 +36,12 @@ public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
         coolDownImage.fillAmount = 0;
         StartCoroutine(StartCoolDown());
     }
-    
+
+    private void Update()
+    {
+        foodAmountTxt.text = foodAmount.ToString();
+    }
+
     IEnumerator StartCoolDown()
     {
         if(!_isCoolingDown) yield break;
@@ -47,15 +56,9 @@ public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
         if (coolDownImage.fillAmount >= 1)
         {
             foodAmount += 1;
-            foodAmountTxt.text = foodAmount.ToString();
             coolDownImage.fillAmount = 0;
             StartCoroutine(StartCoolDown());
         }
-    }
-
-    private void CheckPrice()
-    {
-        
     }
 
     private void BlockMultyClick()

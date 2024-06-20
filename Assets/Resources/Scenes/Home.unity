@@ -3958,7 +3958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0e1cf379ab4fb99a403f1ac81b539d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnload: 1
+  dontDestroyOnload: 0
   curUnit: {fileID: 0}
 --- !u!4 &425455621
 Transform:
@@ -4738,7 +4738,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 520864685}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 425455620}
+        m_TargetAssemblyTypeName: UIHomeManager, Assembly-CSharp
+        m_MethodName: OnBattleBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &520864685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10616,6 +10628,7 @@ GameObject:
   - component: {fileID: 1343893352}
   - component: {fileID: 1343893351}
   - component: {fileID: 1343893350}
+  - component: {fileID: 1343893353}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -10708,6 +10721,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!225 &1343893353
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343893348}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1347949929
 GameObject:
   m_ObjectHideFlags: 0
@@ -17121,7 +17146,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8965451273928358686, guid: b1c644c209c8e244d90947ec581b60e5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965451273928358686, guid: b1c644c209c8e244d90947ec581b60e5, type: 3}
+      propertyPath: m_OverrideSorting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965451273928358686, guid: b1c644c209c8e244d90947ec581b60e5, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965451273928358686, guid: b1c644c209c8e244d90947ec581b60e5, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8750385165775645610, guid: b1c644c209c8e244d90947ec581b60e5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

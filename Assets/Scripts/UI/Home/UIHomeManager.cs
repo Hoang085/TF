@@ -46,6 +46,16 @@ public class UIHomeManager : ManualSingletonMono<UIHomeManager>
         
         PopupManager.Instance.OnShowScreen(PopupName.InforBase, ParentPopup.Hight);
     }
+
+    public void OnBattleBtn()
+    {
+        if (_onClick)
+            return;
+        BlockMultyClick();
+        ShowUIHome(false);
+        
+        PopupManager.Instance.ShowLoadingScene("GamePlay");
+    }
     
     public void ShowUIHome(bool isShow = true)
     {

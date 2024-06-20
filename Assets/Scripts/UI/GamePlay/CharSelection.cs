@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,8 @@ public class CharSelection : MonoBehaviour
     private float _price;
     private TextMeshProUGUI _priceText;
     private Unit _unit;
+    
+    private bool _onClick;
     
     private void Awake()
     {
@@ -34,5 +37,22 @@ public class CharSelection : MonoBehaviour
         {
             isBuy.SetActive(true);
         }
+    }
+    
+    private void BlockMultyClick()
+    {
+        _onClick = true;
+        DOVirtual.DelayedCall(0.1f, () => { _onClick = false; });
+    }
+
+    public void OnBuyCharClick()
+    {
+        if(_onClick)
+            return;
+        BlockMultyClick();
+
+        UIGamePlayManager.Instance.foodAmount -= _price;
+        
+        //Spawn Char
     }
 }

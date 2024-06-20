@@ -15,11 +15,6 @@ public class LoadingScene : MonoBehaviour
     private int _count = 0;
     private float _timeLoading = 2;
 
-    private void Awake()
-    {
-        LoadSceneAsync("Home",LoadingBgType.MineralMine);
-    }
-
     IEnumerator LoadAsyncScene(string mapName)
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(mapName);
