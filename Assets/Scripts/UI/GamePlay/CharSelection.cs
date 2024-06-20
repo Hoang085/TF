@@ -50,8 +50,9 @@ public class CharSelection : MonoBehaviour
         if(_onClick)
             return;
         BlockMultyClick();
-
-        UIGamePlayManager.Instance.foodAmount -= _price;
+        
+        if(!isBuy.activeSelf)
+            UIGamePlayManager.Instance.foodAmount -= _price;
         
         //Spawn Char
     }

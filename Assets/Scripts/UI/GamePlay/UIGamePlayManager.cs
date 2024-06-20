@@ -12,8 +12,6 @@ using UnityEngine.UI;
 
 public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
 {
-    [SerializeField] private GameEvent buyEvent;
-    
     [SerializeField] private TextMeshProUGUI noticeText;
     [SerializeField] private TextMeshProUGUI foodAmountTxt;
     [SerializeField] private Image coolDownImage;
