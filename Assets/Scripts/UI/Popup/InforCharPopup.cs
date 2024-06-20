@@ -5,12 +5,15 @@ using H2910.UI.Popups;
 using ScriptableObjectArchitecture;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InforCharPopup : BasePopUp
 {
     [SerializeField] private GameEvent changeUnit;
+    [SerializeField] private TextMeshProUGUI nameTxt;
     [SerializeField] private List<TextMeshProUGUI> attackTxts;
     [SerializeField] private List<TextMeshProUGUI> healthTxts;
+    [SerializeField] private List<Image> charImages;
 
     [SerializeField]private Unit _unit;
     private Tween _tween;
@@ -65,16 +68,21 @@ public class InforCharPopup : BasePopUp
 
     private void ShowProperties()
     {
+        nameTxt.text = $"Stats\n{_unit.name}";
+        
         for (int i = 0; i < attackTxts.Count; i++)
         {
             attackTxts[i].text = _unit.atk.ToString();
-            print(attackTxts[i].text);
         }
         
         for (int i = 0; i < healthTxts.Count; i++)
         {
             healthTxts[i].text = _unit.health.ToString();
         }
+        
+        charImages[0].sprite = Resources.Load<Sprite>($"Sprite/{_unit.fullSprite.name}");
+        charImages[1].sprite = Resources.Load<Sprite>($"Sprite/{_unit.fullSpriteEnermy.name}");
+        
     }
     
 }

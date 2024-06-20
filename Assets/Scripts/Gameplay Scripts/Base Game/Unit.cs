@@ -22,6 +22,8 @@ public class Unit : ScriptableObject
 
     public Sprite fullSprite;
 
+    public Sprite fullSpriteEnermy;
+
     public Color playerColor;
 
     public Color enemyColor;

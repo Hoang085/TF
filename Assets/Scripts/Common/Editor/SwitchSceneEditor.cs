@@ -41,10 +41,10 @@ public static class SwitchSceneEditor
         EditorSceneManager.OpenScene("Assets/Resources/Scenes/TestUI.unity");
     }
     
-    [MenuItem("-SWITCH SCENE-/Level 3")]
-    static void Level3Scene()
+    [MenuItem("-SWITCH SCENE-/Test 3")]
+    static void Test3Scene()
     {
-        EditorSceneManager.OpenScene("Assets/Resources/Scenes/Level 3.unity");
+        EditorSceneManager.OpenScene("Assets/Resources/Scenes/Test3.unity");
     }
     
 }
