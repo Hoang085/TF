@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,13 +13,14 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] internal bool isEnemy;
 
     [SerializeField] internal float radius;
-    [SerializeField] internal float distance;
 
     [Header("Player Stats")]
     internal float atk;
-    internal float atkSpeed;
+    internal float atkDistance;
+    internal float atkRate;
     internal float health;
     internal float moveSpeed;
+    internal float enemyDetectDistance;
     internal float price;
 
     internal GameObject target;
@@ -40,10 +42,15 @@ public class BaseUnit : MonoBehaviour
         if (unit != null)
         {
             gameObject.name = unit.name;
+
             atk = unit.atk;
-            atkSpeed = unit.atkSpeed;
+            atkDistance = unit.atkDistance;
+            atkRate = unit.atkRate;
+
             health = unit.health;
             moveSpeed = unit.moveSpeed;
+            enemyDetectDistance = isEnemy ? -unit.enemyDetectDistance : unit.enemyDetectDistance;
+
             price = unit.price;
 
             for(int i = 0; i < sprites.Count; i++)
@@ -70,6 +77,23 @@ public class BaseUnit : MonoBehaviour
             }
         }
     }
+    private void OnTeamChange()
+    {
+        if (isEnemy)
+        {
+            gameObject.layer = 7;
+            targetLayer = 1 << 6;
+
+            transform.eulerAngles = Vector3.up * 180;
+        }
+        else
+        {
+            gameObject.layer = 6;
+            targetLayer = 1 << 7;
+
+            transform.eulerAngles = Vector3.zero;
+        }
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
@@ -84,16 +108,7 @@ public class BaseUnit : MonoBehaviour
         if (this == null) return;
         Debug.Log("On Validate");
         OnUnitChange();
-        if (isEnemy)
-        {
-            gameObject.layer = 7;
-            targetLayer = 1 << 6;
-        }
-        else
-        {
-            gameObject.layer = 6;
-            targetLayer = 1 << 7;
-        }
+        OnTeamChange();
     }
 #endif
 }

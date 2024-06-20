@@ -4,23 +4,37 @@ using UnityEngine;
 
 public class ApproachTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 {
+    BaseUnit unit;
     public ApproachTargetState(UnitStateMachine.EUnitState key) : base(key)
     {
     }
 
-    public override void EnterState(StateMachine<UnitStateMachine.EUnitState, BaseUnit> stateMachine, BaseUnit stateObject)
+    public override void EnterState(StateMachine<UnitStateMachine.EUnitState, BaseUnit> stateMachine, BaseUnit unit)
     {
-        throw new System.NotImplementedException();
+        this.unit = unit;
     }
 
     public override void ExitState()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override UnitStateMachine.EUnitState GetNextState()
     {
-        throw new System.NotImplementedException();
+        if (unit.target == null)
+        {
+            return UnitStateMachine.EUnitState.FindTarget;
+        }
+
+        if(Vector2.Distance(unit.transform.position, unit.target.transform.position) / unit.transform.lossyScale.x <= unit.atkDistance)
+        {
+            return UnitStateMachine.EUnitState.Attack;
+        }
+        return UnitStateMachine.EUnitState.ApproachTarget;
+    }
+    public override void UpdateState()
+    {
+        unit.transform.position = Vector2.MoveTowards(unit.transform.position, unit.target.transform.position, unit.moveSpeed * Time.deltaTime);
     }
 
     public override void OnTriggerEnter()
@@ -38,8 +52,4 @@ public class ApproachTargetState : BaseState<UnitStateMachine.EUnitState, BaseUn
         throw new System.NotImplementedException();
     }
 
-    public override void UpdateState()
-    {
-        throw new System.NotImplementedException();
-    }
 }

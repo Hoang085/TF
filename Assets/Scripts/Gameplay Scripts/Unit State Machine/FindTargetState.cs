@@ -22,20 +22,17 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     {
         this.unit = unit;
         direction = Vector2.right;
-        distance = unit.distance;
+        distance = unit.enemyDetectDistance;
         radius = unit.radius;
-        Debug.Log("Hello from FindTargetState");
     }
 
     public override void ExitState()
     {
-        throw new System.NotImplementedException();
+
     }
 
     public override UnitStateMachine.EUnitState GetNextState()
     {
-        return UnitStateMachine.EUnitState.FindTarget;
-
         if (unit.target == null)
         {
             return UnitStateMachine.EUnitState.FindTarget;
@@ -45,14 +42,13 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     }
     public override void UpdateState()
     {
-        Debug.Log("Hello");
-        unit.transform.Translate(Vector2.right * unit.moveSpeed);
+        unit.transform.Translate(Vector2.right * unit.moveSpeed * Time.deltaTime);
         CheckForTarget();
     }
     private void CheckForTarget()
     {
         rayOrigin = unit.transform.position;
-        distance = unit.distance;
+        distance = unit.enemyDetectDistance;
         radius = unit.radius;
 
         RaycastHit2D hit = Physics2D.CircleCast(rayOrigin, radius, direction, distance, unit.targetLayer);

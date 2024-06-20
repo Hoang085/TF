@@ -10,11 +10,15 @@ public class Unit : ScriptableObject
 
     public float atk;
 
-    public float atkSpeed;
+    public float atkDistance;
+
+    public float atkRate;
 
     public float health;
 
     public float moveSpeed;
+
+    public float enemyDetectDistance;
 
     public float price;
 

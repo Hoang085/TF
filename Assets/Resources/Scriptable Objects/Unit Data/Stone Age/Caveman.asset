@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Caveman
   m_EditorClassIdentifier: 
   name: Caveman
-  atk: 1
-  atkSpeed: 1
-  health: 2
-  moveSpeed: 1
+  atk: 2
+  atkDistance: 1
+  atkRate: 1.25
+  health: 6
+  moveSpeed: 0.15
+  enemyDetectDistance: 1
   price: 3
   sprites:
   - {fileID: 7021777363587920636, guid: 1c131fff9ecce754bb6950acba63944c, type: 3}

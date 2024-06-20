@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Thrower
   atk: 2
-  atkSpeed: 1
-  health: 1
-  moveSpeed: 1
+  atkDistance: 4
+  atkRate: 0.5
+  health: 2
+  moveSpeed: 0.15
+  enemyDetectDistance: 1
   price: 5
   sprites:
   - {fileID: 7021777363587920636, guid: 1c131fff9ecce754bb6950acba63944c, type: 3}

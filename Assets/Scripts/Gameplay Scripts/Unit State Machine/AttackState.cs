@@ -4,23 +4,55 @@ using UnityEngine;
 
 public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 {
+    BaseUnit unit;
     public AttackState(UnitStateMachine.EUnitState key) : base(key)
     {
     }
 
-    public override void EnterState(StateMachine<UnitStateMachine.EUnitState, BaseUnit> stateMachine, BaseUnit stateObject)
+    public override void EnterState(StateMachine<UnitStateMachine.EUnitState, BaseUnit> stateMachine, BaseUnit unit)
     {
-        throw new System.NotImplementedException();
+        this.unit = unit;
+        Debug.Log("Hello from attack state");
+        unit.StartCoroutine(Attack());
+    }
+    private IEnumerator Attack()
+    {
+        BaseUnit targetUnit = unit.target.GetComponent<BaseUnit>();
+
+        while(targetUnit.health > 0)
+        {
+            //play animation
+            yield return new WaitForSeconds(unit.atkRate);
+
+            //deal damage
+            targetUnit.health -= unit.atk;
+            Debug.Log(targetUnit.name + " remaining health: " + targetUnit.health);
+        }
+        targetUnit.gameObject.SetActive(false);
+        unit.target = null;
     }
 
     public override void ExitState()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override UnitStateMachine.EUnitState GetNextState()
     {
-        throw new System.NotImplementedException();
+        if (unit.target == null)
+        {
+            return UnitStateMachine.EUnitState.FindTarget;
+        }
+
+        if (Vector2.Distance(unit.transform.position, unit.target.transform.position) / unit.transform.lossyScale.x > unit.atkDistance)
+        {
+            return UnitStateMachine.EUnitState.ApproachTarget;
+        }
+        return UnitStateMachine.EUnitState.Attack;
+    }
+    public override void UpdateState()
+    {
+        
     }
 
     public override void OnTriggerEnter()
@@ -38,20 +70,4 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
         throw new System.NotImplementedException();
     }
 
-    public override void UpdateState()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
