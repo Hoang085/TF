@@ -637,6 +637,7 @@ GameObject:
   - component: {fileID: 221417902200966333}
   - component: {fileID: 676484565994695512}
   - component: {fileID: 3004639262755394289}
+  - component: {fileID: 3214211072753856790}
   m_Layer: 6
   m_Name: Base Unit
   m_TagString: Untagged
@@ -680,6 +681,8 @@ MonoBehaviour:
   - {fileID: 5305939093962573709}
   - {fileID: 831577402743095889}
   - {fileID: 6450622200493344614}
+  healthBar: {fileID: 6842029600047910778}
+  atkAnimatior: {fileID: 3214211072753856790}
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -760,3 +763,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &3214211072753856790
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983926733423554931}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

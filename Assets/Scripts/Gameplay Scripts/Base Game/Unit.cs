@@ -31,4 +31,6 @@ public class Unit : ScriptableObject
     public Color playerColor;
 
     public Color enemyColor;
+
+    public RuntimeAnimatorController unitAnimation;
 }

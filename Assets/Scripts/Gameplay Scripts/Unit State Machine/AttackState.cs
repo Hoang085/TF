@@ -4,32 +4,32 @@ using UnityEngine;
 
 public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 {
-    BaseUnit unit;
+    public override BaseUnit stateObject { get; set; }
+
     public AttackState(UnitStateMachine.EUnitState key) : base(key)
     {
     }
 
     public override void EnterState(StateMachine<UnitStateMachine.EUnitState, BaseUnit> stateMachine, BaseUnit unit)
     {
-        this.unit = unit;
-        Debug.Log("Hello from attack state");
+        this.stateObject = unit;
         unit.StartCoroutine(Attack());
     }
     private IEnumerator Attack()
     {
-        BaseUnit targetUnit = unit.target.GetComponent<BaseUnit>();
+        BaseUnit targetUnit = stateObject.target.GetComponent<BaseUnit>();
 
         while(targetUnit.health > 0)
         {
             //play animation
-            yield return new WaitForSeconds(unit.atkRate);
+            stateObject.atkAnimatior.SetTrigger("Attack");
+            yield return new WaitForSeconds(stateObject.atkRate);
 
             //deal damage
-            targetUnit.health -= unit.atk;
-            Debug.Log(targetUnit.name + " remaining health: " + targetUnit.health);
+            targetUnit.OnDamageTaken(stateObject.atk);
         }
-        targetUnit.gameObject.SetActive(false);
-        unit.target = null;
+        targetUnit.OnDead();
+        stateObject.target = null;
     }
 
     public override void ExitState()
@@ -39,15 +39,15 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 
     public override UnitStateMachine.EUnitState GetNextState()
     {
-        if (unit.target == null)
-        {
-            return UnitStateMachine.EUnitState.FindTarget;
-        }
+        if (stateObject.isDead) return UnitStateMachine.EUnitState.Dead;
 
-        if (Vector2.Distance(unit.transform.position, unit.target.transform.position) / unit.transform.lossyScale.x > unit.atkDistance)
+        if (stateObject.target == null) return UnitStateMachine.EUnitState.FindTarget;
+
+        if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x > stateObject.atkDistance)
         {
             return UnitStateMachine.EUnitState.ApproachTarget;
         }
+
         return UnitStateMachine.EUnitState.Attack;
     }
     public override void UpdateState()

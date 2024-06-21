@@ -10,10 +10,12 @@ public class CharSelection : MonoBehaviour
     [SerializeField] private string name;
     [SerializeField] private Image image;
     [SerializeField] private GameObject isBuy;
+    [SerializeField] private BaseUnit baseUnit;
     
     private float _price;
     private TextMeshProUGUI _priceText;
     private Unit _unit;
+    private Vector2 unitSpawnPos = new Vector2(-2.03f, 0);
     
     private bool _onClick;
     
@@ -55,5 +57,6 @@ public class CharSelection : MonoBehaviour
             UIGamePlayManager.Instance.foodAmount -= _price;
         
         //Spawn Char
+
     }
 }

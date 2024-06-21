@@ -8,12 +8,14 @@ public class UnitStateMachine : StateMachine<UnitStateMachine.EUnitState, BaseUn
     {
         FindTarget,
         ApproachTarget,
-        Attack
+        Attack,
+        Dead
     }
 
     FindTargetState findState = new FindTargetState(EUnitState.FindTarget);
     ApproachTargetState approachState = new ApproachTargetState(EUnitState.ApproachTarget);
     AttackState attackState = new AttackState(EUnitState.Attack);
+    DeadState deadState = new DeadState(EUnitState.Dead);
 
     private void Awake()
     {
@@ -21,6 +23,7 @@ public class UnitStateMachine : StateMachine<UnitStateMachine.EUnitState, BaseUn
         states.Add(EUnitState.FindTarget, findState);
         states.Add(EUnitState.ApproachTarget, approachState);   
         states.Add(EUnitState.Attack, attackState);
+        states.Add(EUnitState.Dead, deadState);
     }
     private void Start()
     {

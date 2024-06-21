@@ -1,33 +1,44 @@
+using ScriptableObjectArchitecture;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class BaseUnit : MonoBehaviour
 {
+    [Header("Unit Identity")]
     [SerializeField] internal Unit unit;
     [SerializeField] internal UnitStateMachine unitState;
     [SerializeField] List<SpriteRenderer> sprites;
+    [SerializeField] internal Image healthBar;
+    [SerializeField] internal Animator atkAnimatior;
+
+    internal bool isDead;
+
+    [Header("Target Detection Var")]
     [SerializeField] internal LayerMask targetLayer;
     [SerializeField] internal bool isEnemy;
-
     [SerializeField] internal float radius;
+    internal GameObject target;
 
     [Header("Player Stats")]
     internal float atk;
     internal float atkDistance;
     internal float atkRate;
     internal float health;
+    internal float maxHealth;
     internal float moveSpeed;
     internal float enemyDetectDistance;
     internal float price;
 
-    internal GameObject target;
-
     // Start is called before the first frame update
     void Start()
     {
+        healthBar.transform.parent.gameObject.SetActive(false);
+
         if (!isEnemy)
         {
             foreach(BaseCard card in DataManager.instance.cards)
@@ -46,8 +57,10 @@ public class BaseUnit : MonoBehaviour
             atk = unit.atk;
             atkDistance = unit.atkDistance;
             atkRate = unit.atkRate;
+            atkAnimatior.runtimeAnimatorController = unit.unitAnimation;
 
             health = unit.health;
+            maxHealth = unit.health;
             moveSpeed = unit.moveSpeed;
             enemyDetectDistance = isEnemy ? -unit.enemyDetectDistance : unit.enemyDetectDistance;
 
@@ -99,6 +112,20 @@ public class BaseUnit : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, radius);
     }
+    public void OnDead()
+    {
+        isDead = true;
+        healthBar.transform.parent.gameObject.SetActive(false);
+    }
+
+    public void OnDamageTaken(float data)
+    {
+        healthBar.transform.parent.gameObject.SetActive(true);
+        health -= data;
+        healthBar.fillAmount = health / maxHealth;
+    }
+    
+
 #if UNITY_EDITOR
     private void OnValidate() => UnityEditor.EditorApplication.delayCall += _OnValidate;
 
