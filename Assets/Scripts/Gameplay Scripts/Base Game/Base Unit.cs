@@ -34,18 +34,28 @@ public class BaseUnit : MonoBehaviour
     internal float enemyDetectDistance;
     internal float price;
 
+    private void OnEnable()
+    {
+        CharSelection.onUnitInitialize += OnUnitChange;
+        CharSelection.onUnitInitialize += OnTeamChange;
+    }
+    private void OnDisable()
+    {
+        CharSelection.onUnitInitialize -= OnUnitChange;
+        CharSelection.onUnitInitialize -= OnTeamChange;
+    }
     // Start is called before the first frame update
     void Start()
     {
         healthBar.transform.parent.gameObject.SetActive(false);
 
-        if (!isEnemy)
-        {
-            foreach(BaseCard card in DataManager.instance.cards)
-            {
-                card.cardBoost.Apply(this);
-            }
-        }
+        //if (!isEnemy)
+        //{
+        //    foreach(BaseCard card in DataManager.instance.cards)
+        //    {
+        //        card.cardBoost.Apply(this);
+        //    }
+        //}
     }
 
     private void OnUnitChange()

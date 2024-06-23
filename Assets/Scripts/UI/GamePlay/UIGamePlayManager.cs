@@ -23,6 +23,8 @@ public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
     
     private Tween _tween;
     private bool _onClick;
+
+    public static Action onFoodChange;
     
     public override void Awake()
     {
@@ -54,6 +56,7 @@ public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
         if (coolDownImage.fillAmount >= 1)
         {
             foodAmount += 1;
+            onFoodChange?.Invoke();
             coolDownImage.fillAmount = 0;
             StartCoroutine(StartCoolDown());
         }

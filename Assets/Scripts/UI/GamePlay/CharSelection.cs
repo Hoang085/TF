@@ -10,14 +10,16 @@ public class CharSelection : MonoBehaviour
     [SerializeField] private string name;
     [SerializeField] private Image image;
     [SerializeField] private GameObject isBuy;
-    [SerializeField] private BaseUnit baseUnit;
-    
+    [SerializeField] private GameObject baseUnit;
+
     private float _price;
     private TextMeshProUGUI _priceText;
     private Unit _unit;
     private Vector2 unitSpawnPos = new Vector2(-2.03f, 0);
     
     private bool _onClick;
+
+    public static event Action onUnitInitialize;
     
     private void Awake()
     {
@@ -28,14 +30,21 @@ public class CharSelection : MonoBehaviour
         
         _priceText.text = _price.ToString();
         image.sprite = Resources.Load<Sprite>($"Sprite/{_unit.fullSprite.name}");
+
+        UIGamePlayManager.onFoodChange += PriceCheck;
+    }
+    private void Start()
+    {
+        PriceCheck();
     }
 
-    private void Update()
+    private void PriceCheck()
     {
         if (_price == UIGamePlayManager.Instance.foodAmount)
         {
             isBuy.SetActive(false);
-        }else if (_price > UIGamePlayManager.Instance.foodAmount)
+        }
+        else if (_price > UIGamePlayManager.Instance.foodAmount)
         {
             isBuy.SetActive(true);
         }
@@ -54,9 +63,14 @@ public class CharSelection : MonoBehaviour
         BlockMultyClick();
         
         if(!isBuy.activeSelf)
+        {
             UIGamePlayManager.Instance.foodAmount -= _price;
-        
-        //Spawn Char
+            UIGamePlayManager.onFoodChange?.Invoke(); 
 
+            //Spawn Char
+            BaseUnit unit = Instantiate(baseUnit, unitSpawnPos, Quaternion.identity).GetComponent<BaseUnit>();
+            unit.unit = _unit;
+            onUnitInitialize?.Invoke();
+        }
     }
 }

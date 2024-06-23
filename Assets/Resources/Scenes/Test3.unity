@@ -450,7 +450,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.15
+  m_fontSize: 36.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -800,6 +800,7 @@ MonoBehaviour:
   name: DinoRider
   image: {fileID: 1940898940}
   isBuy: {fileID: 835900746}
+  baseUnit: {fileID: 7983926733423554931, guid: 911fd31071bf5eb4b957cbba98e6e8e5, type: 3}
 --- !u!114 &135178925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4346,6 +4347,7 @@ MonoBehaviour:
   name: Thrower
   image: {fileID: 511714171}
   isBuy: {fileID: 462545779}
+  baseUnit: {fileID: 7983926733423554931, guid: 911fd31071bf5eb4b957cbba98e6e8e5, type: 3}
 --- !u!114 &1135901418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6000,7 +6002,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37
+  m_fontSize: 29.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7006,6 +7008,7 @@ MonoBehaviour:
   name: Caveman
   image: {fileID: 1204464834}
   isBuy: {fileID: 1739902396}
+  baseUnit: {fileID: 7983926733423554931, guid: 911fd31071bf5eb4b957cbba98e6e8e5, type: 3}
 --- !u!1 &1807141869
 GameObject:
   m_ObjectHideFlags: 0
@@ -8445,7 +8448,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.8
+  m_fontSize: 28.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
