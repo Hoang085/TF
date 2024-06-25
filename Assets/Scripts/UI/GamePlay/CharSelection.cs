@@ -21,7 +21,7 @@ public class CharSelection : MonoBehaviour
     
     private bool _onClick;
 
-    public static event Action onUnitInitialize;
+    public static Action onUnitInitialize;
     
     private void Awake()
     {

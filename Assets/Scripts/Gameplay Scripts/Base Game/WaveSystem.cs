@@ -1,18 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
+[System.Serializable]   
 public class WaveSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float spawnRate = 1.0f;
+    public float timeBetweenWaves = 30f;
+    private bool waveIsDone = true;
 
-    // Update is called once per frame
-    void Update()
+    public int enemyCount;
+
+    public GameObject enemy;
+    [SerializeField] List<Unit> unitList = new List<Unit>();    
+    private void Update()
     {
-        
+        if (waveIsDone)
+        {
+            StartCoroutine(WaveSpawner());
+        }
+    }
+    IEnumerator WaveSpawner()
+    {
+        waveIsDone = false;
+
+        for(int i = 0; i < enemyCount; i++)
+        {
+            BaseUnit enemyUnit = Instantiate(enemy, new Vector2(2.03f, Random.Range(-0.1f, 0.1f)), Quaternion.identity).GetComponent<BaseUnit>();
+            enemyUnit.isEnemy = true;
+            int unitIndex = Random.Range(0, unitList.Count);
+            enemyUnit.unit = unitList[unitIndex];
+            CharSelection.onUnitInitialize?.Invoke();
+
+            yield return new WaitForSeconds(spawnRate);
+        }
+        spawnRate -= 0.1f;
+        enemyCount += 3;
+
+        yield return new WaitForSeconds(timeBetweenWaves);
+
+        waveIsDone = true;
     }
 }

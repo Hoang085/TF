@@ -26,8 +26,8 @@ public class ApproachTargetState : BaseState<UnitStateMachine.EUnitState, BaseUn
 
         if (stateObject.target == null) return UnitStateMachine.EUnitState.FindTarget;
 
-        Debug.Log("Distance between object and target: " + Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x);
-        if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x <= stateObject.atkDistance)
+        //Debug.Log("Distance between object and target: " + Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x);
+        if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x <= stateObject.agent.stoppingDistance + 1)
         {
             return UnitStateMachine.EUnitState.Attack;
         }

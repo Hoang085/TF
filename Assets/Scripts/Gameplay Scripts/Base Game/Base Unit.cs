@@ -2,6 +2,7 @@ using ScriptableObjectArchitecture;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -24,16 +25,14 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] internal LayerMask targetLayer;
     [SerializeField] internal bool isEnemy;
     [SerializeField] internal float radius;
-    internal GameObject target;
+    [SerializeField] internal GameObject target;
     internal NavMeshAgent agent;
 
     [Header("Player Stats")]
     internal float atk;
-    internal float atkDistance;
     internal float atkRate;
     internal float health;
     internal float maxHealth;
-    internal float moveSpeed;
     internal float enemyDetectDistance;
     internal float price;
 
@@ -69,15 +68,18 @@ public class BaseUnit : MonoBehaviour
     {
         if (unit != null)
         {
+            agent = GetComponent<NavMeshAgent>();
+
             gameObject.name = unit.name;
 
             atk = unit.atk;
-            atkDistance = unit.atkDistance;
+            agent.stoppingDistance = unit.atkDistance;
             atkRate = unit.atkRate;
 
             health = unit.health;
             maxHealth = unit.health;
-            moveSpeed = unit.moveSpeed;
+            agent.speed = unit.moveSpeed;
+            agent.acceleration = unit.moveSpeed * 3;
             enemyDetectDistance = isEnemy ? -unit.enemyDetectDistance : unit.enemyDetectDistance;
 
             price = unit.price;
@@ -100,18 +102,18 @@ public class BaseUnit : MonoBehaviour
                     sprites[i].color = isEnemy ? unit.enemyColor : unit.playerColor;
                 }
 
-                if (sprites[i].gameObject.name == "Mount")
+                else { sprites[i].color = unit.sprites[i].color; }
+
+                if (sprites[i].gameObject.name == "Mount" && sprites[i].gameObject.GetComponent<BoxCollider2D>() == null)
                 {
                     mountCollider = sprites[i].gameObject.AddComponent<BoxCollider2D>(); //add collider to mount
+                    mountCollider.GetComponent<BoxCollider2D>().size = new Vector2(1, 1.25f);
                 }
-
-                else { sprites[i].color = unit.sprites[i].color; }
 
                 //Setting sprites transform value 
                 sprites[i].transform.localPosition = unit.sprites[i].transform.localPosition;
                 sprites[i].transform.localRotation = unit.sprites[i].transform.rotation;
             }
-
             //animator component with an animation clip attached to it will reset any change made to sprite renderer during runtime so we will need to 
             //register it after all sprite renderer has been loaded
             atkAnimatior.runtimeAnimatorController = unit.unitAnimation;
