@@ -35,6 +35,12 @@ public static class SwitchSceneEditor
         EditorSceneManager.OpenScene("Assets/Resources/Scenes/Login.unity");
     }
     
+    [MenuItem("-SWITCH SCENE-/TestMev")]
+    static void TestMevScene()
+    { 
+        EditorSceneManager.OpenScene("Assets/Resources/Scenes/TestGameplay.unity");
+    }
+    
     [MenuItem("-SWITCH SCENE-/Test UI")]
     static void TestUIScene()
     {

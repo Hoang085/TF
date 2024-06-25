@@ -4,6 +4,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class CharSelection : MonoBehaviour
 {
@@ -11,10 +12,11 @@ public class CharSelection : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private GameObject isBuy;
     [SerializeField] private GameObject baseUnit;
-
+    
     private float _price;
     private TextMeshProUGUI _priceText;
     private Unit _unit;
+    
     private Vector2 unitSpawnPos = new Vector2(-2.03f, 0);
     
     private bool _onClick;
@@ -67,13 +69,15 @@ public class CharSelection : MonoBehaviour
             UIGamePlayManager.Instance.foodAmount -= _price;
             UIGamePlayManager.onFoodChange?.Invoke(); 
 
-            //Spawn Char
-            //BaseUnit unit = Instantiate(baseUnit, unitSpawnPos, Quaternion.identity).GetComponent<BaseUnit>();
-            //unit.unit = _unit;
-            //onUnitInitialize?.Invoke();
+            // Spawn Char
+            // BaseUnit unit = Instantiate(baseUnit, unitSpawnPos, Quaternion.identity).GetComponent<BaseUnit>();
+            // unit.unit = _unit;
+            // onUnitInitialize?.Invoke();
         }
 
-        BaseUnit unit = Instantiate(baseUnit, unitSpawnPos, Quaternion.identity).GetComponent<BaseUnit>();
+        //BaseUnit unit = Instantiate(baseUnit, unitSpawnPos, Quaternion.identity).GetComponent<BaseUnit>();
+        
+        BaseUnit unit = Instantiate(baseUnit, new Vector2(-2.03f,UnityEngine.Random.Range(-0.1f,0.1f)), Quaternion.identity).GetComponent<BaseUnit>();
         unit.unit = _unit;
         onUnitInitialize?.Invoke();
     }

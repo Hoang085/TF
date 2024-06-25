@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d626edb3d0c74696a677d98e66eba6d6
+timeCreated: 1708680705
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: "NotoSansJP-Bold"
+  fontNames:
+  - Noto Sans JP
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData:
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,21 +1,23 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
-public class Test_3 : MonoBehaviour
+public class Test3 : MonoBehaviour
 {
-    [SerializeField]private Animator _animator;
+    [SerializeField] private Transform target;
+
+    private NavMeshAgent _agent;
 
     private void Awake()
     {
-        _animator = GetComponent<Animator>();
+        _agent = GetComponent<NavMeshAgent>();
+        _agent.updateRotation = false;
+        _agent.updateUpAxis = false;
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            print("A");
-            _animator.SetTrigger("Attack");
-        }
+        _agent.SetDestination(target.position);
     }
 }

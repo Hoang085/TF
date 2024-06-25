@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f4a2c03563f040d68df97c7689b24d1c
+timeCreated: 1708680705
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: "NotoSansKR-Bold"
+  fontNames:
+  - Noto Sans KR
+  fallbackFontReferences: []
+  customCharacters:
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData:
+  assetBundleName: 
+  assetBundleVariant: 
