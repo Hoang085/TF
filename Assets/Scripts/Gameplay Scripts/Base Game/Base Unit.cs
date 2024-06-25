@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -12,9 +13,10 @@ public class BaseUnit : MonoBehaviour
     [Header("Unit Identity")]
     [SerializeField] internal Unit unit;
     [SerializeField] internal UnitStateMachine unitState;
-    [SerializeField] List<SpriteRenderer> sprites;
+    [SerializeField] internal List<SpriteRenderer> sprites;
     [SerializeField] internal Image healthBar;
     [SerializeField] internal Animator atkAnimatior;
+    private Collider2D mountCollider;
 
     internal bool isDead;
 
@@ -23,6 +25,7 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] internal bool isEnemy;
     [SerializeField] internal float radius;
     internal GameObject target;
+    internal NavMeshAgent agent;
 
     [Header("Player Stats")]
     internal float atk;
@@ -49,6 +52,10 @@ public class BaseUnit : MonoBehaviour
     {
         healthBar.transform.parent.gameObject.SetActive(false);
 
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+
         //if (!isEnemy)
         //{
         //    foreach(BaseCard card in DataManager.instance.cards)
@@ -67,7 +74,6 @@ public class BaseUnit : MonoBehaviour
             atk = unit.atk;
             atkDistance = unit.atkDistance;
             atkRate = unit.atkRate;
-            atkAnimatior.runtimeAnimatorController = unit.unitAnimation;
 
             health = unit.health;
             maxHealth = unit.health;
@@ -81,6 +87,7 @@ public class BaseUnit : MonoBehaviour
                 if (i >= unit.sprites.Count)
                 {
                     sprites[i].sprite = null;
+                    DestroyImmediate(mountCollider); //remove mount collider if it exist
                     continue; //skip if unit doesn't have the sprite needed for the last element
                 }
 
@@ -92,12 +99,22 @@ public class BaseUnit : MonoBehaviour
                 {
                     sprites[i].color = isEnemy ? unit.enemyColor : unit.playerColor;
                 }
+
+                if (sprites[i].gameObject.name == "Mount")
+                {
+                    mountCollider = sprites[i].gameObject.AddComponent<BoxCollider2D>(); //add collider to mount
+                }
+
                 else { sprites[i].color = unit.sprites[i].color; }
 
                 //Setting sprites transform value 
                 sprites[i].transform.localPosition = unit.sprites[i].transform.localPosition;
-                sprites[i].transform.localRotation = unit.sprites[i].transform.localRotation;
+                sprites[i].transform.localRotation = unit.sprites[i].transform.rotation;
             }
+
+            //animator component with an animation clip attached to it will reset any change made to sprite renderer during runtime so we will need to 
+            //register it after all sprite renderer has been loaded
+            atkAnimatior.runtimeAnimatorController = unit.unitAnimation;
         }
     }
     private void OnTeamChange()
@@ -143,7 +160,6 @@ public class BaseUnit : MonoBehaviour
     {
         UnityEditor.EditorApplication.delayCall -= _OnValidate;
         if (this == null) return;
-        Debug.Log("On Validate");
         OnUnitChange();
         OnTeamChange();
     }

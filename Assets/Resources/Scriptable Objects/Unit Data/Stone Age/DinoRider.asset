@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Dino Rider
   atk: 4
-  atkDistance: 1
+  atkDistance: 1.5
   atkRate: 1
   health: 12
-  moveSpeed: 0.25
+  moveSpeed: 0.2
   enemyDetectDistance: 1
   price: 7
   sprites:

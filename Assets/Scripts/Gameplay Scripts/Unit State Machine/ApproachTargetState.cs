@@ -26,6 +26,7 @@ public class ApproachTargetState : BaseState<UnitStateMachine.EUnitState, BaseUn
 
         if (stateObject.target == null) return UnitStateMachine.EUnitState.FindTarget;
 
+        Debug.Log("Distance between object and target: " + Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x);
         if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x <= stateObject.atkDistance)
         {
             return UnitStateMachine.EUnitState.Attack;
@@ -35,7 +36,8 @@ public class ApproachTargetState : BaseState<UnitStateMachine.EUnitState, BaseUn
     }
     public override void UpdateState()
     {
-        stateObject.transform.position = Vector2.MoveTowards(stateObject.transform.position, stateObject.target.transform.position, stateObject.moveSpeed * Time.deltaTime);
+        //stateObject.transform.position = Vector2.MoveTowards(stateObject.transform.position, stateObject.target.transform.position, stateObject.moveSpeed * Time.deltaTime);
+        stateObject.agent.SetDestination(stateObject.target.transform.position);
     }
 
     public override void OnTriggerEnter()

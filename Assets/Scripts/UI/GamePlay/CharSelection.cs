@@ -68,9 +68,13 @@ public class CharSelection : MonoBehaviour
             UIGamePlayManager.onFoodChange?.Invoke(); 
 
             //Spawn Char
-            BaseUnit unit = Instantiate(baseUnit, unitSpawnPos, Quaternion.identity).GetComponent<BaseUnit>();
-            unit.unit = _unit;
-            onUnitInitialize?.Invoke();
+            //BaseUnit unit = Instantiate(baseUnit, unitSpawnPos, Quaternion.identity).GetComponent<BaseUnit>();
+            //unit.unit = _unit;
+            //onUnitInitialize?.Invoke();
         }
+
+        BaseUnit unit = Instantiate(baseUnit, unitSpawnPos, Quaternion.identity).GetComponent<BaseUnit>();
+        unit.unit = _unit;
+        onUnitInitialize?.Invoke();
     }
 }
