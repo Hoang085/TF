@@ -27,27 +27,27 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     }
     private IEnumerator MeleeAttack()
     {
-        BaseUnit targetUnit = stateObject.target.GetComponent<BaseUnit>();
+        var targetHp = stateObject.target.GetComponent<IHealth>();
 
-        while(targetUnit.health > 0)
+        while(targetHp.Health > 0)
         {
             //play animation
             stateObject.atkAnimatior.SetTrigger("Attack");
             yield return new WaitForSeconds(stateObject.atkRate);
 
             //deal damage
-            targetUnit.OnDamageTaken(stateObject.atk);
+            targetHp.OnDamageTaken(stateObject.atk);
         }
-        targetUnit.OnDead();
+        targetHp.OnDead();
         stateObject.target = null;
     }
 
     private IEnumerator RangeAttack()
     {
-        BaseUnit targetUnit = stateObject.target.GetComponent<BaseUnit>();
+        var targetHp = stateObject.target.GetComponent<IHealth>();
         var rangeWeapon = stateObject.sprites[2].gameObject; //weapon will always be the 3rd child of sprites
 
-        while (targetUnit.health > 0)
+        while (targetHp.Health > 0)
         {
             //play animation
             stateObject.atkAnimatior.SetTrigger("Attack");
@@ -56,18 +56,18 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
             //animation clip needs to be removed in order to adjust the value of the animated object properties, we can assign it back later
             stateObject.atkAnimatior.runtimeAnimatorController = null;
 
-            float projectileDuration = Vector2.Distance(rangeWeapon.transform.position, targetUnit.transform.position) / 2.5f;
+            float projectileDuration = Vector2.Distance(rangeWeapon.transform.position, stateObject.target.transform.position) / 2.5f;
 
-            rangeWeapon.transform.DOMove(targetUnit.transform.position, projectileDuration).SetEase(Ease.InOutSine);
+            rangeWeapon.transform.DOMove(stateObject.target.transform.position, projectileDuration).SetEase(Ease.InOutSine);
             yield return new WaitForSeconds(projectileDuration);
 
             //deal damage
-            targetUnit.OnDamageTaken(stateObject.atk);
+            targetHp.OnDamageTaken(stateObject.atk);
 
-            if(targetUnit.health <= 0)
+            if(targetHp.Health <= 0)
             {
                 //target unit should die instantly instead of waiting for all those yield return below
-                targetUnit.OnDead();
+                targetHp.OnDead();
                 //ObjectPoolManager.ReturnObjectToPool(stateObject.target.gameObject);
                 stateObject.target = null;
             }
@@ -100,7 +100,7 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
         {
             return UnitStateMachine.EUnitState.FindTarget;
         }
-        else if(stateObject.target.GetComponent<BaseUnit>().health <= 0)
+        else if(stateObject.target.GetComponent<IHealth>().Health <= 0)
         {
             return UnitStateMachine.EUnitState.FindTarget;
         }

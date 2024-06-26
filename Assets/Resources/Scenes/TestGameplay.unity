@@ -741,7 +741,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 28.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1455,6 +1455,11 @@ Transform:
   - {fileID: 944398350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &251337330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7653888788382716940, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
+  m_PrefabInstance: {fileID: 944398349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &281106136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1535,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281106136}
   m_CullTransparentMesh: 1
+--- !u!1 &316163614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7653888788382716940, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
+  m_PrefabInstance: {fileID: 1451626524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &326042793
 GameObject:
   m_ObjectHideFlags: 0
@@ -3601,7 +3611,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.5
+  m_fontSize: 36.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4428,6 +4438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enermy Cave
       objectReference: {fileID: 0}
+    - target: {fileID: 7653888788382716940, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8122432976420329241, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0
@@ -4452,13 +4466,61 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 2037980949338543473, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7653888788382716940, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 944398353}
   m_SourcePrefab: {fileID: 100100000, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
 --- !u!4 &944398350 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5140626926237253771, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
   m_PrefabInstance: {fileID: 944398349}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &944398353
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251337330}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3350513, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6808511, y: 2.6914895}
+    newSize: {x: 1.6808511, y: 2.6914895}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.7}
+  m_EdgeRadius: 0
 --- !u!1 &957703942
 GameObject:
   m_ObjectHideFlags: 0
@@ -6474,17 +6536,69 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Cave
       objectReference: {fileID: 0}
+    - target: {fileID: 7653888788382716940, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2037980949338543473, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7653888788382716940, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1451626528}
   m_SourcePrefab: {fileID: 100100000, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
 --- !u!4 &1451626525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5140626926237253771, guid: 2e7dddcc33b4ce649b3b8cbb18b4db97, type: 3}
   m_PrefabInstance: {fileID: 1451626524}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1451626528
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316163614}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.33926827, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6808511, y: 2.6914895}
+    newSize: {x: 1.6808511, y: 2.6914895}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.6914895}
+  m_EdgeRadius: 0
 --- !u!1 &1453771639
 GameObject:
   m_ObjectHideFlags: 0
@@ -6699,7 +6813,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.8
+  m_fontSize: 28.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7451,7 +7565,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684029774}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 579251da2d47f3044aee2e98261f0de5, type: 3}
   m_Name: 

@@ -9,8 +9,8 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class BaseUnit : MonoBehaviour
-{
+public class BaseUnit : MonoBehaviour, IHealth
+{  
     [Header("Unit Identity")]
     [SerializeField] internal Unit unit;
     [SerializeField] internal UnitStateMachine unitState;
@@ -31,9 +31,11 @@ public class BaseUnit : MonoBehaviour
     [Header("Player Stats")]
     internal float atk;
     internal float atkRate;
+    internal float enemyDetectDistance;
+    float IHealth.Health { get => health; }
     [SerializeField] internal float health;
     internal float maxHealth;
-    internal float enemyDetectDistance;
+
     internal float price;
 
     private void OnEnable()
@@ -147,10 +149,10 @@ public class BaseUnit : MonoBehaviour
         healthBar.transform.parent.gameObject.SetActive(false);
     }
 
-    public void OnDamageTaken(float data)
+    public void OnDamageTaken(float damage)
     {
         healthBar.transform.parent.gameObject.SetActive(true);
-        health -= data;
+        health -= damage;
         healthBar.fillAmount = health / maxHealth;
     }
     
