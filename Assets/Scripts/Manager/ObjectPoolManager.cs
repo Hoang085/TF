@@ -10,15 +10,15 @@ public class ObjectPoolManager : MonoBehaviour
     private static GameObject _objectPoolEmptyHolder;
     private static GameObject _gameObjectEmpty;
     private static GameObject _particleSystemEmpty;
-    private static GameObject _woodObjectEmpty;
-    private static GameObject _screwObjectEmpty;
+    private static GameObject _enemyObjectEmpty;
+    private static GameObject _playerOjectEmpty;
 
     public enum PoolType
     {
         GameObject,
         ParticleSystem,
-        Wood,
-        Screw,
+        PlayerOnject,
+        EnemyObject,
         None
     }
     public static PoolType PoolingType;
@@ -37,11 +37,11 @@ public class ObjectPoolManager : MonoBehaviour
         _gameObjectEmpty = new GameObject("GameObjects");
         _gameObjectEmpty.transform.SetParent(_objectPoolEmptyHolder.transform);
 
-        _woodObjectEmpty = new GameObject("Wood");
-        _woodObjectEmpty.transform.SetParent(_gameObjectEmpty.transform);
+        _playerOjectEmpty = new GameObject("PlayerObject");
+        _playerOjectEmpty.transform.SetParent(_gameObjectEmpty.transform);
 
-        _screwObjectEmpty = new GameObject("Screw");
-        _screwObjectEmpty.transform.SetParent(_gameObjectEmpty.transform);
+        _enemyObjectEmpty = new GameObject("EnemyObject");
+        _enemyObjectEmpty.transform.SetParent(_gameObjectEmpty.transform);
     }
 
     public static  GameObject SpawnObject(GameObject objectToSpawn, Vector3 spawnPosition, Quaternion spawnRotation,PoolType poolType = PoolType.None)
@@ -103,12 +103,12 @@ public class ObjectPoolManager : MonoBehaviour
                 return _particleSystemEmpty;
             case PoolType.GameObject:
                 return _gameObjectEmpty;
+            case PoolType.PlayerOnject:
+                return _playerOjectEmpty;
+            case PoolType.EnemyObject:
+                return _enemyObjectEmpty;
             case PoolType.None:
                 return null;
-            case PoolType.Wood:
-                return _woodObjectEmpty;
-            case PoolType.Screw:
-                return _screwObjectEmpty;
             default:
                 return null;
         }

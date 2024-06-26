@@ -68,6 +68,7 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
             {
                 //target unit should die instantly instead of waiting for all those yield return below
                 targetUnit.OnDead();
+                ObjectPoolManager.ReturnObjectToPool(stateObject.target.gameObject);
                 stateObject.target = null;
             }
 

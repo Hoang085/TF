@@ -13,8 +13,8 @@ public class DeadState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     public override void EnterState(StateMachine<UnitStateMachine.EUnitState, BaseUnit> stateMachine, BaseUnit unit)
     {
         stateObject = unit;
-        stateObject.gameObject.SetActive(false);
-        Debug.Log("Hello from dead state");
+        //ObjectPoolManager.ReturnObjectToPool(stateObject.gameObject);
+        //stateObject.gameObject.SetActive(false);
     }
 
     public override void ExitState()

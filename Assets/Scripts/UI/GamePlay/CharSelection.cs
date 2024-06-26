@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
@@ -74,10 +75,10 @@ public class CharSelection : MonoBehaviour
             // unit.unit = _unit;
             // onUnitInitialize?.Invoke();
         }
-
-        //BaseUnit unit = Instantiate(baseUnit, unitSpawnPos, Quaternion.identity).GetComponent<BaseUnit>();
         
-        BaseUnit unit = Instantiate(baseUnit, new Vector2(-2.03f,UnityEngine.Random.Range(-0.1f,0.1f)), Quaternion.identity).GetComponent<BaseUnit>();
+        BaseUnit unit = ObjectPoolManager
+            .SpawnObject(baseUnit, new Vector2(-2.03f, UnityEngine.Random.Range(-0.1f,0.1f)), quaternion.identity,
+                ObjectPoolManager.PoolType.PlayerOnject).GetComponent<BaseUnit>();
         unit.unit = _unit;
         onUnitInitialize?.Invoke();
     }

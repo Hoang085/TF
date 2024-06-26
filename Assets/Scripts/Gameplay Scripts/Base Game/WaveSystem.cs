@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [System.Serializable]   
 public class WaveSystem : MonoBehaviour
@@ -27,7 +29,10 @@ public class WaveSystem : MonoBehaviour
 
         for(int i = 0; i < enemyCount; i++)
         {
-            BaseUnit enemyUnit = Instantiate(enemy, new Vector2(2.03f, Random.Range(-0.1f, 0.1f)), Quaternion.identity).GetComponent<BaseUnit>();
+            BaseUnit enemyUnit = ObjectPoolManager
+                .SpawnObject(enemy, new Vector2(2.03f, Random.Range(-0.1f, 0.1f)), quaternion.identity,
+                    ObjectPoolManager.PoolType.EnemyObject).GetComponent<BaseUnit>();
+            
             enemyUnit.isEnemy = true;
             int unitIndex = Random.Range(0, unitList.Count);
             enemyUnit.unit = unitList[unitIndex];

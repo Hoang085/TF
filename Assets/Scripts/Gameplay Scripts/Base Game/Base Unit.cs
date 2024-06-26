@@ -31,7 +31,7 @@ public class BaseUnit : MonoBehaviour
     [Header("Player Stats")]
     internal float atk;
     internal float atkRate;
-    internal float health;
+    [SerializeField] internal float health;
     internal float maxHealth;
     internal float enemyDetectDistance;
     internal float price;
@@ -70,7 +70,7 @@ public class BaseUnit : MonoBehaviour
         {
             agent = GetComponent<NavMeshAgent>();
 
-            gameObject.name = unit.name;
+            //gameObject.name = unit.name;
 
             atk = unit.atk;
             agent.stoppingDistance = unit.atkDistance;
