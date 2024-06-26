@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 5140626926237253771}
   - component: {fileID: 3433670463266647316}
   - component: {fileID: 5755400747123348549}
+  - component: {fileID: -8440428795531169477}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -491,3 +492,17 @@ MonoBehaviour:
   healthTxt: {fileID: 4074721926130523355}
   healthBar: {fileID: 4238779020033229222}
   health: 0
+--- !u!114 &-8440428795531169477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653888788382716940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e180ecb6c6f4069b8a8cfdfe5b23d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateCoinEvent: {fileID: 11400000, guid: 9699718614341074ebc8a3cf38997f12, type: 2}
+  coinObject: {fileID: 2031049612619056501, guid: bf09283c09d798a4fa5af997583b6087, type: 3}

@@ -1,4 +1,5 @@
 ﻿using System;
+using TF.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,9 +8,10 @@ public class BaseManager : MonoBehaviour, IHealth
 {
     [SerializeField] private TextMeshProUGUI healthTxt;
     [SerializeField] private Image healthBar;
-
     [SerializeField] private float health;
-    float maxHealth;
+    [SerializeField] private bool isEnemy;
+    
+    private float _maxHealth;
 
     public float Health { get => health; }
 
@@ -17,7 +19,8 @@ public class BaseManager : MonoBehaviour, IHealth
     {
         health -= damage;
         healthTxt.text = health.ToString();
-        healthBar.fillAmount = health / maxHealth;
+        healthBar.fillAmount = health / _maxHealth;
+        gameObject.GetComponent<CollectionItem>().DropCoin(gameObject.transform, true,false);
     }
 
     public void OnDead()
@@ -25,11 +28,14 @@ public class BaseManager : MonoBehaviour, IHealth
         Debug.Log("Game Over");
     }
 
-    private void Awake()
+    private void Start()
     {
         healthTxt.GetComponentInChildren<TextMeshProUGUI>();
         healthBar.fillAmount = 1;
+        if (!isEnemy)
+            health = GameData.Instance.playerData.baseHealth;
+        
         healthTxt.text = health.ToString();
-        maxHealth = health;
+        _maxHealth = health;
     }
 }

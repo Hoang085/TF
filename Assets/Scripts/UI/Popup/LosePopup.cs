@@ -10,7 +10,6 @@ using UnityEngine.UI;
 
 public class LosePopup : BasePopUp
 {
-    [SerializeField] private GameEvent bonusTimeEvent;
     
     private Tween _tween;
     private bool _onClick;
@@ -30,32 +29,7 @@ public class LosePopup : BasePopUp
     {
         _onClick = isBlock;
     }
-
-    public void OnBtnRetry()
-    {
-        if (_onClick)
-            return;
-        BlockMultyClick();
-        OnCloseScreen();
-        Time.timeScale = 1;
-        _tween?.Kill();
-
-        string levelName = $"Level {PlayerPrefs.GetInt("UnlockedLevel", 1)}";
-        PopupManager.Instance.ShowLoadingScene(levelName);
-    }
-
-    public void OnBtnMoreTime()
-    {
-        if (_onClick)
-        {
-            return;
-        }
-        BlockMultyClick();
-        bonusTimeEvent.Raise();
-        Time.timeScale = 1;
-        Close();
-        
-    }
+    
     
     public void Close()
     {

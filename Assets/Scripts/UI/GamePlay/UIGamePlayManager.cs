@@ -6,16 +6,21 @@ using H2910.Defines;
 using System.Collections;
 using System.Collections.Generic;
 using ScriptableObjectArchitecture;
+using TF.Data;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
 public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
 {
+    [SerializeField] private GameEvent UpdateCoinEvent;
+    
     [SerializeField] private TextMeshProUGUI noticeText;
     [SerializeField] private TextMeshProUGUI foodAmountTxt;
     [SerializeField] private Image coolDownImage;
+    [SerializeField] private TextMeshProUGUI collectedCoinTxt;
 
+    public float collectedCoin;
     public float foodAmount;
     
     private bool _isCoolingDown;
@@ -25,12 +30,26 @@ public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
     private bool _onClick;
 
     public static Action onFoodChange;
-    
+
+    private void OnEnable()
+    {
+        UpdateCoinEvent.AddListener(UpdateCoin);
+    }
+
+    private void OnDisable()
+    {
+        UpdateCoinEvent.RemoveListener(UpdateCoin);
+    }
+
     public override void Awake()
     {
         base.Awake();
+
+        _coolDownTime = GameData.Instance.playerData.foodProductionSpeed;
         foodAmount = 0;
+        collectedCoin = 0;
         foodAmountTxt.text = foodAmount.ToString();
+        collectedCoinTxt.text = collectedCoin.ToString();
         
         _isCoolingDown = true;
         coolDownImage.fillAmount = 0;
@@ -102,6 +121,11 @@ public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
     {
         noticeText.gameObject.SetActive(true);
         DOVirtual.DelayedCall(1f, () => noticeText.gameObject.SetActive(false));
+    }
+
+    private void UpdateCoin()
+    {
+        collectedCoinTxt.text = collectedCoin.ToString();
     }
    
 }

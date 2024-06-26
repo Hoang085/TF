@@ -12,6 +12,7 @@ public class ObjectPoolManager : MonoBehaviour
     private static GameObject _particleSystemEmpty;
     private static GameObject _enemyObjectEmpty;
     private static GameObject _playerOjectEmpty;
+    private static GameObject _CoinEmpty;
 
     public enum PoolType
     {
@@ -19,6 +20,7 @@ public class ObjectPoolManager : MonoBehaviour
         ParticleSystem,
         PlayerOnject,
         EnemyObject,
+        Coin,
         None
     }
     public static PoolType PoolingType;
@@ -42,6 +44,9 @@ public class ObjectPoolManager : MonoBehaviour
 
         _enemyObjectEmpty = new GameObject("EnemyObject");
         _enemyObjectEmpty.transform.SetParent(_gameObjectEmpty.transform);
+
+        _CoinEmpty = new GameObject("CoinObject");
+        _CoinEmpty.transform.SetParent(_gameObjectEmpty.transform);
     }
 
     public static  GameObject SpawnObject(GameObject objectToSpawn, Vector3 spawnPosition, Quaternion spawnRotation,PoolType poolType = PoolType.None)
@@ -109,6 +114,8 @@ public class ObjectPoolManager : MonoBehaviour
                 return _enemyObjectEmpty;
             case PoolType.None:
                 return null;
+            case PoolType.Coin:
+                return _CoinEmpty;
             default:
                 return null;
         }
