@@ -41,18 +41,21 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
         //Debug.Log("Distance between object and target: " + Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x);
         if(stateObject.target != null)
         {
-            //if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x <=
-            //stateObject.agent.stoppingDistance + 1)
-            //{
-            //    return UnitStateMachine.EUnitState.Attack;
-            //}
             if (!stateObject.agent.pathPending)
             {
                 if (stateObject.agent.remainingDistance <= stateObject.agent.stoppingDistance)
                 {
                     if (!stateObject.agent.hasPath || stateObject.agent.velocity.sqrMagnitude == 0f)
                     {
-                        return UnitStateMachine.EUnitState.Attack;
+                        if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x <=
+                            stateObject.agent.stoppingDistance + 1)
+                        {
+                            return UnitStateMachine.EUnitState.Attack;
+                        }
+                        else
+                        {
+                            stateObject.transform.Translate(Vector2.right * stateObject.agent.speed * Time.deltaTime);
+                        }
                     }
                 }
             }
