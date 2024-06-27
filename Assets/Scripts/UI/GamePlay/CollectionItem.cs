@@ -8,15 +8,18 @@ public class CollectionItem : MonoBehaviour
 {
     [SerializeField] private GameEvent updateCoinEvent;
     [SerializeField] private GameObject coinObject;
+    
     private GameObject _coin;
     
+    private int _minValue = 10;
+    private int _maxValue = 20;
     
     private void ReturnPoolAfterTime(float time)
     {
         DOVirtual.DelayedCall(time, () =>
         {
             ObjectPoolManager.ReturnObjectToPool(_coin);
-            UIGamePlayManager.Instance.collectedCoin += 1;
+            UIGamePlayManager.Instance.collectedCoin += (int)Random.Range(_minValue,_maxValue);
             updateCoinEvent.Raise();
         });
 

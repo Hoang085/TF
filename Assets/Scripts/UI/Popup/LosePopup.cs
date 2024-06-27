@@ -5,18 +5,21 @@ using DG.Tweening;
 using H2910.Defines;
 using H2910.UI.Popups;
 using ScriptableObjectArchitecture;
+using TF.Data;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LosePopup : BasePopUp
 {
+    [SerializeField] private TextMeshProUGUI collectedCoinTxt;
     
     private Tween _tween;
     private bool _onClick;
 
     private void Start()
     {
-        Time.timeScale = 0;
+        collectedCoinTxt.text = UIGamePlayManager.Instance.collectedCoin.ToString();
     }
 
     private void BlockMultyClick()
@@ -44,5 +47,9 @@ public class LosePopup : BasePopUp
     {
         Time.timeScale = 1;
         base.OnCloseScreen();
+
+        PopupManager.Instance.ShowLoadingScene("Home");
+        
+        GameData.Instance.playerData.coin += UIGamePlayManager.Instance.collectedCoin;
     }
 }

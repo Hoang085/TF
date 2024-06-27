@@ -9,6 +9,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "SO Assets Reg")]
 public class SOAssetReg : GlobalConfig<SOAssetReg>
 {
+    [BoxGroup("Save Data")] public MainSaveDataVariable mainSaveDataVariable;
 
     [BoxGroup("Game Event")] public GameEvent winEvent;
     [BoxGroup("Game Event")] public GameEvent loseEvent;

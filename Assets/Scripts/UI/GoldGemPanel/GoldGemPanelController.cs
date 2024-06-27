@@ -1,12 +1,13 @@
 ﻿using System.Globalization;
 using DG.Tweening;
+using H2910.Common.Singleton;
 using H2910.Defines;
 using H2910.UI.Popups;
 using TF.Data;
 using TMPro;
 using UnityEngine;
 
-public class CoinGemPanelController : MonoBehaviour
+public class GoldGemPanelController : ManualSingletonMono<GoldGemPanelController>
 {
     [SerializeField] TextMeshProUGUI gemTxt;
     [SerializeField] TextMeshProUGUI CoinTxt;
@@ -17,7 +18,7 @@ public class CoinGemPanelController : MonoBehaviour
     private float _gemValue;
     
     private float _durationFx = 0.5f;
-    
+
     private void Start()
     {
         if (GameData.Instance == null)

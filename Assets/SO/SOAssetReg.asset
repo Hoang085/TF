@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c62b3d6ae518947b32accabfdfc462, type: 3}
   m_Name: SOAssetReg
   m_EditorClassIdentifier: 
+  mainSaveDataVariable: {fileID: 11400000, guid: 0e8666c2b2b123e43887c011a17e8cde, type: 2}
+  winEvent: {fileID: 11400000, guid: d8911e88b671b1141b82d60930e1c18f, type: 2}
+  loseEvent: {fileID: 11400000, guid: 6d46780d5aa2cf446befb373af2dd0cb, type: 2}
   setPinEvent: {fileID: 11400000, guid: 54c7adf3226af1c48b37c0c2149f18d7, type: 2}
   unPinEvent: {fileID: 11400000, guid: 340e09a8445202a45b41182db0fe0004, type: 2}

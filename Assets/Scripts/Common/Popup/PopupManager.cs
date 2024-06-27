@@ -38,6 +38,7 @@ namespace H2910.UI.Popups
 
         public void ShowLoadingScene(string mapName)
         {
+            ToggleGoldPanel(false);
             loadingScene.gameObject.SetActive(true);
             loadingScene.LoadSceneAsync(mapName,LoadingBgType.None);
         }
@@ -195,17 +196,18 @@ namespace H2910.UI.Popups
             {
                 _tweenDeActive?.Kill();
                 goldPanel.SetActive(isShow);
-                _tweenActive = goldPanel.GetComponent<RectTransform>().DOAnchorPosY(-45f, 0.3f).SetUpdate(true);
+                //_tweenActive = goldPanel.GetComponent<RectTransform>().DOAnchorPosY(-45f, 0.3f).SetUpdate(true);
             }
             else
             {
                 if(CanHideGoldUI() || forceDisable)
                 {
                     _tweenActive?.Kill();
-                    _tweenDeActive = goldPanel.GetComponent<RectTransform>().DOAnchorPosY(45f, 0.3f).SetUpdate(true).OnComplete(() =>
-                    {
-                        goldPanel.SetActive(false);
-                    });
+                    goldPanel.SetActive(false);
+                    // _tweenDeActive = goldPanel.GetComponent<RectTransform>().DOAnchorPosY(45f, 0.3f).SetUpdate(true).OnComplete(() =>
+                    // {
+                    //     goldPanel.SetActive(false);
+                    // });
                 }    
             }
         }

@@ -2,26 +2,15 @@ using ScriptableObjectArchitecture;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using H2910.Common.Singleton;
+using H2910.Defines;
+using H2910.UI.Popups;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : ManualSingletonMono<GameManager>
 {
-    public static GameManager instance;
-
     [SerializeField] internal BoolGameEvent onGameOver;
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    
     void OnEnable()
     {
         onGameOver.AddListener(GameOverEvent);
@@ -31,8 +20,8 @@ public class GameManager : MonoBehaviour
     {
         if (isGameOver)
         {
-            Debug.Log("Game Over");
             onGameOver.RemoveListener(GameOverEvent);
+            PopupManager.Instance.OnShowScreen(PopupName.Lose,ParentPopup.Hight);
         }
     }
 }

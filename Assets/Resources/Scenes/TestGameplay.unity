@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba436406ae6d46ebab7c9f39bd649e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnload: 0
   gemTxt: {fileID: 1593704547}
   CoinTxt: {fileID: 1959288312}
 --- !u!1 &18202669

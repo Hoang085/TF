@@ -23,7 +23,7 @@ namespace H2910.UI.Popups
         public bool CanClick => !OnClick;
         public bool IsShow => _canvasGroup.alpha == 1 && IsClosing == false;
         public bool IsShowing { get; private set; }
-        public bool IsClosing { get; private set; }
+        public bool IsClosing { get; private set; } 
         public bool EnableGoldUI => enableGoldUI;
 
         protected void Awake()

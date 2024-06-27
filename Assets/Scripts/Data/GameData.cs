@@ -75,6 +75,8 @@ public class PlayerData
     public float gem;
     public float baseHealth;
     public float foodProductionSpeed;
+    public float dameBoost;
+    public float healthBoost;
 }
 
 [System.Serializable]

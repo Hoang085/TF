@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using H2910.Common.Singleton;
 using H2910.Defines;
 using H2910.UI.Popups;
@@ -17,6 +18,11 @@ public class UIHomeManager : ManualSingletonMono<UIHomeManager>
     {
         base.Awake();
         _canvas = GetComponentInChildren<CanvasGroup>();
+    }
+
+    private void Start()
+    {
+        GoldGemPanelController.Instance.UpdateCoinTxt();
     }
 
     private void BlockMultyClick()

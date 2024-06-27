@@ -26,7 +26,7 @@ public class BaseManager : MonoBehaviour, IHealth
 
     public void OnDead()
     {
-        GameManager.instance.onGameOver?.Raise(true);
+        GameManager.Instance.onGameOver?.Raise(true);
     }
 
     private void Start()

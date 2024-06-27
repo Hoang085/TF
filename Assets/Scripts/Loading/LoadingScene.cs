@@ -23,6 +23,7 @@ public class LoadingScene : MonoBehaviour
         asyncLoad.allowSceneActivation = true;  
         yield return new WaitForSecondsRealtime(0.05f);
         gameObject.SetActive(false);
+        PopupManager.Instance.ToggleGoldPanel(true);
     }
 
     public void LoadSceneAsync(string mapName, LoadingBgType loadingBgType)

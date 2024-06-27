@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableObjectArchitecture;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class MainSaveDataVariable : MonoBehaviour
+
+[System.Serializable]
+public class VariableSaveEvent : UnityEvent<VariableSave>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+}
 
-    // Update is called once per frame
-    void Update()
+[CreateAssetMenu(
+    fileName = "VariableSaveData.asset",
+    menuName = SOArchitecture_Utility.VARIABLE_SUBMENU + "VariableSaveData",
+    order = 120)]
+public class MainSaveDataVariable : BaseVariable<VariableSave,VariableSaveEvent>
+{
+    public override VariableSave Value
     {
-        
+        get
+        {
+            return _value;
+        }
+        set
+        {
+            _value = value;
+            Raise();
+        }
     }
 }
