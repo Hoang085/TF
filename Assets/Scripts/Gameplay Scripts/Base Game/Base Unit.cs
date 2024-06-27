@@ -28,15 +28,22 @@ public class BaseUnit : MonoBehaviour, IHealth
     [SerializeField] internal GameObject target;
     internal NavMeshAgent agent;
 
-    [Header("Player Stats")]
+    [Header("Unit Stats")]
     internal float atk;
     internal float atkRate;
     internal float enemyDetectDistance;
     float IHealth.Health { get => health; }
     [SerializeField] internal float health;
     internal float maxHealth;
-
     internal float price;
+
+    [Header("Layermasks")]
+    private int playerMelee = 6;
+    private int playerRange = 7;
+    private int player = 10;
+    private int enemyMelee = 8;
+    private int enemyRange = 9;
+    private int enemy = 11;
 
     private void OnEnable()
     {
@@ -125,15 +132,41 @@ public class BaseUnit : MonoBehaviour, IHealth
     {
         if (isEnemy)
         {
-            gameObject.layer = 7;
-            targetLayer = 1 << 6;
+            if(unit?.atkDistance <= 1)
+            {
+                gameObject.layer = enemyMelee;
+            }
+            else
+            {
+                gameObject.layer = enemyRange;
+            }
+            Physics2D.IgnoreLayerCollision(enemyMelee, enemyRange);
+
+            var targetLayer1 = 1 << playerMelee;
+            var targetLayer2 = 1 << playerRange;
+            var targetLayer3 = 1 << player;
+
+            targetLayer = targetLayer1 | targetLayer2 | targetLayer3;
 
             transform.eulerAngles = Vector3.up * 180;
         }
         else
         {
-            gameObject.layer = 6;
-            targetLayer = 1 << 7;
+            if (unit?.atkDistance <= 1)
+            {
+                gameObject.layer = playerMelee;
+            }
+            else
+            {
+                gameObject.layer = playerRange;
+            }
+            Physics2D.IgnoreLayerCollision(playerMelee, playerRange);
+
+            var targetLayer1 = 1 << enemyMelee;
+            var targetLayer2 = 1 << enemyRange;
+            var targetLayer3 = 1 << enemy;
+
+            targetLayer = targetLayer1 | targetLayer2 | targetLayer3;
 
             transform.eulerAngles = Vector3.zero;
         }

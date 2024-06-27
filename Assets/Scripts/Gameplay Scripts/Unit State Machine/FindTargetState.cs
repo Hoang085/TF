@@ -22,11 +22,7 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 
     public override void EnterState(StateMachine<UnitStateMachine.EUnitState, BaseUnit> stateMachine, BaseUnit unit)
     {
-        Debug.Log("Hello from Find target state");
-        this.stateObject = unit;
-        direction = Vector2.right;
-        distance = unit.enemyDetectDistance;
-        radius = unit.radius;
+        stateObject = unit;
     }
 
     public override void ExitState()
@@ -54,6 +50,7 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
                         }
                         else
                         {
+                            //Continue to progress even when stopping distance has been reached
                             stateObject.transform.Translate(Vector2.right * stateObject.agent.speed * Time.deltaTime);
                         }
                     }
@@ -66,29 +63,12 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     }
     public override void UpdateState()
     {   
-        CheckForTarget();
-    }
-    private void CheckForTarget()
-    {
-        rayOrigin = stateObject.transform.position;
-        distance = stateObject.enemyDetectDistance;
-        radius = stateObject.radius;
-
-        RaycastHit2D hit = Physics2D.CircleCast(rayOrigin, radius, direction, distance, stateObject.targetLayer);
-        Debug.DrawRay(rayOrigin, direction * distance * 2 * radius, Color.green);
-
-        if (hit)
+        if(stateObject.target != null)
         {
-            stateObject.target = hit.transform.gameObject;
-            curHitDistance = hit.distance;
-
             stateObject.agent.SetDestination(stateObject.target.transform.position);
         }
         else
         {
-            curHitDistance = distance;
-            stateObject.target = null;
-
             stateObject.transform.Translate(Vector2.right * stateObject.agent.speed * Time.deltaTime);
         }
     }

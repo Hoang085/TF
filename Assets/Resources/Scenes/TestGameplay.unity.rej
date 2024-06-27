@@ -1,0 +1,9 @@
+diff a/Assets/Resources/Scenes/TestGameplay.unity b/Assets/Resources/Scenes/TestGameplay.unity	(rejected hunks)
+@@ -258,6 +258,7 @@
+   m_GameObject: {fileID: 17678182}
+   m_CullTransparentMesh: 1
+ --- !u!1 &18100056
++GameObject:
+   m_ObjectHideFlags: 0
+   m_CorrespondingSourceObject: {fileID: 0}
+   m_PrefabInstance: {fileID: 0}

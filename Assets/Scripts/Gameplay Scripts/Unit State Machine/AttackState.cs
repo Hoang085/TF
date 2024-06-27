@@ -2,11 +2,11 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 {
     public override BaseUnit stateObject { get; set; }
+    private bool targetChanged;
 
     public AttackState(UnitStateMachine.EUnitState key) : base(key)
     {
@@ -31,6 +31,12 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 
         while(targetHp.Health > 0)
         {
+            //if current target is not the same as the object old target
+            if (!targetHp.Equals(stateObject.target.GetComponent<IHealth>()))
+            {
+                targetChanged = true;
+            }
+
             //play animation
             stateObject.atkAnimatior.SetTrigger("Attack");
             yield return new WaitForSeconds(stateObject.atkRate);
@@ -49,6 +55,12 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 
         while (targetHp.Health > 0)
         {
+            //if current target is not the same as the object old target
+            if (!targetHp.Equals(stateObject.target.GetComponent<IHealth>()))
+            {
+                targetChanged = true;
+            }
+
             //play animation
             stateObject.atkAnimatior.SetTrigger("Attack");
             yield return new WaitForSeconds(stateObject.atkRate / 2);
@@ -89,7 +101,7 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 
     public override void ExitState()
     {
-        
+        targetChanged = false;
     }
 
     public override UnitStateMachine.EUnitState GetNextState()
@@ -100,15 +112,12 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
         {
             return UnitStateMachine.EUnitState.FindTarget;
         }
-        else if(stateObject.target.GetComponent<IHealth>().Health <= 0)
+        else if(stateObject.target.GetComponent<IHealth>().Health <= 0 ||
+            Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x > stateObject.agent.stoppingDistance + 1
+            || targetChanged)
         {
             return UnitStateMachine.EUnitState.FindTarget;
         }
-
-        //if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x > stateObject.agent.stoppingDistance + 1)
-        //{
-        //    return UnitStateMachine.EUnitState.ApproachTarget;
-        //}
 
         return UnitStateMachine.EUnitState.Attack;
     }

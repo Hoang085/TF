@@ -11,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
+  - Player Melee
+  - Player Range
+  - Enemy Melee
+  - Enemy Range
+  - 'Player '
   - Enemy
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 

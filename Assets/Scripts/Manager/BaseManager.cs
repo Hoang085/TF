@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using TF.Data;
 using TMPro;
 using UnityEngine;
@@ -10,7 +10,7 @@ public class BaseManager : MonoBehaviour, IHealth
     [SerializeField] private Image healthBar;
     [SerializeField] private float health;
     [SerializeField] private bool isEnemy;
-    
+
     private float _maxHealth;
 
     public float Health { get => health; }
@@ -20,7 +20,7 @@ public class BaseManager : MonoBehaviour, IHealth
         health -= damage;
         healthTxt.text = health.ToString();
         healthBar.fillAmount = health / _maxHealth;
-        gameObject.GetComponent<CollectionItem>().DropCoin(gameObject.transform, true,false);
+        gameObject.GetComponent<CollectionItem>().DropCoin(gameObject.transform, true, false);
     }
 
     public void OnDead()
@@ -34,7 +34,7 @@ public class BaseManager : MonoBehaviour, IHealth
         healthBar.fillAmount = 1;
         if (!isEnemy)
             health = GameData.Instance.playerData.baseHealth;
-        
+
         healthTxt.text = health.ToString();
         _maxHealth = health;
     }

@@ -2,16 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+   
 public abstract class StateMachine<EState, ObjectType> : MonoBehaviour where EState : Enum
 {
     [SerializeField] internal ObjectType stateObject;
 
     protected Dictionary<EState, BaseState<EState, ObjectType>> states = new Dictionary<EState, BaseState<EState, ObjectType>>();
-    protected BaseState<EState, ObjectType> currentState;
+
+    [SerializeField] protected BaseState<EState, ObjectType> currentState;
 
     protected bool isTransitioningState = false;
-    private void Update()
+    protected virtual void Update()
     {
         EState nextStateKey = currentState.GetNextState();
 
