@@ -16,7 +16,7 @@ MonoBehaviour:
   atk: 4
   atkDistance: 0.75
   atkRate: 1
-  health: 12
+  health: 18
   moveSpeed: 0.2
   enemyDetectDistance: 1
   price: 7

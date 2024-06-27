@@ -32,10 +32,7 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
         while(targetHp.Health > 0)
         {
             //if current target is not the same as the object old target
-            if (!targetHp.Equals(stateObject.target.GetComponent<IHealth>()))
-            {
-                targetChanged = true;
-            }
+            if (!targetHp.Equals(stateObject.target.GetComponent<IHealth>())) targetChanged = true;
 
             //play animation
             stateObject.atkAnimatior.SetTrigger("Attack");
@@ -58,12 +55,17 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
             //if current target is not the same as the object old target
             if (!targetHp.Equals(stateObject.target.GetComponent<IHealth>()))
             {
+                Debug.Log("Target changed");
                 targetChanged = true;
             }
 
             //play animation
+            stateObject.atkAnimatior.runtimeAnimatorController = stateObject.unit.unitAnimation;
             stateObject.atkAnimatior.SetTrigger("Attack");
             yield return new WaitForSeconds(stateObject.atkRate / 2);
+
+            //break out of the attack loop if the target is no longer there, this is mainly to prevent null reference bug when projectile are flying
+            if (stateObject.target == null || !stateObject.target.activeSelf) break;
 
             //animation clip needs to be removed in order to adjust the value of the animated object properties, we can assign it back later
             stateObject.atkAnimatior.runtimeAnimatorController = null;
@@ -88,14 +90,12 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
             rangeWeapon.transform.localPosition = new Vector3(-0.2f, -0.1f, 0);
 
             //wait for the complete cycle before attacking again
-            if (projectileDuration < 0.5f) yield return new WaitForSeconds(0.5f - projectileDuration);
+            if (projectileDuration < (stateObject.atkRate / 2)) yield return new WaitForSeconds((stateObject.atkRate / 2) - projectileDuration);
 
             rangeWeapon.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.InOutSine);
 
             //wait for weapon to load back
-            yield return new WaitForSeconds(0.2f);
-
-            stateObject.atkAnimatior.runtimeAnimatorController = stateObject.unit.unitAnimation;
+            yield return new WaitForSeconds(0.25f);
         }
     }
 

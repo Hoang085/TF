@@ -1,3 +1,4 @@
+using ScriptableObjectArchitecture;
 using System;
 using TF.Data;
 using TMPro;
@@ -25,7 +26,7 @@ public class BaseManager : MonoBehaviour, IHealth
 
     public void OnDead()
     {
-        Debug.Log("Game Over");
+        GameManager.instance.onGameOver?.Raise(true);
     }
 
     private void Start()
