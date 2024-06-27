@@ -3186,6 +3186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 613007015}
+  - component: {fileID: 613007014}
   - component: {fileID: 613007013}
   m_Layer: 0
   m_Name: Data
@@ -3206,14 +3207,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0f645ec6e94866884703528739b6ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnload: 1
+  dontDestroyOnload: 0
   identifierField: data.json
+  priceIndentifier: pricedata.json
   defaultPlayerData:
     name: Player
     coin: 10
     gem: 20
     baseHealth: 2
     foodProductionSpeed: 5
+  defaultPriceData:
+    foodUpgradePrice: 20
+    baseUpgradePrice: 50
+--- !u!114 &613007014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613007012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad093702fb6be4c4eb626da94e2ca03d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &613007015
 Transform:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class DeadState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     {
         stateObject = unit;
         ObjectPoolManager.ReturnObjectToPool(stateObject.gameObject);
-        stateObject.GetComponent<CollectionItem>().DropCoin(stateObject.gameObject.transform,false,false);
+        stateObject.GetComponent<CollectionItem>().DropCoin(stateObject.gameObject.transform,false);
     }
 
     public override void ExitState()

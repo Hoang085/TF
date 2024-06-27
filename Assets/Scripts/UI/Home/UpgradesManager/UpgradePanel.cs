@@ -10,6 +10,8 @@ public class UpgradePanel : PanelBase
     [SerializeField] private TextMeshProUGUI foodUpgradePriceTxt;
     [SerializeField] private TextMeshProUGUI baseHeathPriceTxt;
 
+    private float _priceDecrea = 4;
+
     private void Start()
     {
         UpdateTxt();
@@ -17,7 +19,7 @@ public class UpgradePanel : PanelBase
 
     private void UpdateTxt()
     {
-        foodProTxt.text = $"{(GameData.Instance.playerData.foodProductionSpeed/10).ToString()}/s";
+        foodProTxt.text = $"{Math.Round(GameData.Instance.playerData.foodProductionSpeed/10, 2).ToString()}/s";
         baseHeathTxt.text = GameData.Instance.playerData.baseHealth.ToString();
 
         foodUpgradePriceTxt.text = GameData.Instance.priceData.foodUpgradePrice.ToString();
@@ -26,13 +28,15 @@ public class UpgradePanel : PanelBase
 
     public void UpgradeFoodPro()
     {
-        //GameData.Instance.playerData.foodProductionSpeed -= 0.2f;
+        GameData.Instance.playerData.foodProductionSpeed -= 0.2f;
+        GameData.Instance.priceData.foodUpgradePrice += (int)(GameData.Instance.priceData.foodUpgradePrice/2);
         UpdateTxt();
     }
 
     public void UpgradeBaseHeath()
     {
-        //GameData.Instance.playerData.baseHealth += 2;
+        GameData.Instance.playerData.baseHealth += 2;
+        GameData.Instance.priceData.baseUpgradePrice += (int)(GameData.Instance.priceData.baseUpgradePrice / 2);
         UpdateTxt();
     }
 }

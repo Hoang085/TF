@@ -42,21 +42,19 @@ namespace TF.Data
         {
             if (!await SaveSystemAPI.ExistsAsync(this.identifierField))
             {
-                Debug.Log("Player data not found");
+                Debug.LogError("Player data not found");
                 Debug.Log("Using default player data instead");
-                this.playerData = this.defaultPlayerData;
-                return;
+                playerData = defaultPlayerData;
             }
             
             if (!await SaveSystemAPI.ExistsAsync(this.priceIndentifier))
             {
-                Debug.Log("Player data not found");
+                Debug.LogError("Player data not found");
                 Debug.Log("Using default data instead");
                 priceData = defaultPriceData;
-                return;
             }
             
-            this.playerData = await SaveSystemAPI.LoadAsync<PlayerData>(this.identifierField);
+            playerData = await SaveSystemAPI.LoadAsync<PlayerData>(identifierField);
             priceData = await SaveSystemAPI.LoadAsync<PriceData>(priceIndentifier);
             Debug.Log("Player data loaded successfully");
         }

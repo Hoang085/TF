@@ -44,8 +44,7 @@ public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
     public override void Awake()
     {
         base.Awake();
-
-        _coolDownTime = GameData.Instance.playerData.foodProductionSpeed;
+        
         foodAmount = 0;
         collectedCoin = 0;
         foodAmountTxt.text = foodAmount.ToString();
@@ -54,6 +53,11 @@ public class UIGamePlayManager : ManualSingletonMono<UIGamePlayManager>
         _isCoolingDown = true;
         coolDownImage.fillAmount = 0;
         StartCoroutine(StartCoolDown());
+    }
+
+    private void Start()
+    {
+        _coolDownTime = GameData.Instance.playerData.foodProductionSpeed;
     }
 
     private void Update()

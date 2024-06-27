@@ -22,23 +22,23 @@ public class CollectionItem : MonoBehaviour
 
     }
 
-    public void DropCoin(Transform spawnPos, bool isBase, bool isEnemy)
+    public void DropCoin(Transform spawnPos, bool isBase)
     {
         _coin = ObjectPoolManager.SpawnObject(coinObject, spawnPos.position, Quaternion.identity,
             ObjectPoolManager.PoolType.Coin);
 
         Vector3 endPos = new Vector3(0,0,0);
         
-        if (!isBase && !isEnemy)
+        if (!isBase)
         {
             endPos = new Vector3(Random.Range(spawnPos.position.x - 0.5f, spawnPos.position.x + 0.5f),
                 Random.Range(spawnPos.position.y - 0.5f, spawnPos.position.y + 0.5f), spawnPos.position.z);
         }
-        else if(isBase && !isEnemy)
+        else if(isBase && gameObject.layer == 10)
         { 
             endPos = new Vector3(spawnPos.position.x + 0.5f,
                 Random.Range(spawnPos.position.y - 0.5f, spawnPos.position.y + 0.5f), spawnPos.position.z);
-        }else if (!isBase && isEnemy)
+        }else if (isBase && gameObject.layer == 11)
         {
             endPos = new Vector3(spawnPos.position.x - 0.5f,
                 Random.Range(spawnPos.position.y - 0.5f, spawnPos.position.y + 0.5f), spawnPos.position.z);

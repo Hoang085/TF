@@ -20,7 +20,7 @@ public class BaseManager : MonoBehaviour, IHealth
         health -= damage;
         healthTxt.text = health.ToString();
         healthBar.fillAmount = health / _maxHealth;
-        gameObject.GetComponent<CollectionItem>().DropCoin(gameObject.transform, true, false);
+        gameObject.GetComponent<CollectionItem>().DropCoin(gameObject.transform, true);
     }
 
     public void OnDead()
@@ -33,7 +33,14 @@ public class BaseManager : MonoBehaviour, IHealth
         healthTxt.GetComponentInChildren<TextMeshProUGUI>();
         healthBar.fillAmount = 1;
         if (!isEnemy)
+        {
+            gameObject.layer = 10;
             health = GameData.Instance.playerData.baseHealth;
+        }
+        else
+        {
+            gameObject.layer = 11;
+        }
 
         healthTxt.text = health.ToString();
         _maxHealth = health;
