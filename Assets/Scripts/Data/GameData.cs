@@ -77,6 +77,7 @@ public class PlayerData
     public float foodProductionSpeed;
     public float dameBoost;
     public float healthBoost;
+    public Setting playersetting;
 }
 
 [System.Serializable]
@@ -85,4 +86,11 @@ public class PriceData
     public float foodUpgradePrice;
     public float baseUpgradePrice;
     
+}
+
+[System.Serializable]
+public class Setting
+{
+    public float soundValue;
+    public float BGMValue;
 }

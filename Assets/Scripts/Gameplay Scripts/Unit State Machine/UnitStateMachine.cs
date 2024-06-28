@@ -22,6 +22,7 @@ public class UnitStateMachine : StateMachine<UnitStateMachine.EUnitState, BaseUn
     private float radius;
     private Vector3 rayOrigin;
     private Vector3 direction = Vector2.right;
+    private float curhitdistan;
 
     private void Awake()
     {
@@ -51,10 +52,19 @@ public class UnitStateMachine : StateMachine<UnitStateMachine.EUnitState, BaseUn
         if (hit)
         {
             stateObject.target = hit.transform.gameObject;
+            curhitdistan = hit.distance;
         }
         else
         {
+            curhitdistan = distance;
             stateObject.target = null;
         }
+        
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Debug.DrawLine(rayOrigin, rayOrigin+direction * curhitdistan);
+        Gizmos.DrawWireSphere(rayOrigin+direction * curhitdistan,radius);
     }
 }

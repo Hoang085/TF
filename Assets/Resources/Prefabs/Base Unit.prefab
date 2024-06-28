@@ -807,10 +807,10 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.25
+  m_Height: 0.3
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &8670769285636530030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_OverrideArea: 1
-  m_Area: 0
+  m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
 --- !u!114 &-1958718496169656463

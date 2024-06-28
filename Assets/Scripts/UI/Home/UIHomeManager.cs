@@ -20,11 +20,6 @@ public class UIHomeManager : ManualSingletonMono<UIHomeManager>
         _canvas = GetComponentInChildren<CanvasGroup>();
     }
 
-    private void Start()
-    {
-        GoldGemPanelController.Instance.UpdateCoinTxt();
-    }
-
     private void BlockMultyClick()
     {
         _onClick = true;
@@ -63,10 +58,11 @@ public class UIHomeManager : ManualSingletonMono<UIHomeManager>
         PopupManager.Instance.ShowLoadingScene("GamePlay");
     }
     
-    public void ShowUIHome(bool isShow = true)
+    public void ShowUIHome(bool isShow)
     {
-        _canvas.alpha = isShow ? 0 : 1;
+        _canvas.alpha = isShow ? 1 : 0;
         _canvas.blocksRaycasts = !isShow;
+        gameObject.SetActive(isShow);
     }   
     
 }

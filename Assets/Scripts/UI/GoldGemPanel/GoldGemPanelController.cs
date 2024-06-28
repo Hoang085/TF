@@ -13,9 +13,7 @@ public class GoldGemPanelController : ManualSingletonMono<GoldGemPanelController
     [SerializeField] TextMeshProUGUI CoinTxt;
 
     private float _currentCoin;
-    private float _CoinValue;
     private float _currentGem;
-    private float _gemValue;
     
     private float _durationFx = 0.5f;
 
@@ -33,14 +31,13 @@ public class GoldGemPanelController : ManualSingletonMono<GoldGemPanelController
         CoinTxt.text = _currentCoin.ToString("N0", CultureInfo.InvariantCulture);
     }
     
-    public void UpdateGemTxt()
+    public void UpdateTxt()
     {
-        gemTxt.text = _gemValue.ToString("N0", CultureInfo.InvariantCulture);
-    }
-
-    public void UpdateCoinTxt()
-    {
-        CoinTxt.text = _CoinValue.ToString("N0", CultureInfo.InvariantCulture);
+        _currentCoin = GameData.Instance.playerData.coin;
+        _currentGem = GameData.Instance.playerData.gem;
+        
+        gemTxt.text = _currentGem.ToString("N0",CultureInfo.InvariantCulture);
+        CoinTxt.text = _currentCoin.ToString("N0", CultureInfo.InvariantCulture);
     }
     
 }

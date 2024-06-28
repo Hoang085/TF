@@ -19,24 +19,48 @@ public class UpgradePanel : PanelBase
 
     private void UpdateTxt()
     {
+        CheckPrice(foodUpgradePriceTxt);
+        CheckPrice(baseHeathPriceTxt);
         foodProTxt.text = $"{Math.Round(GameData.Instance.playerData.foodProductionSpeed/10, 2).ToString()}/s";
         baseHeathTxt.text = GameData.Instance.playerData.baseHealth.ToString();
 
         foodUpgradePriceTxt.text = GameData.Instance.priceData.foodUpgradePrice.ToString();
         baseHeathPriceTxt.text = GameData.Instance.priceData.baseUpgradePrice.ToString();
+
     }
 
     public void UpgradeFoodPro()
     {
-        GameData.Instance.playerData.foodProductionSpeed -= 0.2f;
-        GameData.Instance.priceData.foodUpgradePrice += (int)(GameData.Instance.priceData.foodUpgradePrice/2);
-        UpdateTxt();
+        if (GameData.Instance.playerData.coin >= GameData.Instance.priceData.foodUpgradePrice)
+        {
+            GameData.Instance.playerData.foodProductionSpeed -= 0.2f;
+            GameData.Instance.priceData.foodUpgradePrice += (int)(GameData.Instance.priceData.foodUpgradePrice/2);
+            GameData.Instance.playerData.coin -= GameData.Instance.priceData.foodUpgradePrice;
+            UpdateTxt();
+        }
     }
 
     public void UpgradeBaseHeath()
     {
-        GameData.Instance.playerData.baseHealth += 2;
-        GameData.Instance.priceData.baseUpgradePrice += (int)(GameData.Instance.priceData.baseUpgradePrice / 2);
-        UpdateTxt();
+        if (GameData.Instance.playerData.coin >= GameData.Instance.priceData.foodUpgradePrice)
+        {
+            GameData.Instance.playerData.baseHealth += 2;
+            GameData.Instance.priceData.baseUpgradePrice += (int)(GameData.Instance.priceData.baseUpgradePrice / 2);
+            GameData.Instance.playerData.coin -= GameData.Instance.priceData.baseUpgradePrice;
+            UpdateTxt();
+        }
+
+    }
+
+    private void CheckPrice(TextMeshProUGUI txt)
+    {
+        if (GameData.Instance.playerData.coin < GameData.Instance.priceData.foodUpgradePrice)
+        {
+            txt.color = Color.red;
+        }
+        else
+        {
+            txt.color = Color.white;
+        }
     }
 }

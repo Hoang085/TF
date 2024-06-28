@@ -5851,6 +5851,8 @@ MonoBehaviour:
     gem: 20
     baseHealth: 2
     foodProductionSpeed: 5
+    dameBoost: 0
+    healthBoost: 0
   defaultPriceData:
     foodUpgradePrice: 0
     baseUpgradePrice: 0

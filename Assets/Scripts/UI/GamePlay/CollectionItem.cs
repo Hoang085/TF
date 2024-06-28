@@ -11,8 +11,8 @@ public class CollectionItem : MonoBehaviour
     
     private GameObject _coin;
     
-    private int _minValue = 10;
-    private int _maxValue = 20;
+    private int _minValue = 5;
+    private int _maxValue = 10;
     
     private void ReturnPoolAfterTime(float time)
     {
@@ -27,8 +27,6 @@ public class CollectionItem : MonoBehaviour
 
     public void DropCoin(Transform spawnPos, bool isBase)
     {
-        _coin = ObjectPoolManager.SpawnObject(coinObject, spawnPos.position, Quaternion.identity,
-            ObjectPoolManager.PoolType.Coin);
 
         Vector3 endPos = new Vector3(0,0,0);
         
@@ -36,15 +34,18 @@ public class CollectionItem : MonoBehaviour
         {
             endPos = new Vector3(Random.Range(spawnPos.position.x - 0.5f, spawnPos.position.x + 0.5f),
                 Random.Range(spawnPos.position.y - 0.5f, spawnPos.position.y + 0.5f), spawnPos.position.z);
+            _coin = ObjectPoolManager.SpawnObject(coinObject, spawnPos.position, Quaternion.identity,
+                ObjectPoolManager.PoolType.Coin);
         }
         else if(isBase && gameObject.layer == 10)
-        { 
-            endPos = new Vector3(spawnPos.position.x + 0.5f,
-                Random.Range(spawnPos.position.y - 0.5f, spawnPos.position.y + 0.5f), spawnPos.position.z);
+        {
+            return;
         }else if (isBase && gameObject.layer == 11)
         {
             endPos = new Vector3(spawnPos.position.x - 0.5f,
                 Random.Range(spawnPos.position.y - 0.5f, spawnPos.position.y + 0.5f), spawnPos.position.z);
+            _coin = ObjectPoolManager.SpawnObject(coinObject, spawnPos.position, Quaternion.identity,
+                ObjectPoolManager.PoolType.Coin);
         }
         
         _coin.transform.DOJump(endPos, 0.5f, 2, 0.5f);

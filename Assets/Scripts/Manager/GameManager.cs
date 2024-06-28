@@ -2,6 +2,7 @@ using ScriptableObjectArchitecture;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using H2910.Common.Singleton;
 using H2910.Defines;
 using H2910.UI.Popups;
@@ -21,7 +22,11 @@ public class GameManager : ManualSingletonMono<GameManager>
         if (isGameOver)
         {
             onGameOver.RemoveListener(GameOverEvent);
-            PopupManager.Instance.OnShowScreen(PopupName.Lose,ParentPopup.Hight);
+
+            DOVirtual.DelayedCall(2.5f, () =>
+            {
+                PopupManager.Instance.OnShowScreen(PopupName.Lose, ParentPopup.Hight);
+            });
         }
     }
 }

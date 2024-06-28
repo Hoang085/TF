@@ -15,6 +15,7 @@ public class PopupSetting : BasePopUp
 
     public event Action<float> BgmChange;
     public event Action<float> SoundChange;
+    
     private float bgmVolume;
     private float soundVolume;
     private Tween tween;

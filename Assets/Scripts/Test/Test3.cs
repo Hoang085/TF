@@ -5,22 +5,17 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
 using TF.Data;
-public class Test3 : DataController
+public class Cards : DataController
 {
-    void Start () {
-        Load();
+    private CardData _cardData;
+    public override void Save()
+    {
+        
     }
 
-    void OnApplicationQuit () {
-        Save();
-    }
-
-    public override void Save () {
-        AutoSaveManager.Current.Save();
-    }
-
-    public override void Load () {
-        AutoSaveManager.Current.Load();
+    public override void Load()
+    {
+        
     }
 
     public override void Delete()
@@ -28,3 +23,12 @@ public class Test3 : DataController
         
     }
 }
+
+[Serializable]
+public class CardData
+{
+    private string name;
+    private int lvel;
+    private int progess;
+}
+

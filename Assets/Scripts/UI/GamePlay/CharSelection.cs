@@ -78,7 +78,7 @@ public class CharSelection : MonoBehaviour
         
         BaseUnit unit = ObjectPoolManager
             .SpawnObject(baseUnit, new Vector2(-2.03f, UnityEngine.Random.Range(-0.1f,0.1f)), quaternion.identity,
-                ObjectPoolManager.PoolType.PlayerOnject).GetComponent<BaseUnit>();
+                ObjectPoolManager.PoolType.GameObject).GetComponent<BaseUnit>();
         unit.isEnemy = false;
         unit.unit = _unit;
         onUnitInitialize?.Invoke();

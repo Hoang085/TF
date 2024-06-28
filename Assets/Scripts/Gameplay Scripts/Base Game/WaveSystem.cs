@@ -31,7 +31,7 @@ public class WaveSystem : MonoBehaviour
         {
             BaseUnit enemyUnit = ObjectPoolManager
                 .SpawnObject(enemy, new Vector2(2.03f, Random.Range(-0.1f, 0.1f)), quaternion.identity,
-                    ObjectPoolManager.PoolType.EnemyObject).GetComponent<BaseUnit>();
+                    ObjectPoolManager.PoolType.GameObject).GetComponent<BaseUnit>();
             
             enemyUnit.isEnemy = true;
             int unitIndex = Random.Range(0, unitList.Count);

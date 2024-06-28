@@ -2797,6 +2797,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28a366b62314ee981d67a06a1c051b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  homeTabGroup: {fileID: 1610797259}
+  buyCard1Btn: {fileID: 1499838025}
+  buyCard2Btn: {fileID: 1295547156}
+  price1Txt: {fileID: 1387633112}
+  price2Txt: {fileID: 1727574546}
 --- !u!114 &201118565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2987,7 +2992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 746663822}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
@@ -3051,7 +3056,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 216321830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d28a366b62314ee981d67a06a1c051b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 759cbd0005d24e758d63c25454815147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &219212384
@@ -3918,7 +3923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &287444620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4294,10 +4299,10 @@ RectTransform:
   - {fileID: 70778508}
   m_Father: {fileID: 2075341308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 255, y: -860}
-  m_SizeDelta: {x: 350, y: 500}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &292391102
 MonoBehaviour:
@@ -5267,10 +5272,10 @@ RectTransform:
   - {fileID: 1016202612}
   m_Father: {fileID: 701327619}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 181.58664, y: -81.6236}
+  m_SizeDelta: {x: 363.17328, y: 163.2472}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &375451683
 GameObject:
@@ -8509,6 +8514,9 @@ MonoBehaviour:
     foodProductionSpeed: 5
     dameBoost: 1
     healthBoost: 1
+    playersetting:
+      soundValue: 0
+      BGMValue: 0
   defaultPriceData:
     foodUpgradePrice: 20
     baseUpgradePrice: 50
@@ -9154,7 +9162,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 669056919}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 201118564}
+        m_TargetAssemblyTypeName: UICardPanel, Assembly-CSharp
+        m_MethodName: OnBuyClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &669056919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10073,7 +10093,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 900}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &746663823
 MonoBehaviour:
@@ -10345,10 +10365,10 @@ RectTransform:
   - {fileID: 609488533}
   m_Father: {fileID: 2075341308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1195, y: -290}
-  m_SizeDelta: {x: 350, y: 500}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &783724334
 MonoBehaviour:
@@ -14086,7 +14106,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1047850005
 MonoBehaviour:
@@ -16817,7 +16837,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'x1 Card
+  m_text: 'x10 Card
 
 '
   m_isRightToLeft: 0
@@ -18279,7 +18299,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '100
+  m_text: '10
 
 '
   m_isRightToLeft: 0
@@ -18308,10 +18328,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.05
-  m_fontSizeBase: 36
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -20979,10 +20999,10 @@ RectTransform:
   - {fileID: 8916967}
   m_Father: {fileID: 701327619}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 544.7599, y: -81.6236}
+  m_SizeDelta: {x: 363.17328, y: 163.2472}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597885979
 MonoBehaviour:
@@ -22831,10 +22851,10 @@ RectTransform:
   - {fileID: 1910603187}
   m_Father: {fileID: 2075341308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 725, y: -290}
-  m_SizeDelta: {x: 350, y: 500}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1761338839
 MonoBehaviour:
@@ -24077,7 +24097,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1861429402}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 201118564}
+        m_TargetAssemblyTypeName: UICardPanel, Assembly-CSharp
+        m_MethodName: OnBuyClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1861429402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27078,7 +27110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2080999920
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27111,6 +27143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6720b017a0ff4ac18f40bd9ecfb8acbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageBoostTxt: {fileID: 1347949931}
+  heathBoostTxt: {fileID: 1041396347}
 --- !u!114 &2080999922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27675,10 +27709,10 @@ RectTransform:
   - {fileID: 1850535824}
   m_Father: {fileID: 2075341308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 255, y: -290}
-  m_SizeDelta: {x: 350, y: 500}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100138953
 MonoBehaviour:

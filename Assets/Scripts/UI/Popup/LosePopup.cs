@@ -17,7 +17,7 @@ public class LosePopup : BasePopUp
     private Tween _tween;
     private bool _onClick;
 
-    private void Start()
+    private void OnEnable()
     {
         collectedCoinTxt.text = UIGamePlayManager.Instance.collectedCoin.ToString();
     }
@@ -47,9 +47,10 @@ public class LosePopup : BasePopUp
     {
         Time.timeScale = 1;
         base.OnCloseScreen();
-
-        PopupManager.Instance.ShowLoadingScene("Home");
         
         GameData.Instance.playerData.coin += UIGamePlayManager.Instance.collectedCoin;
+        
+        PopupManager.Instance.ShowLoadingScene("Home");
+        GoldGemPanelController.Instance.UpdateTxt();
     }
 }

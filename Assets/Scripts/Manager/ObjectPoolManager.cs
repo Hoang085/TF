@@ -10,16 +10,12 @@ public class ObjectPoolManager : MonoBehaviour
     private static GameObject _objectPoolEmptyHolder;
     private static GameObject _gameObjectEmpty;
     private static GameObject _particleSystemEmpty;
-    private static GameObject _enemyObjectEmpty;
-    private static GameObject _playerOjectEmpty;
     private static GameObject _CoinEmpty;
 
     public enum PoolType
     {
         GameObject,
         ParticleSystem,
-        PlayerOnject,
-        EnemyObject,
         Coin,
         None
     }
@@ -38,12 +34,6 @@ public class ObjectPoolManager : MonoBehaviour
 
         _gameObjectEmpty = new GameObject("GameObjects");
         _gameObjectEmpty.transform.SetParent(_objectPoolEmptyHolder.transform);
-
-        _playerOjectEmpty = new GameObject("PlayerObject");
-        _playerOjectEmpty.transform.SetParent(_gameObjectEmpty.transform);
-
-        _enemyObjectEmpty = new GameObject("EnemyObject");
-        _enemyObjectEmpty.transform.SetParent(_gameObjectEmpty.transform);
 
         _CoinEmpty = new GameObject("CoinObject");
         _CoinEmpty.transform.SetParent(_gameObjectEmpty.transform);
@@ -108,10 +98,6 @@ public class ObjectPoolManager : MonoBehaviour
                 return _particleSystemEmpty;
             case PoolType.GameObject:
                 return _gameObjectEmpty;
-            case PoolType.PlayerOnject:
-                return _playerOjectEmpty;
-            case PoolType.EnemyObject:
-                return _enemyObjectEmpty;
             case PoolType.None:
                 return null;
             case PoolType.Coin:
