@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Thrower
   atk: 2
-  atkDistance: 3
+  atkDistance: 4
   atkRate: 1.5
   health: 2
   moveSpeed: 0.15

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Caveman
   atk: 2
-  atkDistance: 0.5
+  atkDistance: 1
   atkRate: 1.25
   health: 6
   moveSpeed: 0.15

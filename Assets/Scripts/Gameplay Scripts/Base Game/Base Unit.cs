@@ -2,6 +2,7 @@ using ScriptableObjectArchitecture;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TF.Data;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -26,15 +27,18 @@ public class BaseUnit : MonoBehaviour, IHealth
     [SerializeField] internal bool isEnemy;
     [SerializeField] internal float radius;
     [SerializeField] internal GameObject target;
-    internal NavMeshAgent agent;
+    [SerializeField] internal GameObject ally; //check if there's any ally in front of the unit
 
     [Header("Unit Stats")]
     internal float atk;
     internal float atkRate;
+    internal float atkDistance;
     internal float enemyDetectDistance;
-    float IHealth.Health { get => health; }
-    [SerializeField] internal float health;
+    internal float moveSpeed;
     internal float maxHealth;
+    float IHealth.Health { get => health; }
+    float health;
+
     internal float price;
 
     [Header("Layermasks")]
@@ -59,36 +63,21 @@ public class BaseUnit : MonoBehaviour, IHealth
     void Start()
     {
         healthBar.transform.parent.gameObject.SetActive(false);
-
-        agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation = false;
-        agent.updateUpAxis = false;
-
-        //if (!isEnemy)
-        //{
-        //    foreach(BaseCard card in DataManager.instance.cards)
-        //    {
-        //        card.cardBoost.Apply(this);
-        //    }
-        //}
     }
 
     private void OnUnitChange()
     {
         if (unit != null)
         {
-            agent = GetComponent<NavMeshAgent>();
-
             //gameObject.name = unit.name;
 
-            atk = unit.atk;
-            agent.stoppingDistance = unit.atkDistance;
+            atk = isEnemy ? unit.atk : unit.atk * GameData.Instance.playerData.totalDamBoost;
+            atkDistance = unit.atkDistance;
             atkRate = unit.atkRate;
 
-            health = unit.health;
+            health = isEnemy ? unit.health : unit.health * GameData.Instance.playerData.totalHealthBoost;
             maxHealth = unit.health;
-            agent.speed = unit.moveSpeed;
-            agent.acceleration = unit.moveSpeed * 3;
+            moveSpeed = unit.moveSpeed;
             enemyDetectDistance = isEnemy ? -unit.enemyDetectDistance : unit.enemyDetectDistance;
 
             price = unit.price;

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ef8c4ef0f93c4418f17391df0b8244, type: 3}
   m_Name: Combat Dummy
   m_EditorClassIdentifier: 
-  boostMultiplier: 0
-  level: 0
-  sprite: {fileID: 0}
+  currentCard: {fileID: 0}
+  name: Combat Dummy
+  boostMultiplier: 1.03
+  cardImage: {fileID: 21300014, guid: e3cbe7b5d8f24618b62a87ef76c6a085, type: 3}
   rarity: 0
-  rarityColor: {r: 0, g: 0, b: 0, a: 0}

@@ -16,7 +16,7 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     {
         this.stateObject = unit;
 
-        if(unit.agent.stoppingDistance <= 1)
+        if(unit.atkDistance <= 1.5f)
         {
             unit.StartCoroutine(MeleeAttack());
         }
@@ -113,7 +113,7 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
             return UnitStateMachine.EUnitState.FindTarget;
         }
         else if(stateObject.target.GetComponent<IHealth>().Health <= 0 ||
-            Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x > stateObject.agent.stoppingDistance + 1
+            Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x > stateObject.atkDistance + 0.5f
             || targetChanged)
         {
             return UnitStateMachine.EUnitState.FindTarget;

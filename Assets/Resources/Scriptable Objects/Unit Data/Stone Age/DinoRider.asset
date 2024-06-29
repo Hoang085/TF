@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Dino Rider
   atk: 4
-  atkDistance: 0.75
+  atkDistance: 1.25
   atkRate: 1
   health: 18
   moveSpeed: 0.2

@@ -15,7 +15,8 @@ namespace TF.Data
         [SerializeField] protected string priceIndentifier;
         [SerializeField] protected PlayerData defaultPlayerData = new PlayerData();
         [SerializeField] protected PriceData defaultPriceData = new PriceData();
-        
+
+
         internal PlayerData playerData;
         internal PriceData priceData;
 
@@ -75,8 +76,8 @@ public class PlayerData
     public float gem;
     public float baseHealth;
     public float foodProductionSpeed;
-    public float dameBoost;
-    public float healthBoost;
+    public float totalDamBoost;
+    public float totalHealthBoost;
     public Setting playersetting;
 }
 

@@ -1,13 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class CardBoost : ScriptableObject
 {
+    [Header("Card Type")]
+    public new string name;
+    public BaseCard currentCard;
     public float boostMultiplier;
-    public int level;
-    public SpriteRenderer sprite;
     public EnumData.Rarity rarity;
-    public Color rarityColor;
-    public abstract void Apply(BaseUnit target);
+
+
+    [Header("Card Appearance")]
+    public Sprite cardImage;
+    public string cardDescription;
+
+    public abstract void Apply();
+    public abstract void RemoveBoost();
 }

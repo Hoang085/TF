@@ -37,24 +37,10 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
         //Debug.Log("Distance between object and target: " + Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x);
         if(stateObject.target != null)
         {
-            if (!stateObject.agent.pathPending)
+            if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x <=
+                            stateObject.atkDistance + 0.5f)
             {
-                if (stateObject.agent.remainingDistance <= stateObject.agent.stoppingDistance)
-                {
-                    if (!stateObject.agent.hasPath || stateObject.agent.velocity.sqrMagnitude == 0f)
-                    {
-                        if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x <=
-                            stateObject.agent.stoppingDistance + 1)
-                        {
-                            return UnitStateMachine.EUnitState.Attack;
-                        }
-                        else
-                        {
-                            //Continue to progress even when stopping distance has been reached
-                            stateObject.transform.Translate(Vector2.right * stateObject.agent.speed * Time.deltaTime);
-                        }
-                    }
-                }
+                return UnitStateMachine.EUnitState.Attack;
             }
         }
         
@@ -65,12 +51,16 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     {   
         if(stateObject.target != null)
         {
-            stateObject.agent.SetDestination(stateObject.target.transform.position);
+            stateObject.transform.position = Vector2.MoveTowards(stateObject.transform.position, stateObject.target.transform.position, stateObject.moveSpeed * Time.deltaTime);
         }
         else
         {
-            stateObject.transform.Translate(Vector2.right * stateObject.agent.speed * Time.deltaTime);
+            stateObject.transform.Translate(Vector2.right * stateObject.moveSpeed * Time.deltaTime);
         }
+    }
+    private void CheckForAlly()
+    {
+
     }
 
     public override void OnTriggerEnter()
