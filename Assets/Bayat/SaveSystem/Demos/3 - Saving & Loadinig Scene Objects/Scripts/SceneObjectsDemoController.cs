@@ -11,7 +11,7 @@ namespace Bayat.SaveSystem.Demos
     {
 
         [SerializeField]
-        protected InputField identifierField;
+        protected string identifierField;
         [SerializeField]
         protected GameObject[] prefabs;
         [SerializeField]
@@ -52,13 +52,13 @@ namespace Bayat.SaveSystem.Demos
 
         public override void Save()
         {
-            SaveSystemAPI.SaveAsync(this.identifierField.text, this.spawnedInstances);
+            SaveSystemAPI.SaveAsync(this.identifierField, this.spawnedInstances);
             Debug.Log("Data saved successfully");
         }
 
         public override async void Load()
         {
-            if (!await SaveSystemAPI.ExistsAsync(this.identifierField.text))
+            if (!await SaveSystemAPI.ExistsAsync(this.identifierField))
             {
                 Debug.Log("Data not found");
                 return;
@@ -68,7 +68,7 @@ namespace Bayat.SaveSystem.Demos
                 DestroyImmediate(this.spawnedInstances[i]);
             }
             this.spawnedInstances.Clear();
-            await SaveSystemAPI.LoadIntoAsync(this.identifierField.text, this.spawnedInstances);
+            await SaveSystemAPI.LoadIntoAsync(this.identifierField, this.spawnedInstances);
             Debug.Log("Data loaded successfully");
         }
 
@@ -86,7 +86,7 @@ namespace Bayat.SaveSystem.Demos
 
         public override void Delete()
         {
-            SaveSystemAPI.DeleteAsync(this.identifierField.text);
+            SaveSystemAPI.DeleteAsync(this.identifierField);
             Debug.Log("Data deleted successfully");
         }
 

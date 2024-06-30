@@ -78,7 +78,8 @@ public class PlayerData
     public float foodProductionSpeed;
     public float totalDamBoost;
     public float totalHealthBoost;
-    public Setting playersetting;
+    public SettingData playerSetting;
+    public List<CarData> carDatas;
 }
 
 [System.Serializable]
@@ -90,8 +91,18 @@ public class PriceData
 }
 
 [System.Serializable]
-public class Setting
+public class SettingData
 {
     public float soundValue;
     public float BGMValue;
+}
+
+[System.Serializable]
+public class CarData
+{
+    public string name;
+    public float level;
+    public float progress;
+    public float atkBoots;
+    public float healthBoots;
 }

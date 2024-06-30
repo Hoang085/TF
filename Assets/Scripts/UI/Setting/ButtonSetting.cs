@@ -8,7 +8,8 @@ public class ButtonSetting : MonoBehaviour
     [SerializeField] private SettingAttribute settingAttribute;
     [SerializeField] private Sprite muteSprite;
     [SerializeField] private Sprite unMuteSprite;
-    private PopupSetting _popupSettingManager;
+    [SerializeField] private Slider slider;
+    [SerializeField] private PopupSetting _popupSettingManager;
     private Image _btImage;
     private bool _isMute;
 
@@ -16,6 +17,7 @@ public class ButtonSetting : MonoBehaviour
     {
         if (_btImage == null)
             _btImage = GetComponent<Image>();
+        
     }
 
     public void Init(PopupSetting popupSetting)
@@ -29,6 +31,9 @@ public class ButtonSetting : MonoBehaviour
         }else if (settingAttribute == SettingAttribute.Sound)
         {
             _popupSettingManager.SoundChange += OnChangeValue;
+        }else if (settingAttribute == SettingAttribute.Vibra)
+        {
+            //_popupSettingManager.SetVibra();
         }
     }
 
@@ -48,10 +53,17 @@ public class ButtonSetting : MonoBehaviour
 
     public void SetValue()
     {
-        if(_isMute)
+        if (_isMute)
+        {
             ChangeVolume(1);
+            slider.value = 1;
+        }
         else
+        {
             ChangeVolume(0);
+            slider.value = 0;
+        }
+            
     }
 
     private void ChangeVolume(float value)
@@ -62,6 +74,9 @@ public class ButtonSetting : MonoBehaviour
         }else if (settingAttribute == SettingAttribute.Sound)
         {
             _popupSettingManager.SetSoundVolume(value);
+        }else if (settingAttribute == SettingAttribute.Vibra)
+        {
+            _popupSettingManager.SetVibra();
         }
     }
     private void OnDisable()

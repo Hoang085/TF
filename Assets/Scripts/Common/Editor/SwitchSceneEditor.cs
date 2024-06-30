@@ -53,4 +53,10 @@ public static class SwitchSceneEditor
         EditorSceneManager.OpenScene("Assets/Resources/Scenes/Test3.unity");
     }
     
+    [MenuItem("-SWITCH SCENE-/Test Save Object")]
+    static void TestSaveObjectScene()
+    {
+        EditorSceneManager.OpenScene("Assets/Resources/Scenes/TestSaveObject.unity");
+    }
+    
 }

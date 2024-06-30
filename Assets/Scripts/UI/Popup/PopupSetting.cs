@@ -10,6 +10,8 @@ using UnityEngine.UI;
 
 public class PopupSetting : BasePopUp
 {
+    [SerializeField] private string privacyURL;
+    [SerializeField] private string rateUsURL;
     [SerializeField] private ButtonSetting[] buttonSettings;
     [SerializeField] private SliderSetting[] sliderSettings;
 
@@ -50,6 +52,19 @@ public class PopupSetting : BasePopUp
         //PlayerData.Instance.PlayerSetting.SaveSFXValue(soundVolume);
         //SoundManager.Instance.GlobalSoundsVolume = soundVolume;
         SoundChange?.Invoke(soundVolume);
+    }
+
+    public void SetVibra()
+    {
+        //SetVibra
+    }
+    
+    public void PrivacyPolicy()
+    {
+        if (OnClick)
+            return;
+        BlockMultyClick();
+        Application.OpenURL(privacyURL);
     }
     
     public void Close()

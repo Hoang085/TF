@@ -99,7 +99,8 @@ namespace H2910.Defines
     { 
         None,
         BGM,
-        Sound
+        Sound,
+        Vibra
     }
     public enum ModelKey
     {

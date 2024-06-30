@@ -1,39 +1,36 @@
-using Bayat.SaveSystem;
-using Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TF.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static Bayat.SaveSystem.Demos.ComplexDataDemoController;
 
-public class BaseCard : DataController
+public class BaseCard : MonoBehaviour
 {
     [SerializeField] internal CardBoost cardBoost;
 
-    [SerializeField] Image cardImage;
-    [SerializeField] Image levelTextBG; 
-    [SerializeField] TMP_Text levelText;
-    [SerializeField] Image levelProgressBar;
-    [SerializeField] TMP_Text progressText;
+    [SerializeField] internal Image cardImage;
+    [SerializeField] internal Image levelTextBG; 
+    [SerializeField] internal TMP_Text levelText;
+    [SerializeField] internal Image levelProgressBar;
+    [SerializeField] internal TMP_Text progressText;
 
     [Header("Level Data Var")]
-    [SerializeField] internal int level;
-    [SerializeField] private int levelProgress;
-    [SerializeField] private int currentProgress;
+    [SerializeField] internal float level;
+    [SerializeField] internal float levelProgress;
+    //[SerializeField] internal int currentProgress;
 
-    [Header("Card Data")]
-    [SerializeField] internal CardData defaultCardData = new CardData();
-    internal CardData cardData;
+    private void Start()
+    {
+        levelText.text = level.ToString();
+        progressText.text = $"{levelProgress}/3";
+        levelProgressBar.fillAmount = levelProgress / 3;
+    }
 
     private void OnCardChange()
     {
-        if (cardBoost.currentCard == null) //if player gets a new type of card
+        /*if (cardBoost.currentCard == null) //if player gets a new type of card
         {
-            //Load default card level data
-            Load();
 
             //Assign new card to scriptable object
             cardBoost.currentCard = this;
@@ -54,15 +51,11 @@ public class BaseCard : DataController
 
             //Apply boost to the game
             cardBoost.Apply();
-
-            //Save card data
-            Save();
         }
         else //if player get a duplicate card
         {
             //Load original card level data
             var originalCard = cardBoost.currentCard;
-            originalCard.Load();
 
             originalCard.currentProgress++;
             if(originalCard.currentProgress >= originalCard.levelProgress)
@@ -92,10 +85,7 @@ public class BaseCard : DataController
 
             //destroy duplicated card
             DestroyImmediate(this.gameObject);
-
-            //Save card data
-            Save(); 
-        }
+        }*/
         
     }
     private void RarityColor()
@@ -115,36 +105,6 @@ public class BaseCard : DataController
                 levelTextBG.color = Color.yellow;
                 break;
         }
-    }
-
-    public override void Save()
-    {
-        SaveSystemAPI.SaveAsync(cardBoost.name, cardData);
-    }
-
-    public override async void Load()
-    {
-        if (!await SaveSystemAPI.ExistsAsync(cardBoost.name))
-        {
-            Debug.LogError("Player data not found");
-            Debug.Log("Using default player data instead");
-            cardData = defaultCardData;
-        }
-
-        cardData = await SaveSystemAPI.LoadAsync<CardData>(cardBoost.name);
-        Debug.Log("Player data loaded successfully");
-    }
-
-    public override void Delete()
-    {
-        throw new NotImplementedException();
-    }
-
-    [Serializable]
-    public class CardData
-    {
-        public int level;
-        public int progress;
     }
 
 #if UNITY_EDITOR
