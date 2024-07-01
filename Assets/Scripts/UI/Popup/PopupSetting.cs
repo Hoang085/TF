@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using DG.Tweening;
 using H2910.Defines;
 using H2910.UI.Popups;
+using TF.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,8 +26,8 @@ public class PopupSetting : BasePopUp
     public override void OnShowScreen()
     {
         base.OnShowScreen();
-        //bgmVolume = PlayerData.Instance.PlayerSetting.BGMValue;
-        //soundVolume = PlayerData.Instance.PlayerSetting.SFXValue;
+        bgmVolume = GameData.Instance.playerData.playerSetting.BGMValue;
+        soundVolume = GameData.Instance.playerData.playerSetting.soundValue;
         foreach (var bt in buttonSettings)
         {
             bt.Init(this);
@@ -39,18 +40,20 @@ public class PopupSetting : BasePopUp
         SetSoundVolume(soundVolume);
         tween?.Kill();
     }
+    
     public void SetBgmVolume(float value)
     {
         bgmVolume = value;
-        //PlayerData.Instance.PlayerSetting.SaveBGMValue(bgmVolume);
-        //SoundManager.Instance.GlobalVMusicVolume = bgmVolume;
+        GameData.Instance.playerData.playerSetting.BGMValue = bgmVolume;
+        SoundManager.Instance.GlobalMusicVolume = bgmVolume;
         BgmChange?.Invoke(bgmVolume);
     }
+    
     public void SetSoundVolume(float value)
     {
         soundVolume = value;
-        //PlayerData.Instance.PlayerSetting.SaveSFXValue(soundVolume);
-        //SoundManager.Instance.GlobalSoundsVolume = soundVolume;
+        GameData.Instance.playerData.playerSetting.soundValue = soundVolume;
+        SoundManager.Instance.GlobalSoundsVolume = soundVolume;
         SoundChange?.Invoke(soundVolume);
     }
 
@@ -75,6 +78,7 @@ public class PopupSetting : BasePopUp
         OnCloseScreen();
         tween?.Kill();
     }
+    
     public override void OnCloseScreen()
     {
         base.OnCloseScreen();

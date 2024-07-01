@@ -47,7 +47,8 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     {   
         if(stateObject.target != null)
         {
-            stateObject.transform.position = Vector2.MoveTowards(stateObject.transform.position, stateObject.target.transform.position, stateObject.moveSpeed * Time.deltaTime);
+            stateObject.transform.position = Vector2.MoveTowards(stateObject.transform.position,
+                stateObject.target.transform.position, stateObject.moveSpeed * Time.deltaTime);
         }
         else
         {
