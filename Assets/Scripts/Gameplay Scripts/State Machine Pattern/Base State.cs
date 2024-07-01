@@ -19,4 +19,6 @@ public abstract class BaseState<EState, ObjectType> where EState : Enum
     public abstract void OnTriggerEnter();
     public abstract void OnTriggerStay();
     public abstract void OnTriggerExit();
+
+    public abstract void OnCollisionEnter2D(Collision2D collision);
 }

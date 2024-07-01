@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 {
@@ -16,13 +17,13 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     {
         this.stateObject = unit;
 
-        if(unit.atkDistance <= 1.5f)
+        if(stateObject.atkDistance <= 2)
         {
-            unit.StartCoroutine(MeleeAttack());
+            stateObject.StartCoroutine(MeleeAttack());
         }
         else
         {
-            unit.StartCoroutine(RangeAttack());
+            stateObject.StartCoroutine(RangeAttack());
         }
     }
     private IEnumerator MeleeAttack()
@@ -32,14 +33,23 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
         while(targetHp.Health > 0)
         {
             //if current target is not the same as the object old target
-            if (!targetHp.Equals(stateObject.target.GetComponent<IHealth>())) targetChanged = true;
+            if (!targetHp.Equals(stateObject?.target.GetComponent<IHealth>()))
+            {
+                Debug.Log("Target changed melee");//play animation
+                targetChanged = true;
+                break;
+            }
 
-            //play animation
             stateObject.atkAnimatior.SetTrigger("Attack");
+
             yield return new WaitForSeconds(stateObject.atkRate);
 
             //deal damage
             targetHp.OnDamageTaken(stateObject.atk);
+            if (targetHp.Health <= 0) break;
+
+            //Delay before the next attack
+            yield return new WaitForSeconds(1);
         }
         targetHp.OnDead();
         stateObject.target = null;
@@ -53,10 +63,11 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
         while (targetHp.Health > 0)
         {
             //if current target is not the same as the object old target
-            if (!targetHp.Equals(stateObject.target.GetComponent<IHealth>()))
+            if (!targetHp.Equals(stateObject?.target.GetComponent<IHealth>()))
             {
-                Debug.Log("Target changed");
+                Debug.Log("Target changed range");
                 targetChanged = true;
+                break;
             }
 
             //play animation
@@ -94,13 +105,19 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 
             rangeWeapon.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.InOutSine);
 
-            //wait for weapon to load back
-            yield return new WaitForSeconds(0.25f);
+            //Delay before the next attack
+            yield return new WaitForSeconds(1);
         }
     }
 
     public override void ExitState()
     {
+        if (stateObject.transform.GetChild(0).transform.GetChild(3).GetComponent<SpriteRenderer>().sprite != null)
+        {
+            //Debug.Log("Exit Attack State, stop attacking");
+        }
+        
+        stateObject.StopAllCoroutines(); //stop all attack currently running in this state first
         targetChanged = false;
     }
 
@@ -113,8 +130,9 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
             return UnitStateMachine.EUnitState.FindTarget;
         }
         else if(stateObject.target.GetComponent<IHealth>().Health <= 0 ||
-            Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x > stateObject.atkDistance + 0.5f
-            || targetChanged)
+            Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) /
+            stateObject.transform.lossyScale.x > stateObject.atkDistance + 1f ||
+            targetChanged)
         {
             return UnitStateMachine.EUnitState.FindTarget;
         }
@@ -123,9 +141,22 @@ public class AttackState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     }
     public override void UpdateState()
     {
+        //give state object a little nudge to chase after  the target if they are too far away
+        if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) /
+            stateObject.transform.lossyScale.x > stateObject.atkDistance)
+        {
+            if (stateObject.unit.name == "Caveman")
+            {
+                Debug.Log("Chasing current target");
+            }
+
+            stateObject.transform.position = Vector2.MoveTowards(stateObject.transform.position, stateObject.target.transform.position, stateObject.moveSpeed * Time.deltaTime);
+        } 
+    }
+    public override void OnCollisionEnter2D(Collision2D collision)
+    {
         
     }
-
     public override void OnTriggerEnter()
     {
         throw new System.NotImplementedException();

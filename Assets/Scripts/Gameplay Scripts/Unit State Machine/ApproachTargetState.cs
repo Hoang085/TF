@@ -53,5 +53,8 @@ public class ApproachTargetState : BaseState<UnitStateMachine.EUnitState, BaseUn
     {
         throw new System.NotImplementedException();
     }
-
+    public override void OnCollisionEnter2D(Collision2D collision)
+    {
+        throw new System.NotImplementedException();
+    }
 }

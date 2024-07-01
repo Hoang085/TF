@@ -5853,9 +5853,10 @@ MonoBehaviour:
     foodProductionSpeed: 5
     totalDamBoost: 1
     totalHealthBoost: 1
-    playersetting:
+    playerSetting:
       soundValue: 0
       BGMValue: 0
+    carDatas: []
   defaultPriceData:
     foodUpgradePrice: 0
     baseUpgradePrice: 0
@@ -6676,10 +6677,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRate: 1
   timeBetweenWaves: 30
-  enemyCount: 5
+  enemyCount: 1
   enemy: {fileID: 7983926733423554931, guid: 911fd31071bf5eb4b957cbba98e6e8e5, type: 3}
   unitList:
-  - {fileID: 11400000, guid: 0687d55d3413ce54cbe0d926e2838cc5, type: 2}
   - {fileID: 11400000, guid: 92a4c4e944acbb54ba74e03937ed78d9, type: 2}
 --- !u!4 &1551946156
 Transform:

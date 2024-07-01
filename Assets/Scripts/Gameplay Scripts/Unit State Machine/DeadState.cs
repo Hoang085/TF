@@ -52,4 +52,8 @@ public class DeadState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     {
         
     }
+    public override void OnCollisionEnter2D(Collision2D collision)
+    {
+        throw new System.NotImplementedException();
+    }
 }

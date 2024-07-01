@@ -40,7 +40,7 @@ namespace H2910.Common.Singleton
 
                 if (_instance == null)
                 {
-                    //Debug.LogError("Cannot find Object with type " + typeof(T));
+                    Debug.LogError("Cannot find Object with type " + typeof(T));
                 }
 
                 return _instance;
@@ -65,7 +65,10 @@ namespace H2910.Common.Singleton
             }
 
             if (_instance == null)
+            {
                 _instance = (T)(MonoBehaviour)this;
+            }
+                
 
             if (_instance == null)
             {
@@ -81,6 +84,7 @@ namespace H2910.Common.Singleton
             //self destroy?
             if (_instance == this)
             {
+                Debug.Log("Destroy instance");
                 _instance = null;
                 //Debug.LogError ("OnDestroy " + typeof(T));
             }

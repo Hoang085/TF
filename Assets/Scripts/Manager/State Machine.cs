@@ -36,4 +36,8 @@ public abstract class StateMachine<EState, ObjectType> : MonoBehaviour where ESt
 
         isTransitioningState = false;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        currentState.OnCollisionEnter2D(collision);
+    }
 }

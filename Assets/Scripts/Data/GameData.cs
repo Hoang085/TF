@@ -24,7 +24,6 @@ namespace TF.Data
         {
             base.Awake();
             Load();
-            
         }
 
         private void OnApplicationQuit()

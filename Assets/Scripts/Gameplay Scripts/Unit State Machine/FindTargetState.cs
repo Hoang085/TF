@@ -8,12 +8,7 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 {
     public override BaseUnit stateObject { get; set; }
 
-    private float distance;
-    private float radius = 0.05f;
-    private float curHitDistance;
-    private Vector3 rayOrigin;
-    private Vector3 direction;
-
+    private bool isCollideWithTarget;
 
     public FindTargetState(UnitStateMachine.EUnitState key) : base(key)
     {
@@ -27,18 +22,19 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
 
     public override void ExitState()
     {
-
+        isCollideWithTarget = false;
     }
 
     public override UnitStateMachine.EUnitState GetNextState()
     {
         if (stateObject.isDead) return UnitStateMachine.EUnitState.Dead;
-
-        //Debug.Log("Distance between object and target: " + Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x);
+   
         if(stateObject.target != null)
         {
+            //Debug.Log("Distance between object and target: " + Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x);
+
             if (Vector2.Distance(stateObject.transform.position, stateObject.target.transform.position) / stateObject.transform.lossyScale.x <=
-                            stateObject.atkDistance + 0.5f)
+                            stateObject.atkDistance || isCollideWithTarget)
             {
                 return UnitStateMachine.EUnitState.Attack;
             }
@@ -56,6 +52,13 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
         else
         {
             stateObject.transform.Translate(Vector2.right * stateObject.moveSpeed * Time.deltaTime);
+        }
+    }
+    public override void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (stateObject.targetLayer == (stateObject.targetLayer | 1 << collision.gameObject.layer))
+        {
+            isCollideWithTarget = true;
         }
     }
     private void CheckForAlly()
@@ -77,5 +80,4 @@ public class FindTargetState : BaseState<UnitStateMachine.EUnitState, BaseUnit>
     {
         throw new System.NotImplementedException();
     }
-
 }

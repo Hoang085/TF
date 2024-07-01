@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 148613690511594571}
   - component: {fileID: 7869099302149218385}
   - component: {fileID: 236484900428542893}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BarHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1616630857624611179}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3706925172812509502}
   - component: {fileID: 5305939093962573709}
-  m_Layer: 0
+  - component: {fileID: 3149281879257799097}
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,6 +297,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &3149281879257799097
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5021311784855770777}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.7659575, y: 0.87234044}
+  m_Direction: 0
 --- !u!1 &5879116589597700846
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +342,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8552429811810056173}
   - component: {fileID: 296392238696081796}
-  m_Layer: 0
+  - component: {fileID: 546540439050096604}
+  m_Layer: 10
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,6 +417,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &546540439050096604
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879116589597700846}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.32712767}
+  serializedVersion: 2
+  m_Radius: 0.32712767
 --- !u!1 &6467661665088115518
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9118312976685563924}
   - component: {fileID: 6450622200493344614}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1452099138798330865}
   - component: {fileID: 831577402743095889}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,13 +757,14 @@ MonoBehaviour:
   - {fileID: 6450622200493344614}
   healthBar: {fileID: 6842029600047910778}
   atkAnimatior: {fileID: 3214211072753856790}
+  mountCollider: {fileID: 0}
   targetLayer:
     serializedVersion: 2
     m_Bits: 2816
   isEnemy: 0
   radius: 0.75
   target: {fileID: 0}
-  health: 0
+  ally: {fileID: 0}
 --- !u!114 &221417902200966333
 MonoBehaviour:
   m_ObjectHideFlags: 0

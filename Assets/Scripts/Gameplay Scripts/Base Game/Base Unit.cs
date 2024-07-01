@@ -18,7 +18,7 @@ public class BaseUnit : MonoBehaviour, IHealth
     [SerializeField] internal List<SpriteRenderer> sprites;
     [SerializeField] internal Image healthBar;
     [SerializeField] internal Animator atkAnimatior;
-    private Collider2D mountCollider;
+    [SerializeField] Collider2D mountCollider;
 
     internal bool isDead;
 
@@ -37,7 +37,7 @@ public class BaseUnit : MonoBehaviour, IHealth
     internal float moveSpeed;
     internal float maxHealth;
     float IHealth.Health { get => health; }
-    float health;
+    [SerializeField] float health;
 
     internal float price;
 
@@ -53,11 +53,6 @@ public class BaseUnit : MonoBehaviour, IHealth
     {
         CharSelection.onUnitInitialize += OnUnitChange;
         CharSelection.onUnitInitialize += OnTeamChange;
-    }
-    private void OnDisable()
-    {
-        CharSelection.onUnitInitialize -= OnUnitChange;
-        CharSelection.onUnitInitialize -= OnTeamChange;
     }
     // Start is called before the first frame update
     void Start()
@@ -115,13 +110,17 @@ public class BaseUnit : MonoBehaviour, IHealth
             //animator component with an animation clip attached to it will reset any change made to sprite renderer during runtime so we will need to 
             //register it after all sprite renderer has been loaded
             atkAnimatior.runtimeAnimatorController = unit.unitAnimation;
+
+            //Unsubscribe from event immediately so it wouldn't be called back when other unit spawn
+            CharSelection.onUnitInitialize -= OnUnitChange;
+            CharSelection.onUnitInitialize -= OnTeamChange;
         }
     }
     private void OnTeamChange()
     {
         if (isEnemy)
         {
-            if(unit?.atkDistance <= 1)
+            if(unit?.atkDistance <= 2)
             {
                 gameObject.layer = enemyMelee;
             }
@@ -129,6 +128,13 @@ public class BaseUnit : MonoBehaviour, IHealth
             {
                 gameObject.layer = enemyRange;
             }
+
+            foreach(Transform child in transform.GetChild(0))
+            {
+                //Setting layer for all sprite renderer gameObject
+                child.gameObject.layer = enemy;
+            }
+
             Physics2D.IgnoreLayerCollision(enemyMelee, enemyRange);
 
             var targetLayer1 = 1 << playerMelee;
@@ -141,7 +147,7 @@ public class BaseUnit : MonoBehaviour, IHealth
         }
         else
         {
-            if (unit?.atkDistance <= 1)
+            if (unit?.atkDistance <= 2)
             {
                 gameObject.layer = playerMelee;
             }
@@ -149,6 +155,13 @@ public class BaseUnit : MonoBehaviour, IHealth
             {
                 gameObject.layer = playerRange;
             }
+
+            foreach (Transform child in transform.GetChild(0))
+            {
+                //Setting layer for all sprite renderer gameObject
+                child.gameObject.layer = player;
+            }
+
             Physics2D.IgnoreLayerCollision(playerMelee, playerRange);
 
             var targetLayer1 = 1 << enemyMelee;
